@@ -1,0 +1,123 @@
+doctype html
+html(lang="en")
+    head
+        title Pricing | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Pricing
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue The cost of Elioplus products.
+                            p(class='text-base lg:text-body text-center lg:text-left') All our products for software, cloud and IT vendors include a free package. All our features are completely free for channel partners without limitations.
+
+                            div(class='flex items-center gap-10px xl:gap-15px flex-col lg:flex-row')
+                                a(href='#productsPricing' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    span PRODUCTS PRICING
+                                    include ../assets/images/global/next.svg
+                        img( src='../assets/images/pricing/opener.svg' alt='Pricing & costs of Elioplus products and services')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center.w-full
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Products & Services Pricing
+                            p(class='w-full text-base lg:text-body') We provide 3 main products which include a free pricing plan. <br class='hidden lg:block'> Click on a product below to view the available packages for each one.
+
+                        div( id='productsPricing' class='gap-30px lg:gap-60px').flex.w-full.flex-col
+                            div(class='gap-30px lg:gap-0').flex.w-full.justify-between.flex-wrap
+                                - var img= '../../../assets/images/products/partner-recruitment.svg'
+                                - var name='Partner Recruitment Automate / Database'
+                                - var feature1= '3 Pricing Plans'
+                                - var feature2= 'Free package included'
+                                - var feature3= 'Starting from $298/month'
+                                - var pricingLink='../templates/pricingPR.html'
+                                - var productLink='../templates/productPR.html'
+                                include components/global/productPricing.pug
+                                - var img= '../../../assets/images/products/partner-relationship-manager.svg'
+                                - var name='Partner Relationship Management (PRM)'
+                                - var feature1= '3 Pricing Plans'
+                                - var feature2= 'Free package included'
+                                - var feature3= 'Starting from $298/month'
+                                - var pricingLink='../templates/pricingPRM.html'
+                                - var productLink='../templates/productPRM.html'
+                                include components/global/productPricing.pug
+                                - var img= '../../../assets/images/products/intent-signals.svg'
+                                - var name='Intent Signals & Lead Generation'
+                                - var feature1= 'Dynamic Pricing'
+                                - var feature2= 'Free leads for local IT companies'
+                                - var feature3= 'Unlimited access to leads/month'
+                                - var pricingLink='../templates/pricingIntent.html'
+                                - var productLink='../templates/productIntentSignals.html'
+                                include components/global/productPricing.pug
+
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-30px.text-center.items-center.w-full
+                            .flex.flex-col.gap-10px.text-center.items-center.w-full
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') For Channel Partners
+                                p(class='w-full text-base lg:text-body') All our features and benefits are completely free for channel partners without limitations.
+                            div(class='flex items-center gap-10px xl:gap-15px flex-col lg:flex-row justify-center')
+                                a(href='../templates/featuresChannelPartners.html' class='btn large font-bold text-sm xl:text-base')
+                                    span VIEW FEATURES IN DETAIL
+                                    include ../assets/images/global/next.svg
+                                a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    span GET STARTED NOW
+                                    include ../assets/images/global/next.svg
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-50px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/pricing/channel-partners.svg' alt='Features for Channel Partners' loading='lazy')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-2.5xl font-bold font-inter text-center lg:text-left') Features:
+                                div().flex.flex-col.gap-20px.w-full
+                                    .flex.gap-10px.items-start
+                                        div(class='pt-5px lg:pt-10px')
+                                            div(class='w-[15px] h-[15px] bg-blue rounded-full')
+                                        .flex.flex-col.gap-5px
+                                            h4(class='text-base lg:text-body').font-semibold Sign up for free
+                                            h5(class='text-sm lg:text-base').text-textGray Create your company's profile and get started (under 30 seconds).
+                                    .flex.gap-10px.items-start
+                                        div(class='pt-5px lg:pt-10px')
+                                            div(class='w-[15px] h-[15px] bg-blue rounded-full')
+                                        .flex.flex-col.gap-5px
+                                            h4(class='text-base lg:text-body').font-semibold Partner with new vendors
+                                            h5(class='text-sm lg:text-base').text-textGray We analyze and provide you the best vendors recommendations.
+                                    .flex.gap-10px.items-start
+                                        div(class='pt-5px lg:pt-10px')
+                                            div(class='w-[15px] h-[15px] bg-blue rounded-full')
+                                        .flex.flex-col.gap-5px
+                                            h4(class='text-base lg:text-body').font-semibold Manage your vendors
+                                            h5(class='text-sm lg:text-base').text-textGray Collaborate in real time with your vendors using our built in tools.
+                                    .flex.gap-10px.items-start
+                                        div(class='pt-5px lg:pt-10px')
+                                            div(class='w-[15px] h-[15px] bg-blue rounded-full')
+                                        .flex.flex-col.gap-5px
+                                            h4(class='text-base lg:text-body').font-semibold Receive sales incentives
+                                            h5(class='text-sm lg:text-base').text-textGray Receive documentation, sales and marketing material from your vendors.
+            section
+                .container
+                    div(class='gap-80px lg:gap-160px').flex.flex-col
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                div(class='gap-5px lg:gap-10px').flex.flex-col
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Do you have questions?
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left').text-blue We have the answers.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') You can visit our help center with frequently asked questions about ElioPlus and our products & services.
+                                div(class='flex justify-center lg:justify-start')
+                                    a(href='../templates/faq.html' class='btn large font-bold text-sm xl:text-base text-blue')
+                                        span VIEW FREQUENTLY ASKED QUESTIONS
+                                        include ../assets/images/global/next.svg
+                            div(class='flex items-center')
+                                img( src='../assets/images/contact-us/faq.svg' alt='Visit the Elioplus FAQ to get answers for your questions' loading='lazy' class='max-w-[350px] lg:max-w-full')
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

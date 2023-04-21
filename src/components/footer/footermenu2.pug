@@ -1,0 +1,14 @@
+mixin menuItem(name, href)
+    li
+        a(href=href class='hover:text-blue text-sm md:text-base transition-colors duration-200').text-textGray=name
+
+.flex.flex-col.gap-15px
+    h4(class='text-sm md:text-base lg:text-lg').font-itner.font-bold PRM ALTERNATIVES
+    ul.flex.flex-col.gap-10px
+        +menuItem('vs Impartner', '../templates/prmAlternative.html')
+        +menuItem('vs PartnerStack', '../templates/prmAlternative.html')
+        +menuItem('vs Allbound', '../templates/prmAlternative.html')
+        +menuItem('vs Zift Solutions', '../templates/prmAlternative.html')
+        +menuItem('vs Salesforce PRM', '../templates/prmAlternative.html')
+        +menuItem('vs Mindmatrix', '../templates/prmAlternative.html')
+        +menuItem('vs myprm', '../templates/prmAlternative.html')

@@ -1,0 +1,10 @@
+details(id=prefix+letter  class='text-sm lg:text-base' open=openval)
+    summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px ').flex.gap-7px.font-bold.relative.bg-white.shadow-card.relative.rounded-4px.cursor-pointer
+        h4.font-bold.font-inter.text-lg Technologies starting with&nbsp;
+            span(class='text-blue')=letter
+            | :
+    div(class='mt-20px').w-full.flex.gap-15px.flex-wrap
+        each term in terms ? terms : []
+            a(href='../templates/searchResultsChannelPartners.html' class='hover:text-blue').flex.items-center.gap-5px.bg-white.shadow-card.rounded-4px.py-10px.px-15px.text-textGray.transition-all.duration-200
+                span().font-bold.text-sm=term
+                img(src='../assets/images/global/next.svg')

@@ -1,0 +1,16 @@
+.p-20px
+    .bg-white.rounded-10px.shadow-card.flex.flex-col.gap-25px.py-30px.px-25px
+        div(class='justify-center lg:justify-start text-center lg:text-left').flex.gap-15px.flex-wrap
+            div(class='w-[55px] h-[55px]').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                img(src='../assets/images/homepage/user.svg' alt=name+'profile image')
+            .flex.flex-col
+                h5(class='text-base lg:text-lg font-semibold font-inter').text-blue=name
+                p(class='text-sm lg:text-base').text-textGray=pos
+        .divider
+        div(class='gap-5px mdl:gap-15px justify-center lg:justify-start text-center lg:text-left').flex.flex-col
+            h4(class='text-base lg:text-body').font-inter.font-bold=title
+            p(class='text-sm lg:text-base')=desc
+        div(class='justify-center lg:justify-end').flex
+            a(href=href class='btn font-bold text-sm bg-white' target='_blank')
+                span READ FULL REVIEW
+                include ../../../assets/images/global/next.svg

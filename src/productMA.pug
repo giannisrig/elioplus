@@ -1,0 +1,220 @@
+doctype html
+html(lang="en")
+    head
+        title Merge & Acquisition Marketplace | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+
+            - var productName = 'M&A Marketplace Software'
+            - var btnText = 'GET STARTED'
+            - var btnLink = '../templates/register.html'
+            - var terms = { 'Overview': '#overview',  'How it works': '#howItWorks',  'Process Timeline': '#processTimeline',  'Listings': '#listings',  'Seller Channels': '#sellerChannels' }
+            include components/header/productHeader.pug
+
+            section(id='overview').bg-gradient-product.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') IT Focused Mergers & Acquisition Marketplace
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Sell your IT business fast and reliably.
+                            p(class='text-base lg:text-body text-center lg:text-left') In collaboration with ITX, Elioplus helps you to reach out to potential buyers worldwide and sell your IT company to a network of <strong>50,000</strong> IT decision makers worldwide.
+
+                            div(class='flex items-center gap-10px xl:gap-15px flex-col lg:flex-row')
+                                a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    span GET STARTED AND SELL YOUR COMPANY
+
+                        .flex.justify-center.items-center
+                            img(src='../assets/images/ma-marketplace/opener.svg' alt='IT Focused Mergers & Acquisition Marketplace at Elioplus' class='max-w-full mdl:max-w-[250px]')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+
+            section(id='howItWorks')
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') How it Works
+                            p(class='w-full text-base lg:text-body') Get to know how Elioplus in collaboration with ITX help you drive sellers to purchase your company.
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/ma-marketplace/process.svg' alt='Seamless Process to sell your company' loading='lazy' class='max-w-full mdl:max-w-[350px]')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Seamless Process
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') Reach out to express your interest in selling your business and an expert will connect with you to gather all the necessary information. The ITX experts will launch the campaign, reach out to potentials buyers and assist you in the sale process until the deal is closed.
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Focused on the IT industry
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') The Elioplus M&A marketplace, in collaboration with ITX, works exclusively with companies that operate in the IT industry, MSPs, SaaS businesses, cyber security firms, providers of CRM & ERP software, IT services and many more. ITX understands your business and has done similar deals in the past.
+
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/ma-marketplace/focused.svg' alt='Focused on the IT industry to sell your company' loading='lazy' class='max-w-full mdl:max-w-[350px]')
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/ma-marketplace/seller-network.svg' alt='A global Network to sell your company' loading='lazy' class='max-w-full mdl:max-w-[350px]')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Seller Network
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') A global network of more than 50,000 IT decision makers are actively looking to buy their next acquisition. An expert will create a showcase listing of your company for the marketplace and an outreach campaign with hand-selected buyers that match your profile.
+
+
+            section(id='processTimeline').bg-white
+
+                .container
+
+                    .flex.flex-col.gap-40px
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Process Timeline
+                            p(class='w-full max-w-full text-base lg:text-body') A <strong>100 days</strong> plan to help you sell your business seamlessly. <br class='hidden lg:block'> You will be onboarded and supported along the way, from day 1 that you reach out until the day the deal is closed.
+
+                        div(class='flex-row lg:flex-col gap-20px lg:gap-10px').flex.text-center.items-center.justify-center
+
+                            div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px w-max lg:w-full')
+
+                                div(class='text-base lg:text-body').text-textGray.w-max Day 1
+
+                                div(class='h-[220px] lg:h-[15px] w-[10px] lg:w-fit overflow-hidden rounded-10px flex-col lg:flex-row').bg-blue.grow.flex
+                                    div(class='w-full lg:w-1/10 h-1/10 lg:h-full').bg-iconGray
+                                    div(class='w-full lg:w-3/6 h-3/6 lg:h-full').bg-blue
+                                    div(class='grow').bg-blue2
+                                    div(class='w-full lg:w-1/10 h-1/10 lg:h-full').bg-green
+
+                                div(class='text-base lg:text-body').text-textGray.w-max Day 100+
+
+                            div(class='flex flex-col lg:flex-row lg:justify-between lg:px-80px gap-10px lg:gap-0 text-left')
+
+                                div(class='w-[220px]').flex.gap-10px.items-start
+                                    div(class='pt-5px lg:pt-10px')
+                                        div(class='w-[15px] h-[15px] rounded-full').bg-iconGray
+                                    div(class='gap-0 lg:gap-5px').flex.flex-col
+                                        h4(class='text-base lg:text-body').font-semibold Day 1-7
+                                        h5(class='text-sm lg:text-base').text-textGray Reach out to start the onboarding process.
+
+                                div(class='w-[280px]').flex.gap-10px.items-start
+                                    div(class='pt-5px lg:pt-10px')
+                                        div(class='w-[15px] h-[15px] rounded-full').bg-blue
+                                    div(class='gap-0 lg:gap-5px').flex.flex-col
+                                        h4(class='text-base lg:text-body').font-semibold Day 8-59
+                                        h5(class='text-sm lg:text-base').text-textGray Your listing will be created and the buyers’ outreach will begin.
+
+                                div(class='w-[280px]').flex.gap-10px.items-start
+                                    div(class='pt-5px lg:pt-10px')
+                                        div(class='w-[15px] h-[15px] rounded-full').bg-blue2
+                                    div(class='gap-0 lg:gap-5px').flex.flex-col
+                                        h4(class='text-base lg:text-body').font-semibold Day 60-99
+                                        h5(class='text-sm lg:text-base').text-textGray Due diligence and negotiation of purchase agreement.
+
+                                div(class='w-[220px]').flex.gap-10px.items-start
+                                    div(class='pt-5px lg:pt-10px')
+                                        div(class='w-[15px] h-[15px] rounded-full').bg-green
+                                    div(class='gap-0 lg:gap-5px').flex.flex-col
+                                        h4(class='text-base lg:text-body').font-semibold Day 100+
+                                        h5(class='text-sm lg:text-base').text-textGray Close transaction and press releases.
+
+            section(id='listings')
+
+                .container
+
+                    div(class='gap-50px lg:gap-80px').flex.flex-col.w-full
+
+                        .flex.flex-col.gap-10px.text-center.items-center.w-full
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Current listings in the marketplace
+                            p(class='w-full max-w-full text-base lg:text-body') Find some companies that are currently showcased and listed in the marketplace.
+
+                        .flex.flex-col.gap-50px.w-full
+
+                            .flex.flex-col.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.py-25px.gap-20px
+                                div(class='px-20px lg:px-40px flex-col lg:flex-row gap-10px justify-start lg:justify-between items-start lg:items-center').flex
+                                    h4(class='text-base lg:text-lg').font-inter Company Type: <strong>IT SECURITY</strong>
+                                    h5(class='text-base lg:text-lg').font-inter Reference Number: <strong class='text-blue'>EX-816</strong>
+                                .divider
+                                p(class='px-20px lg:px-40px py-10px').text-base
+                                    | Headquartered on the West Coast, the Company is an application security software vendor that offers its always-active Application/API Security Posture Monitoring (ASPM) and Observability technology, endlessly monitoring applications and APIs and ensuring that no API/process escapes discovery and diagnosis. The technology provides an on-demand, real-minute architecture model of an application API ecosystem with all its assets, call-dependencies, vulnerabilities, and attack-surface.
+
+                            .flex.flex-col.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.py-25px.gap-20px
+                                div(class='px-20px lg:px-40px flex-col lg:flex-row gap-10px justify-start lg:justify-between items-start lg:items-center').flex
+                                    h4(class='text-base lg:text-lg').font-inter Company Type: <strong>MANAGED SERVICES PROVIDERS (MSPs)</strong>
+                                    h5(class='text-base lg:text-lg').font-inter Reference Number: <strong class='text-blue'>EX-816</strong>
+                                .divider
+                                p(class='px-20px lg:px-40px py-10px').text-base
+                                    | The Company was founded in 2017 and has acquired sixteen local MSPs to create a national managed service provider with local market presence in key markets. It offers managed and hosted services, as well as project engineering to over 600 customers across twelve states.
+
+                            .flex.flex-col.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.py-25px.gap-20px
+                                div(class='px-20px lg:px-40px flex-col lg:flex-row gap-10px justify-start lg:justify-between items-start lg:items-center').flex
+                                    h4(class='text-base lg:text-lg').font-inter Company Type: <strong>MANAGED SERVICES PROVIDERS (MSPs)</strong>
+                                    h5(class='text-base lg:text-lg').font-inter Reference Number: <strong class='text-blue'>EX-816</strong>
+                                .divider
+                                p(class='px-20px lg:px-40px py-10px').text-base
+                                    | The company is a digital service provider delivering consumable solutions to organizations in pursuit of their digital transformation initiatives. The Company is a hyper-specialized partner in the cloud services ecosystem focused on DevOps automation and cloud enablement, offering unique go-to market solutions in high end consulting services and managed subscription services.
+
+                            .flex.flex-col.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.py-25px.gap-20px
+                                div(class='px-20px lg:px-40px flex-col lg:flex-row gap-10px justify-start lg:justify-between items-start lg:items-center').flex
+                                    h4(class='text-base lg:text-lg').font-inter Company Type: <strong>IT SERVICES & INTEGRATION</strong>
+                                    h5(class='text-base lg:text-lg').font-inter Reference Number: <strong class='text-blue'>EX-816</strong>
+                                .divider
+                                p(class='px-20px lg:px-40px py-10px').text-base
+                                    | This Company is a fast-growing security solution provider that has experienced significant revenue growth in each full year of operations since the company’s founding in 2016 and forecasts $17M in 2022. It represents the top security and infrastructure vendors in the industry such as Fortinet, Meraki, Sophos, ESET, Palo Alto Networks, Barracuda and others, and its sustained top-line growth is paired with meaningful margin-enhancing IP that enables the Company to provide best in class service and care with minimal overhead.
+
+                            .flex.flex-col.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.py-25px.gap-20px
+                                div(class='px-20px lg:px-40px flex-col lg:flex-row gap-10px justify-start lg:justify-between items-start lg:items-center').flex
+                                    h4(class='text-base lg:text-lg').font-inter Company Type: <strong>IT SERVICES & INTEGRATION</strong>
+                                    h5(class='text-base lg:text-lg').font-inter Reference Number: <strong class='text-blue'>EX-816</strong>
+                                .divider
+                                p(class='px-20px lg:px-40px py-10px').text-base
+                                    | Headquartered in the East Coast with global offices in Europe and India, the Company is an award-winning software design and development company. It has built large-scale cutting-edge eCommerce applications across the globe catering to B2B & B2C customers ranging from Fortune 500 to the world's largest retailers.
+
+
+            section(id='sellerChannels').bg-white
+                .container
+                    .flex.flex-col.gap-40px
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Seller Channels
+                            p(class='w-full text-base lg:text-body') Stop waiting and join a network of sales channels consisted by big companies in the IT industry.
+                        div(class='m-carousel flex sm:grid sm:grid-cols-3 lg:flex' data-items=1).gap-30px.justify-center
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/vmware.png' alt='vmware Logo' loading='lazy')
+
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/cisco.png' alt='cisco Logo' loading='lazy')
+
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/ibdm.png' alt='ibm Logo' loading='lazy')
+
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/microsoft.png' alt='microsoft Logo' loading='lazy')
+
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/oracle.png' alt='oracle Logo' loading='lazy')
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/ma-marketplace/salesforce.png' alt='salesforce Logo' loading='lazy')
+
+            section.bg-gray
+                .container
+                    div(class='gap-80px lg:gap-160px').flex.flex-col
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                div(class='gap-5px lg:gap-10px').flex.flex-col
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Do you have questions?
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left').text-blue We have the answers.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') You can visit our help center with frequently asked questions about ElioPlus and our products & services.
+                                div(class='flex justify-center lg:justify-start')
+                                    a(href='../templates/faq.html' class='btn large font-bold text-sm xl:text-base text-blue')
+                                        span VIEW FREQUENTLY ASKED QUESTIONS
+                                        include ../assets/images/global/next.svg
+                            div(class='flex items-center justify-center')
+                                img( src='../assets/images/contact-us/faq.svg' alt='Visit the Elioplus FAQ to get answers for your questions' loading='lazy' class='max-w-[350px] lg:max-w-full')
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

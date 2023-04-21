@@ -1,0 +1,54 @@
+mixin menuItem(name, href)
+    li
+        a(href=href).text-textGray.text-sm=name
+
+
+nav(id='FeaturesResourcesMenu').py-30px.px-40px.bg-white.absolute.megamenu.shadow-lg.rounded-xl.right-0
+    .flex.flex-row.gap-40px
+        .flex.flex-col.gap-25px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm Main Features
+                ul.flex.flex-col.gap-10px
+                    +menuItem('Vendors', '../templates/featuresVendors.html')
+                    +menuItem('Channel Partners', '../templates/featuresChannelPartners.html')
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm Resources
+                ul.flex.flex-col.gap-10px
+                    +menuItem('Partner to Partner Deals', '../templates/resourcesArticle.html')
+                    +menuItem('Collaboration Tool', '../templates/resourcesArticle.html')
+                a(href='../templates/resources.html').btn.font-bold.text-blue.text-sm
+                    span All Resources
+                    include ../../../assets/images/global/next.svg
+        .separator.h-unset
+        .flex.flex-col.gap-40px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm PRM Alternatives
+                ul.flex.flex-col.gap-10px
+                    +menuItem('Impartner', '../templates/prmAlternative.html')
+                    +menuItem('PartnerStack', '../templates/prmAlternative.html')
+                    +menuItem('Allbound', '../templates/prmAlternative.html')
+                    +menuItem('Zift Solutions', '../templates/prmAlternative.html')
+                    +menuItem('Salesforce PRM', '../templates/prmAlternative.html')
+                    +menuItem('Mindmatrix', '../templates/prmAlternative.html')
+                    +menuItem('Myprm', '../templates/prmAlternative.html')
+        .separator.h-unset
+        .flex.flex-col.gap-40px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm Elioplus PRM Features
+                .flex.flex-row.gap-50px
+                    ul.flex.flex-col.gap-10px
+                        +menuItem('Partner Portal', '../templates/prmFeature.html')
+                        +menuItem('Partner Directory', '../templates/prmFeature.html')
+                        +menuItem('Partner Onboarding', '../templates/prmFeature.html')
+                        +menuItem('Deal Registration', '../templates/prmFeature.html')
+                        +menuItem('Lead Distribution', '../templates/prmFeature.html')
+                        +menuItem('Content Management', '../templates/prmFeature.html')
+                        +menuItem('Collaboration', '../templates/prmFeature.html')
+                    ul.flex.flex-col.gap-10px
+                        +menuItem('Channel Analytics', '../templates/prmFeature.html')
+                        +menuItem('Partner Locator', '../templates/prmFeature.html')
+                        +menuItem('Partner 2 Partner', '../templates/prmFeature.html')
+                        +menuItem('Partner Activation', '../templates/prmFeature.html')
+                        +menuItem('Tier Management', '../templates/prmFeature.html')
+                        +menuItem('Team Roles', '../templates/prmFeature.html')
+                        +menuItem('Partner Management', '../templates/prmFeature.html')

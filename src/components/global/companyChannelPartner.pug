@@ -1,0 +1,77 @@
+div(class='flex flex-col w-full').bg-white.shadow-card.rounded-10px.overflow-hidden
+    div(class='flex w-full flex-col lg:flex-row').border-gray.border-b-2
+        div(class='p-20px lg:p-30px border-gray border-b-2 lg:border-b-0').flex.items-center.justify-center
+            img(src=img alt='logo for company profile '+name loading='lazy')
+        div(class='flex flex-col grow py-30px px-25px gap-10px').border-gray.border-l-2
+            div(class='flex flex-col-reverse lg:flex-row gap-20px w-full items-center')
+                h3(class='text-xl lg:text-2xl font-inter font-bold')=name
+                div(class='flex gap-7px items-center px-10px py-5px').bg-gray.rounded-30px
+                    img( src='../assets/images/company-item/rating.svg' alt='feaured icon' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-bold').text-yellow Featured Company
+            div(class='flex gap-20px w-full items-center justify-center lg:justify-start')
+                div(class='flex gap-7px items-center')
+                    img(src='../assets/images/company-item/rating.svg' alt='rating icon' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-semibold') 5.0
+                div(class='flex gap-7px items-center flex-col lg:flex-row justify-center')
+                    div(class='flex gap-7px items-center')
+                        img(src='../assets/images/global/circles.svg' alt='company type icon' loading='lazy')
+                    strong(class='text-xs lg:text-sm font-semibold') Managed Service Provider (MSP)
+                div(class='country').bg-white.overflow-hidden.rounded-30px.p-5px.flex.gap-5px.items-center.w-fit
+                    img(src='../assets/images/flags/US.svg' class='w-[15px] lg:w-[20px]' alt='flag US' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-semibold').font-bold United States
+
+                div(class='flex gap-7px items-center')
+                    img(src='../assets/images/company-item/location.svg' alt='location icon' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-semibold') New York
+    div(class='p-25px gap-15px lg:gap-20px').border-gray.border-b-2.flex.flex-col.w-full
+        div(class='gap-10px lg:gap-15px').flex.flex-col.w-full
+
+            div(class='px-15px py-20px lg:py-10px gap-15px flex-col lg:flex-row').w-full.bg-gray.rounded-10px.flex.items-center
+                div(class='flex gap-7px items-center')
+                    img( src='../assets/images/company-item/categories.svg' alt='categories icon' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-semibold') Categories:
+                div(class='hidden lg:flex grow gap-10px flex-wrap justify-center lg:justify-start').items-group
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Advertising/Marketing
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Email Marketing
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white SEO & SEM
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Engagement Tools
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white CRM
+
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Advertising/Marketing
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Email Marketing
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white SEO & SEM
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Engagement Tools
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white CRM
+
+                    a(href='#' class='moreTrigger text-xs lg:text-xs py-5px px-10px').bg-hawkesBlue.rounded-20px.text-blue
+                        span.number +5
+                        span.labelText more
+
+            div(class='px-15px py-20px lg:py-10px gap-15px flex-col lg:flex-row').w-full.bg-gray.rounded-10px.flex.items-center
+                div(class='flex gap-7px items-center')
+                    img( src='../assets/images/company-item/products.svg' alt='products icon' loading='lazy')
+                    h4(class='text-xs lg:text-sm font-semibold') Products:
+                div(class='hidden lg:flex grow gap-10px flex-wrap justify-center lg:justify-start').items-group
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Reseller
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Distributor
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px').bg-blue.rounded-20px.text-white Managed Service Providers (MSPs)
+
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Reseller
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Distributor
+                    a(href='#' class='text-xs lg:text-xs py-5px px-10px extra hidden').bg-blue.rounded-20px.text-white Managed Service Providers (MSPs)
+
+                    a(href='#' class='moreTrigger text-xs lg:text-xs py-5px px-10px').bg-hawkesBlue.rounded-20px.text-blue
+                        span.number +2
+                        span.labelText more
+
+        p(class='text-sm lg:text-base text-center lg:text-left').text-textGray=desc
+    div(class='py-15px px-25px flex-col lg:flex-row gap-10px justify-start lg:justify-end ').flex
+
+        a( href='../templates/companyProfileChannelPartner.html' class='btn large font-bold text-xs xl:text-sm bg-white text-blue justify-center w-full lg:w-fit')
+            span VIEW COMPANY PROFILE
+
+        a( href='#' class='btn large font-bold text-xs xl:text-sm bg-yellow text-white justify-center w-full lg:w-fit')
+            span VIEW WEBSITE
+
+        a( href='../templates/getQuote.html' class='btn large font-bold text-xs xl:text-sm bg-blue text-white justify-center w-full lg:w-fit')
+            span GET A QUOTE

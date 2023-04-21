@@ -1,0 +1,101 @@
+
+
+doctype html
+html(lang="en")
+    head
+        title Managed Service Providers (MSPs) partner programs | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+
+        main.transition-all.duration-200
+
+            section.bg-gray
+
+                .container
+
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+
+                                div(class='text-xs lg:text-base flex gap-5px items-center justify-center').text-textGray.font-medium
+                                    a(href='../templates/index.html' class='transition-all duration-200 hover:text-blue') HOME
+                                    span(class='') /
+                                    a(href='../templates/searchVendors.html' class='transition-all duration-200 hover:text-blue') SASS PARTNER PROGRAMS
+                                    span(class='') /
+                                    span MSPS
+
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Managed Service Providers (MSPs) partner programs
+
+                                p(class='text-base lg:text-body text-center max-w-full') A managed service provider (MSP) is an IT company that manages remotely the infrastructure and systems for a customer. In order to reduce costs and not to hire any IT personnel many small and mid-sized companies choose to hire an MSP company based on a subscription model to manage all their IT needs.
+
+                            div(class='flex justify-center')
+
+                                form(class='flex gap-10px w-full lg:w-[500px] max-w-full pt-5px pr-5px pb-5px pl-15px').bg-white.shadow-card.rounded-40px.overflow-hidden
+
+                                    input(class='grow pl-15px' placeholder='Type to search for a product category').rounded-30px.outline-none
+
+                                    button( type='submit' class='btn large font-bold text-xs xl:text-sm bg-blue text-white')
+                                        span SEARCH
+                                        include ../assets/images/global/searchWhite.svg
+
+            section
+                .container
+
+                    .flex.flex-col.gap-50px.w-full
+
+                        .flex.flex-col.gap-15px.w-full
+
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Partner Programs
+
+                            p(class='text-base lg:text-body text-center lg:text-left max-w-full') Find the best SaaS and software partner programs based on the product category and designed especially for MSPs.
+
+                        div(class='gap-30px lg:gap-40px').flex.flex-col.w-full
+
+                            - var name = 'Sales & Marketing'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/marketing.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Customer Management'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/customer-management.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Project Management'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/project-management.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Operations & Workflow'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/operations-workflow.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Tracking & Measurement'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/tracking.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Accounting & Financials'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/accounting.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'HR'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/hr.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+                            - var name = 'Web Mobile Software Development'
+                            - var terms = ["Ad Serving", "Affiliate Marketing", "Campaign Management", "Content Marketing", "Document Management", "ECM", "Email Marketing", "Engagement Tools", "E-Signature", "Event Management", "Marketing Automation", "POS", "Quotes & Orders", "Sales Intelligence", "SEO & SEM", "Social Media Marketing", "Surveys & Forms"]
+                            - var img = '../assets/images/search/vendor-type-categories/web-development.png'
+                            include components/global/searchCategoryImageGroup.pug
+
+
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,188 @@
+mixin techItem(name)
+    div(class='w-full').flex.gap-10px.items-center
+        div(class='w-[15px] h-[15px] rounded-full').bg-blue
+        a( href='../templates/searchResultsPartnerPrograms.html' class='text-base lg:text-lg hover:text-blue').font-semibold=name
+
+
+doctype html
+html(lang="en")
+    head
+        title Cupix - Vendor Company Profile | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='px-30px lg:px-80px py-30px lg:px-40px gap-30px lg:gap-50px').bg-white.shadow-card.flex.flex-col.rounded-20px
+                        div(class='flex w-full flex-col lg:flex-row items-center gap-20px')
+                            div(class='w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] border-blue border-2 p-5px').flex.items-center.justify-center.rounded-full
+                                img(src='../assets/images/company-profile/cupix.png' alt='Cupix Logo' width='150' height='150').w-full
+
+                            div(class='flex flex-col grow gap-10px')
+                                div(class='flex flex-col-reverse lg:flex-row gap-20px w-full items-center')
+                                    h1(class='text-2xl lg:text-3xl font-inter font-bold') Cupix
+                                    div(class='flex gap-7px items-center px-10px py-5px').bg-gray.rounded-30px
+                                        include ../assets/images/company-item/rating.svg
+                                        h4(class='text-xs lg:text-sm font-bold').text-yellow Featured Company
+                                div(class='flex gap-20px w-full items-center flex-col lg:flex-row')
+                                    div(class='flex gap-7px items-center')
+                                        include ../assets/images/global/circles.svg
+                                        h4(class='text-xs lg:text-sm font-semibold') Company Type: <strong>Vendor</strong>
+                                    div(class='flex gap-7px items-center')
+                                        include ../assets/images/company-item/rating.svg
+                                        h4(class='text-xs lg:text-sm font-semibold') Rating: <strong>5.0</strong> / <span class='text-textGray'>5.0</span>
+                                    div(class='country').bg-white.overflow-hidden.rounded-30px.p-5px.flex.gap-5px.items-center.w-fit
+                                        img(src='../assets/images/flags/US.svg' class='w-[15px] lg:w-[20px]')
+                                        h4(class='text-xs lg:text-sm font-semibold').font-bold Country: <strong>United States</strong>
+
+
+                                div(class='flex-row gap-10px justify-start lg:justify-start ').flex
+
+                                    a( href='../templates/partnerPortals.html' class='btn font-bold text-xs xl:text-sm bg-blue text-white justify-center w-full lg:w-fit')
+                                        span JOIN AS A PARTNER
+
+                        .divider
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center.w-full
+                            h2(class='text-2xl lg:text-2.5xl font-bold font-inter text-left') Overview:
+                            p(class='w-full text-base lg:text-xl text-left')
+                                | 3D Digital Twin solution provider mainly targeting AEC industry customers or facilities owner customers.
+                                | <br><br>
+                                | We create and deliver 3D Digital Twins based on consumer level 360 cameras.
+                                | <br><br>
+                                | We have created an easy-to-deploy 3D Digital Twin platform enabling architecture, construction, and engineering professionals to manage jobsites remotely and to collaborate each other effectively.
+                                | <br><br>
+                                | Cupix is the trusted partner of choice for delivering the industry’s most flexible and easiest-to-deploy 3D digital twin platform to builders and owners everywhere.
+                                | <br><br>
+                                | Cupix supports the entire AEC ecosystem across the entire built-world lifecycle and serves every stakeholder’s needs including owners, contractors, project managers, BIM/VDC specialists, and property managers.
+
+                        .divider
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center.w-full
+                            h2(class='text-2xl lg:text-2.5xl font-bold font-inter text-left') Industries:
+                            div(class='flex-col lg:flex-row gap-10px lg:gap-50px').flex.justify-start.w-full
+                                .flex.flex-col.gap-20px
+                                    +techItem('Software')
+                                    +techItem('Energy')
+                                    +techItem('General Industry')
+                                    +techItem('Oil & Gas')
+                                    +techItem('Shipping')
+                                .flex.flex-col.gap-20px
+                                    +techItem('Aerospace and Defense')
+                                    +techItem('Engineering & Construction')
+                                    +techItem('High Tech & Communications')
+                                    +techItem('Real Estate')
+                                    +techItem('Telecommunications')
+                                .flex.flex-col.gap-20px
+                                    +techItem('Chemicals & Life Sciences')
+                                    +techItem('Food and Beverage/CPG')
+                                    +techItem('Manufacturing')
+                                    +techItem('Retail')
+                                    +techItem('Utilities')
+                        .divider
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center.w-full
+                            h2(class='text-2xl lg:text-2.5xl font-bold font-inter text-left') Market Specialization:
+                            div(class='flex-col lg:flex-row gap-10px lg:gap-50px').flex.justify-start.w-full
+                                div(class='').flex.gap-10px.items-center
+                                    div(class='w-[15px] h-[15px] rounded-full').bg-blue
+                                    h4(class='text-base lg:text-lg').font-semibold Small & mid-sized businesses (B2B)
+                                div(class='').flex.gap-10px.items-center
+                                    div(class='w-[15px] h-[15px] rounded-full').bg-blue
+                                    h4(class='text-base lg:text-lg').font-semibold Enterprise (B2B
+
+
+                        .divider
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center.w-full
+                            h2(class='text-2xl lg:text-2.5xl font-bold font-inter text-left') Partner Program available for:
+                            div(class='flex-col lg:flex-row gap-10px lg:gap-50px').flex.justify-start.w-full
+                                .flex.flex-col.gap-20px
+                                    +techItem('White Label')
+                                    +techItem('Distributor ')
+                                    +techItem('System Integrator')
+                                .flex.flex-col.gap-20px
+                                    +techItem('Reseller ')
+                                    +techItem('API Program (Developers)')
+                                .flex.flex-col.gap-20px
+                                    +techItem('Value Added Reseller (VAR)')
+                                    +techItem('Managed Service Provider (MSP)')
+
+                        .divider
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center.w-full
+                            h2(class='text-2xl lg:text-2.5xl font-bold font-inter text-left') Contact Details:
+                            div(class='flex-col lg:flex-row gap-10px lg:gap-50px').flex.justify-start.w-full
+                                a(href='#' class='w-fit').flex.gap-10px.items-center
+                                    div(class='w-[15px] h-[15px]')
+                                        img(src='../assets/images/company-profile/location.svg')
+                                    h4(class='text-base lg:text-lg').font-semibold 805 Veterans Blvd, Suite 305
+                                a(href='tel:+014083136218' class='w-fit').flex.gap-10px.items-center
+                                    div(class='w-[15px] h-[15px]')
+                                        img(src='../assets/images/company-profile/phone.svg')
+                                    h4(class='text-base lg:text-lg').font-semibold +014083136218
+                                a(href='mailto:info@cupix.com' class='w-fit').flex.gap-10px.items-center
+                                    div(class='w-[15px] h-[15px]')
+                                        img(src='../assets/images/company-profile/mail.svg')
+                                    h4(class='text-base lg:text-lg').font-semibold info@cupix.com
+
+                        .divider
+                        div(class='flex-row gap-10px justify-start lg:justify-start ').flex
+
+                            a( href='../templates/partnerPortals.html' class='btn large font-bold text-xs xl:text-sm bg-blue text-white justify-center w-full lg:w-fit')
+                                span JOIN AS A PARTNER
+            section
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-company gap-30px lg:gap-50px').grid
+
+                        div(class='gap-40px').flex.flex-col
+
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Vendors you might also be interest in:
+
+                            div(class='w-full').flex.flex-col.gap-50px
+                                - var img= '../assets/images/company-item/loqate.png'
+                                - var name= 'Loqate a GBG solution'
+                                - var lastBtnTex= 'JOIN AS PARTNER'
+                                - var desc= 'Loqate, GBG\'s location intelligence business unit, is a leading developer of Global Location Data Solutions, including Address Verification and Geocode. WHY PARTNER Loqate partners deliver a richer global data product and increase their revenues...'
+                                include components/global/company.pug
+                                - var img= '../assets/images/company-item/vcc.png'
+                                - var name= 'VCC Live'
+                                - var lastBtnTex= 'JOIN AS PARTNER'
+                                - var desc= 'Move your Contact Center to the Cloud with secure and assisted implementation. Talk to our experts now and get a personalized deployment plan. With VCC Live, helpdesk and customer support...'
+                                include components/global/company.pug
+                                - var img= '../assets/images/company-item/marketman.png'
+                                - var name= 'Marketman'
+                                - var lastBtnTex= 'JOIN AS PARTNER'
+                                - var desc= 'MarketMan is a cloud-based inventory management and purchasing app focused on streamlining procurement, delivery and accounting. Our all-in-one restaurant management platform offers...'
+                                include components/global/company.pug
+                                - var img= '../assets/images/company-item/claritytel.png'
+                                - var name= 'ClarityTel'
+                                - var lastBtnTex= 'JOIN AS PARTNER'
+                                - var desc= 'ClarityTel is a leading nationwide Hosted IP PBX and SIP Trunk provider. Since 2003, ClarityTel has leveraged its expertise in telephony engineering and software design to deliver enhanced tele...'
+                                include components/global/company.pug
+
+                        div
+                            div.relative.h-full
+                                aside(class='sidebar-container sticky top-[100px] pb-0 lg:pb-80px').flex.flex-col.gap-50px
+                                    div.flex.flex-col.gap-15px.w-full.justify-center.items-center
+                                        img(src='../assets/images/banners/acronis-banner.png' alt='Acronis sponsored banner' loading='lazy').shadow-card.rounded-10px.w-fit
+                                        div.flex.flex-col.gap-7px
+                                            .flex.gap-7px.items-center.justify-center
+                                                img(src='../assets/images/global/info-dark.svg' alt='info icon' loading='lazy')
+                                                h4.text-base.font-bold Advertisement
+                                            p.text-textGray.text-sm.text-center Interested in advertising on our platform? Reach out:
+                                            a(href='../templates/contactUs.html').text-center.text-blue.font-bold.text-base Contact us!
+                                    div(class='py-25px px-20px').flex.flex-col.gap-15px.bg-white.shadow-card.w-full.rounded-10px
+                                        h4.text-base.font-bold Related Categories:
+                                        .divider
+                                        .flex.flex-col.gap-5px.w-full
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue Affiliate Marketing
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue Campaign Management
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue Content Marketing
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue Sales Intelligence
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue Sales Process Management
+                                            a(href='../templates/searchResultsPartnerPrograms.html' class='text-sm font-semibold underline').text-blue SEO & SEM
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

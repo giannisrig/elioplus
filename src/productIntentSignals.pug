@@ -1,0 +1,457 @@
+mixin tableItem(name, country, company, looking, size, hidden)
+    -var extraClass = ''
+    if hidden
+        - extraClass = ' extra hidden'
+
+    tr(class='text-sm lg:text-base font-medium mdl:font-bold'+extraClass)
+        td=name
+        td
+            .flex.w-full.justify-start
+                - var img= '../assets/images/flags/US.svg'
+                - var name='United States'
+                - var href='#'
+                include components/global/country.pug
+        td
+            .flex.items-center.justify-start.gap-5px
+                img(src='../assets/images/intent-signals/loqate.png' alt='company logo' loading='lazy' class='hidden mdl:block')
+                div=company
+        td
+            a(href='#modal54').flex.items-center.justify-start.gap-5px.modal-trigger
+                div(class='transition-all duration-200 hover:text-blue')=looking
+                img(src='../assets/images/global/info.svg' alt='info icon' class='w-[15px] mdl:w-[20px]')
+        td
+            div.text-center=size
+
+
+
+mixin featureItem(name, included)
+    .flex.items-center.gap-5px
+        div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+            if included
+                img(src='../assets/images/pricing/check.svg' alt='Included feature for ' + name loading='lazy')
+            else
+                img(src='../assets/images/pricing/close.svg' alt='Not included feature for ' + name loading='lazy')
+        if included
+            div(class='text-[15px]')=name
+        else
+            div(class='text-[15px]').text-textGray=name
+
+
+
+mixin techItem(name)
+    a( href='#' class='w-max smw-full').flex.gap-10px.items-center
+        div(class='hidden sm:block w-[8px] h-[8px]  sm:w-[15px] sm:h-[15px] rounded-full').bg-blue
+        h4(class='text-sm sm:text-base lg:text-lg transition-all duration-200 hover:text-blue').font-semibold=name
+
+
+doctype html
+html(lang="en")
+    head
+        title Intent Signals & Lead Generation | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+
+            - var productName = 'Intent Signals'
+            - var btnText = 'GET STARTED'
+            - var btnLink = 'https://calendly.com/elioplus'
+            - var terms = { 'Overview': '#overview',  'Our Clients': '#clients',  'Features': '#features',  'Leads': '#leads' , 'How it works': '#howItWorks'  , 'Why Intent': '#whyIntent' , 'Pricing': '#pricing' }
+            include components/header/productHeader.pug
+
+            section(id='overview').bg-gradient-product.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Intent Signals
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Leads & RFQs generation network.
+                            p(class='text-base lg:text-body text-center lg:text-left') The Intent Signals partner program is for agencies looking to expand their offerings and help their clients grow their sales pipeline. Whether you offer marketing or sales services for your clients we can help you grow your business faster. Win new customers, expand your services or upsell your current clients.
+
+                            div(class='flex items-center gap-10px xl:gap-15px flex-col lg:flex-row')
+                                a(href='https://calendly.com/elioplus' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    include ../assets/images/global/circles.svg
+                                    span GET A DEMO
+
+                        .flex.justify-center.items-center
+                            img(src='../assets/images/intent-signals/opener.svg' alt='Intent Signals, Leads & RFQs generation network by Elioplus.' class='max-w-[250px] lg:max-w-full')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+
+
+            section(id='clients')
+                .container
+                    .flex.flex-col.gap-40px
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Our Clients
+                            p(class='w-full text-base lg:text-body') Leading IT companies trust Elioplus and use Intent Signals to grow their sales pipeline.
+                        div(class='m-carousel flex sm:grid sm:grid-cols-3 lg:flex' data-items=1).gap-30px.justify-center
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/intent-signals/acronis.png' alt='acronis logo' loading='lazy')
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/intent-signals/cloudit.png' alt='cloudit logo' loading='lazy')
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/intent-signals/nttdata.png' alt='nttdata logo' loading='lazy')
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/intent-signals/massivegrid.png' alt='massivegrid logo' loading='lazy')
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/intent-signals/marketman.png' alt='marketman logo' loading='lazy')
+
+            section(id='features').bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Features that matter
+                            p(class='w-full text-base lg:text-body') Avoid a ton of features that make your life difficult. Through Elioplus PRM you are focusing on your channel partner's productivity and needs through collaboration and incentivization.
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/intent-signals/high-leads.svg' alt='igh intent leads & RFQs with the Elioplus Intent Signals Solution' loading='lazy' class='max-w-[250px] lg:max-w-full')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') High intent leads & RFQs
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') Get access to requests from end-customers that are looking for quotations based on your expertise and tech partnerships. Reach out to high intent leads that have expressed their intent to buy products and solutions that fit your needs.
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Get featured on our network
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') Your profile will be recommended on the top spot of all relevant landing pages on our network based to help you drive high quality traffic to your website. Potential clients can also reach out directly to your company for quotation that is shared exclusively to you.
+
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/intent-signals/featured.svg' alt='Get featured on our network with the Elioplus Intent Signals Solution' loading='lazy' class='max-w-[250px] lg:max-w-full')
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/intent-signals/campaigns.svg' alt='Start your campaigns with the Elioplus Intent Signals Solution' loading='lazy' class='max-w-[250px] lg:max-w-full')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Start your campaigns
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') You can filter and export all available data to be used to your outreach campaigns by your team. We provide company insights for every lead along with contact details for your marketing efforts or ad campaigns.
+
+
+
+            section(id='leads').bg-gray
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Latest Quotes & Leads
+                            p(class='w-full text-base lg:text-body') View a sample of the latest quote requests and leads uploaded on our platform based on the location and product/technologies. This list is being updated multiple times during the day.
+                            div(class='flex items-center justify-center mt-20px')
+                                a(href='https://medium.com/@elioplus.com/intent-signals-how-it-works-b7701c427910' class='btn large font-bold bg-white text-sm xl:text-base')
+                                    span LEARN MORE ABOUT OUR LEADS
+                                    include ../assets/images/global/next.svg
+
+                        div(class='w-full overflow-x-auto').flex.flex-col.rounded-10px.overflow-hidden.shadow-card
+                            table(class='w-max sm:w-full').bg-white
+                                thead.bg-blue.text-white
+                                    tr
+                                        th Type
+                                        th.text-left Country
+                                        th.text-left Company
+                                        th.text-left Looking for
+                                        th Company Size
+                                tbody
+                                    +tableItem('Lead', 'United States', 'Netpoleons.com', 'Dell Emc', '2')
+                                    +tableItem('RFQ', 'United States', 'Blueejapan', '3D Architecture', '1')
+                                    +tableItem('Lead', 'United States', 'Elizabeth Seton school', 'Channel Partners', '51-200')
+                                    +tableItem('RFQ', 'United States', 'BloomchemAG BV', 'Salesforce', '11-50')
+                                    +tableItem('Lead', 'United States', 'Netpoleons.com', 'Dell Emc', '2')
+                                    +tableItem('RFQ', 'United States', 'Blueejapan', '3D Architecture', '1')
+                                    +tableItem('Lead', 'United States', 'Elizabeth Seton school', 'Channel Partners', '51-200')
+                                    +tableItem('RFQ', 'United States', 'BloomchemAG BV', 'Salesforce', '11-50')
+
+                                    +tableItem('Lead', 'United States', 'Netpoleons.com', 'Dell Emc', '2', true)
+                                    +tableItem('RFQ', 'United States', 'Blueejapan', '3D Architecture', '1', true)
+                                    +tableItem('Lead', 'United States', 'Elizabeth Seton school', 'Channel Partners', '51-200', true)
+                                    +tableItem('RFQ', 'United States', 'BloomchemAG BV', 'Salesforce', '11-50', true)
+                                    +tableItem('Lead', 'United States', 'Netpoleons.com', 'Dell Emc', '2', true)
+                                    +tableItem('RFQ', 'United States', 'Blueejapan', '3D Architecture', '1', true)
+                                    +tableItem('Lead', 'United States', 'Elizabeth Seton school', 'Channel Partners', '51-200', true)
+                                    +tableItem('RFQ', 'United States', 'BloomchemAG BV', 'Salesforce', '11-50', true)
+                            a(href='#' class='text-sm mdl:text-base table-load').bg-gray2.text-center.text-blue.font-bold.py-20px.w-full LOAD MORE INTENT SIGNALS
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-base sm:text-xl lg:text-2xl font-bold font-inter') Get access to <span class='text-blue'>121,261</span> more active leads on our platform today
+                            div(class='flex items-center justify-center mt-20px')
+                                a(href='https://calendly.com/elioplus' class='btn large font-bold bg-white text-sm xl:text-base')
+                                    span GET A DEMO
+                                    include ../assets/images/global/next.svg
+
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        div(class='gap-30px lg:gap-50px').flex.flex-col
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center') Popular Locations
+                            div(class='gap-7px lg:gap-15px').countries.flex.justify-center.flex-wrap
+                                - var img= '../assets/images/flags/US.svg'
+                                - var name='United States'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Australia.svg'
+                                - var name='Australia'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/India.svg'
+                                - var name='India'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Nigeria.svg'
+                                - var name='Nigeria'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/SouthAfrica.svg'
+                                - var name='South Africa'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/NewZealand.svg'
+                                - var name='New Zealand'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Philippines.svg'
+                                - var name='Philippines'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Singapore.svg'
+                                - var name='Singapore'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/France.svg'
+                                - var name='France'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Germany.svg'
+                                - var name='Germany'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Italy.svg'
+                                - var name='Italy'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Netherlands.svg'
+                                - var name='Netherlands'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Poland.svg'
+                                - var name='Poland'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Spain.svg'
+                                - var name='Spain'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/UK.svg'
+                                - var name='United Kingdom'
+                                - var href='#'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/United_Arab_Emirates.svg'
+                                - var name='United Arab Emirates'
+                                - var href='#'
+                                include components/global/country.pug
+
+
+
+                        div(class='gap-30px lg:gap-50px').flex.flex-col
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center') Popular Technologies
+                            div(class='flex-col sm:flex-row gap-15px md:gap-25px mdl:gap-50px').flex.justify-center.w-full
+                                div(class='flex-row sm:flex-col justify-center gap-10px flex-wrap').flex
+                                    +techItem('SAP')
+                                    +techItem('Cisco')
+                                    +techItem('Ibm')
+                                    +techItem('Sophos')
+                                    +techItem('Zoho')
+                                div(class='flex-row sm:flex-col justify-center gap-10px flex-wrap').flex
+                                    +techItem('Salesforce')
+                                    +techItem('Avaya')
+                                    +techItem('Microsoft')
+                                    +techItem('Oracle')
+                                    +techItem('Cloudflare')
+                                div(class='flex-row sm:flex-col justify-center gap-10px flex-wrap').flex
+                                    +techItem('McAfee')
+                                    +techItem('Sage')
+                                    +techItem('Fortinet')
+                                    +techItem('Arista Networks')
+                                    +techItem('Crowdstrike')
+                                div(class='flex-row sm:flex-col justify-center gap-10px flex-wrap').flex
+                                    +techItem('Dell')
+                                    +techItem('Pos Software')
+                                    +techItem('Google')
+                                    +techItem('Kofax')
+                                    +techItem('Lenovo')
+                                div(class='flex-row sm:flex-col justify-center gap-10px flex-wrap').flex
+                                    +techItem('Meraki')
+                                    +techItem('Mimecast')
+                                    +techItem('Netapp')
+                                    +techItem('Netsuite')
+                                    +techItem('Ringcentral')
+
+            section(id='howItWorks').bg-blue.bg-particles.bg-cover
+
+                .container
+
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center.text-white
+
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center') How it works
+                            p(class='w-[780px] max-w-full text-base lg:text-body') Intent Signals is as simple as it can. Get started in less than a minute
+
+                        div(class='grid-cols-1 md:grid-cols-2 mdl:grid-cols-3 grid lg:flex lg:flex-row gap-30px lg:gap-50px').text-center.items-center.justify-center
+
+                            div(class='w-[320px] max-w-full mx-auto px-15px lg:px-25px py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/join.svg' alt='Join icon' loading='lazy' width='55' height='55')
+
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-body').font-bold Join
+                                    p().text-sm  Sign up and add your company’s expertise and technologies.
+
+                            div(class='w-[320px] max-w-full mx-auto px-15px lg:px-25px py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/quotes.svg' alt='Quotes icon' loading='lazy' width='55' height='55')
+
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-body').font-bold Quotes
+                                    p().text-sm  Receive quotation requests from local businesses for your products.
+
+                            div(class='w-[320px] max-w-full mx-auto px-15px lg:px-25px py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/data.svg' alt='Intent Data icon' loading='lazy' width='55' height='55')
+
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-body').font-bold Intent Data
+                                    p().text-sm  Get access to intent data for businesses based on your expertise.
+
+                        div(class='flex justify-center items-center gap-10px xl:gap-20px')
+                            a(href='https://medium.com/@elioplus.com/intent-signals-how-it-works-b7701c427910' class='btn font-bold text-sm bg-white')
+                                span LEARN MORE
+                                include ../assets/images/global/next.svg
+
+            section(id='whyIntent')
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Why choose Intent Signals?
+                            p(class='w-full text-base lg:text-body') The Elioplus Intent Signals is different from other lead generation solutions for 3 main reasons:
+
+                        div(class='grid-cols-1 md:grid-cols-2 mdl:grid-cols-3 grid lg:flex lg:flex-row gap-30px lg:gap-10px justify-start lg:justify-between')
+
+                            div(class='w-[380px] mx-auto max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='h-[250px]').flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/whyQuotes.svg' alt='Quotes' loading='lazy')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    h3(class='text-lg lg:text-2xl font-bold font-inter') Quotes
+                                    p(class='text-sm lg:text-base') You will be receiving quote requests from local businesses based on your product portfolio and technologies.
+
+                            div(class='w-[380px] mx-auto max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='h-[250px]').flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/whyTechnology.svg' alt='Technologies' loading='lazy')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    h3(class='text-lg lg:text-2xl font-bold font-inter') Technologies
+                                    p(class='text-sm lg:text-base') Our intent data uncover businesses that are in the market not only for product categories but also for specific technologies.
+
+                            div(class='w-[380px] mx-auto max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='h-[250px]').flex.items-center.justify-center
+                                    img(src='../assets/images/intent-signals/whyLocal.svg' alt='Local companies' loading='lazy')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    h3(class='text-lg lg:text-2xl font-bold font-inter') Local
+                                    p(class='text-sm lg:text-base') We host more than 10.000 technology categories on a local level to connect you with businesses that are looking for your expertise.
+
+                        div(class='grid-cols-1 lg:grid-cols-7-5 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Where we get our Leads and RFQs from
+                                p(class='w-full text-base lg:text-lg text-center lg:text-left') Our network has more than 20,000 landing pages for more than 5,000 technologies in 120 countries. Our visitors come from every corner in the world in order to find useful content, engage with local IT providers and ask for quotations. In some cases, we also receive multiple RFQs from local businesses via our communication channels. Local companies trust our network to find the best IT providers in their area, get the best prices for the products they are looking for or search for implementation, support and training services.
+
+                            div(class='flex items-center justify-center pl-30px')
+                                img(src='../assets/images/intent-signals/leadsFrom.svg' alt='Where we get Leads and RFQs data for Elioplus Intent Signals software solution' loading='lazy' class='max-w-[250px] lg:max-w-full')
+
+            section(id='pricing').bg-gray
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+
+                        div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                            h2(class='text-base lg:text-lg font-semibold').text-blue LEAD GENERATION & RFQs
+                            h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Intent Signals Pricing
+                            p(class='text-base lg:text-body text-center w-[900px] max-w-full') Grow your sales pipeline with leads and RFQs from thousands of local businesses near you. Contact us today and get a quote from our sales team.
+
+                        div(class='grid-cols-1 md:grid-cols-2 mdl:grid-cols-2 grid lg:flex lg:flex-row lg:justify-center items-center gap-30px lg:gap-50px').w-full
+
+                            div(class='w-[360px] max-w-full mx-auto lg:mx-0').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Free
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') Limited to small local IT companies, we offer a free plan to get access to a number of leads every month.
+
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €0
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Upgrade to a premium plan anytime.
+
+                                a(href='../templates/contactUs.html' class='btn large font-bold text-sm').bg-white.border-blackBlue.text-blackBlue.w-full.justify-center
+                                    span CONTACT US NOW
+                                    include ../assets/images/global/next.svg
+
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        +featureItem( 'Send quotes directly', true )
+                                        +featureItem( 'Limited no. of Leads', false )
+                                        +featureItem( 'Limited countries', false )
+                                        +featureItem( 'Limited categories', false )
+
+                            div(class='w-[360px] max-w-full mx-auto lg:mx-0').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left').text-blue Custom
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') The pricing is based on the country or regions that you are interested to gain access and is charged on a monthly basis.
+
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €100+
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Per month, you can cancel anytime.
+
+                                a(href='../templates/contactUs.html' class='btn large font-bold text-sm').bg-blue.text-white.w-full.justify-center
+                                    span CONTACT SALES
+                                    include ../assets/images/global/next.svg
+
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        +featureItem( 'Send quotes directly', true )
+                                        +featureItem( 'Unlimited no. of Leads', true )
+                                        +featureItem( 'Unlimited countries', true )
+                                        +featureItem( 'Unlimited categories', true )
+
+
+                        p(class='text-sm lg:text-base text-center w-[970px] max-w-full').text-textGray.italic
+                            | The pricing is based on the country or regions that you are interested to gain access and is charged on a monthly basis.
+
+            section
+                .container
+                    div(class='gap-80px lg:gap-160px').flex.flex-col
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                div(class='gap-5px lg:gap-10px').flex.flex-col
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Do you have questions?
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left').text-blue We have the answers.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') You can visit our help center with frequently asked questions about ElioPlus and our products & services.
+                                div(class='flex justify-center lg:justify-start')
+                                    a(href='../templates/faq.html' class='btn large font-bold text-sm xl:text-base text-blue')
+                                        span VIEW FREQUENTLY ASKED QUESTIONS
+                                        include ../assets/images/global/next.svg
+                            div(class='flex items-center justify-center')
+                                img( src='../assets/images/contact-us/faq.svg' alt='Visit the Elioplus FAQ to get answers for your questions' loading='lazy' class='max-w-[250px] lg:max-w-full')
+
+        div(id='modal54').modal.fixed.p-25px.bg-white.shadow-card.z-50.hidden
+            .flex.flex-col.w-full.gap-10px
+                h4(class='text-base lg:text-xl font-bold font-inter text-center lg:text-left') Products:
+                p 3d architecture,3d cad,8k-miles-software-services,accounting,ace-cloud-hosting,acronis,acts,adaptive insights,adapt-software-india-pvt-ltd,adobe,adobe creative cloud,akamai,algorit,alibaba,alibaba cloud,allion-technologies,analytics software,anaplan,ansible,ansys,anton-systems,appdynamics,appian,apple,arcserve,argil-consulting,ariba,aruba,autocad,autodesk,avaya,aws,azure,backup & restore,backup & restore,bamboohr,barco,barracuda-networks,bilytica,bim,bittitan,bluesapling-technologies,bmc,booz allen,brother,browserstack-inc,bt,business process management,ca,cal-business-solutions,callhippo,calliduscloud,canviz,channel-partners,circular-informationssysteme,cisco,citrix,clearcloud,cloud integration (ipaas),cloud management,cloud management,cloud management,cloud management,cloud management,cloud management,cloud management,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloud storage,cloudamize,cloudendure,cloudflare,cloudhealth,cloudmigrator365,cloudtech24,cognigix,cohesity,commscope,commvault,compliance,conga,conquer-technologies,covantex-llc,creative-computing-solutions,crm,crowdstrike,crystal reports,cyber security,daxperience,deflytics,dell,dell emc,design-centric,detewe-communications,digi-power,digital asset management,digital marketing,digitalmax,digitalocean,d-link,documation-software,docusign,domain-plus-international,domo,druva,d-t,dynacons-systems-solutions,dynamics,ecm,ecommerce,eguard-technology-services,elearning,email,emc,envato,epicor,epson,erp,erpnext,eunoia-limited,exceller-consultancy,fast-in-cloud,fiori,firewall,fis-clouds,forcepoint,fore-solutions,fortinet,fraud prevention,frox,f-secure,gbb,general-purpose cad,genesys,gigahertz-computing,global-business-solution,google cloud,google cloud,google meet,google workspace,google workspace,google workspace,google workspace,google workspace,google workspace,governance, risk & compliance (grc),green hr,hana,healthcare,help desk,hexagon,honeywell,hp,hpe,hr administration,huawei,ibm,illustris,iluvatech,imanage,imenu360,imperva,indyzone,infinidat,infinity-pos,infor,informatica,ingram micro,ingram micro,inspark-intelligent-business-solutions,intel,inventory management,iotap,ip-dynamics,isolved,i-t-solutions-india,ivanti,jd edwards,jd edwards,juniper,kisssoft,kofax,konica minolta,kubera-softtech-private-limited,kyndryl,lbt-mind-technology-pvt-ltd,learning management system,learning management system,lenovo,liferay,lightlever-systems,logmein,mailchimp,mait,malwarebytes,management-science-and-innovation,marketing automation,mcafee,mechknowsoft-pvt-ltd,medialine-eurotrade,metron,microsoft,microsoft azure,microsoft azure,mimecast,mitel,mobileiron,modulus-data,mongodb,mylingotrip,ncr,netapp,netgear,netmagic,netsuite,netsystem,netwrix,new-relic,ninth-dimension-it-solutions-pvt-ltd,novation-technologies,nutanix,nvidia,odoo,office-timeline,ofm-communications,oneglobe,oracle,oracle cloud,palo-alto,paradiso-solutions,pcloud,pentaho,petpooja-prayohsa-food-services-pvt-ltd,pipedrive,plm,poly,pos,power-bi,procurement,productivity suites,project management tools,project management tools,ptc,purevpn,qlik,quick heal,red hat,red hat,red hat,red hat,red-hat,ringcentral,risk management,robotic process automation,rsa,rubrik,ruckus,sage,sales intelligence,sales intelligence,sales process management,salesforce,salesforce marketing cloud,salesforce marketing cloud,sap,sap business bydesign,sap business one,sap business one,sap business one,sap business one,sap business one,sap business one,sap business one,sap businessobjects,sap ecc,sap ecc,sap hana,sap hana,sas,seo & sem,servicenow,sharepoint,shd,shipping & tracking,sia,siemens,sify,slick-account-pvt-ltd,smartbear,snowflake,softlayer,softnow-regina-kiluk,solarwinds,sophos,splunk,sti-infotech,sugarcrm,sumo logic,supply chain management,surveys & forms,symantec,tally,tally erp,teamviewer,techinpro,technobind,techsmith,temenos,tesisquare,the-createch-group,timextender,trade-well-it-solutions,trend-micro,twirll-product-of-embedded-business-solution,uipath,unified-communications,veeam,veritas,video conferencing,video conferencing,virtual-it,vmware,voip,vulnerability management,warehouse management,westbahn-management-gmbh,workday,workflow management,yotta,zendesk,zipbooks,zoho,zoho forms,zoom,zscaler,zwsoft
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,10 @@
+div().flex.w-full.bg-white.shadow-card.rounded-10px.overflow-hidden
+    img(src=img alt='Partner Program category '+name)
+    div( class='gap-10px lg:gap-15px').flex.flex-col.p-25px.justify-center
+        h4.font-bold.font-inter.text-2xl=name
+        div(class='h-[2px]').divider
+        .w-full.flex.gap-15px.flex-wrap
+            each term in terms ? terms : []
+                a(href='../templates/searchResultsPartnerPrograms.html' class='hover:text-blue').flex.items-center.gap-5px.py-10px.px-15px.text-textGray.transition-all.duration-200.border.border-gray.rounded-4px
+                    span().font-bold.text-sm=term
+                    img(src='../assets/images/global/next.svg')

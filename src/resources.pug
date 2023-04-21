@@ -1,0 +1,155 @@
+doctype html
+html(lang="en")
+    head
+        title Resources | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Elioplus Resources
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Information & guides of our products.
+                            p(class='text-base lg:text-body text-center lg:text-left') At Elioplus we care about our customers and we want to provide any required information and how-to guides of our products and services for IT vendors and channel partners.
+                        .flex.justify-center
+                            img( src='../assets/images/resources/opener.svg' alt='Information and Resources for the Elioplus products and services')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-50px
+                            div(class='text-center lg:text-left items-center lg:items-start').flex.flex-col.gap-10px
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') Partner Management
+                                p(class='w-full text-base lg:text-body') Resources and information regarding our Partner Management service.
+                            div(class='grid-cols-1 lg:grid-cols-2').grid.gap-50px
+                                - var img= '../assets/images/resources/what-is-prm.png'
+                                - var category='PARTNER MANAGEMENT RESOURCES'
+                                - var name='What is a partner relationship management system?'
+                                - var desc='Partner relationship management system or simply PRM is a software system that includes tools, modules and capabilities to help vendors manage and enable their partner network...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                                - var img= '../assets/images/resources/manage-channel-partners.png'
+                                - var category='PARTNER MANAGEMENT RESOURCES'
+                                - var name='How to manage channel partners'
+                                - var desc='Having a healthy channel network is paramount for vendors that rely on channel partners to drive revenue, up to 30% of total revenue in most cases. Recruiting new partners...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                                - var img= '../assets/images/resources/guide-for-partner-management.png'
+                                - var category='PARTNER MANAGEMENT RESOURCES'
+                                - var name='The Ultimate Guide for Partner Management'
+                                - var desc='An enterprise company in US operating in note taking software industry launched a reseller partner program because they used to offer only an affiliate partner program until now...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                                - var img= '../assets/images/resources/collaboration-tool.png'
+                                - var category='PARTNER MANAGEMENT RESOURCES'
+                                - var name='How it works: Collaboration Tool'
+                                - var desc='Bring your partner network together! Empower your team with a partner portal to optimize your network and give your partners powerful features to enable them to grow their sales...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                        .flex.flex-col.gap-50px
+                            div(class='text-center lg:text-left items-center lg:items-start').flex.flex-col.gap-10px
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') Partner Recruitment
+                                p(class='w-full text-base lg:text-body') Resources and information regarding channel partners and our Partner Recruitment service.
+                            div(class='grid-cols-1 lg:grid-cols-2').grid.gap-50px
+                                - var img= '../assets/images/resources/partnering-examples.png'
+                                - var category='PARTNER RECRUITMENT RESOURCES'
+                                - var name='Partnering Examples'
+                                - var desc='In today’s business environment if you don’t partner up you get isolated and defeated. Similar in businesses, if you don’t create partnerships it gets harder and harder to attract potential...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                                - var img= '../assets/images/resources/p2p-deals.png'
+                                - var category='PARTNER RECRUITMENT RESOURCES'
+                                - var name='Partner to Partner (P2P) Deals '
+                                - var desc='Create one-off or long term partnerships with other channel companies, that you belong to the same partner networks, to win more deals based on your industry expertise and location...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+                                - var img= '../assets/images/resources/pr-process.png'
+                                - var category='PARTNER RECRUITMENT RESOURCES'
+                                - var name='How the channel partner recruitment process works?'
+                                - var desc='Creating and scaling a partner network can make the difference for many SaaS companies in their growth efforts or to penetrate certain markets. But the channel partner recruitment process...'
+                                - var link='../templates/resourcesArticle.html'
+                                include components/global/resourcesArticleBig.pug
+
+            section.bg-gray
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        div(class='items-center lg:items-start text-center lg:text-left').flex.flex-col.gap-10px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') PRM alternatives
+                            p(class='w-full text-base lg:text-body') Compare the Elioplus PRM with other software solutions for partner recruitment management.
+                        div(class='w-full owl-carousel owl-theme' data-items='4')
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/impartner-logo.png'
+                                - var name='Elioplus PRM vs Partnerstack PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/allbound-logo.png'
+                                - var name='Elioplus PRM vs Allbound PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/zif-solutions-logo.png'
+                                - var name='Elioplus PRM vs Zift Solutions PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/salesforce-logo.png'
+                                - var name='Elioplus PRM vs Salesforce PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/impartner-logo.png'
+                                - var name='Elioplus PRM vs Partnerstack PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+            section.bg-white
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        h3(class='text-2xl lg:text-3xl font-bold font-inter text-center') Networks
+                        div(class='m-carousel' data-items='2').flex.w-full.justify-between.gap-30px
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/spiceworks.png' alt='Spiceworks Network' loading='lazy')
+                                p.text-sm A community for IT professionals and engage in relevant discussions and find local meetups.
+                                a(href='../templates/network.html' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/comptia.png' alt='Comptia Network' loading='lazy')
+                                p.text-sm A non-profit association that issues certifications for IT professionals in more than 120 countries.
+                                a(href='../templates/network.html' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/forrester.png' alt='Forrester Channel software' loading='lazy')
+                                p.text-sm The best channel software tech stack for 2021 by Jay McBain, Principal Analyst.
+                                a(href='https://www.forrester.com/blogs/channel-software-tech-stack-2021/' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/medium.png' alt='Medium Elioplus Blog' loading='lazy')
+                                p.text-sm The official blog of Elioplus on Medium, the most popular blogging network worldwide.
+                                a(href='https://medium.com/@elioplus' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/growann.png' alt='Growann List' loading='lazy')
+                                p.text-sm 14+ Best PRM Software in 2023, listing Elioplus PRM. A list currated by Nick Cotter and Growann.
+                                a(href='https://www.growann.com/best/partner-management-software-prm' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+
+            section
+                .container
+                    .flex.flex-col.gap-40px
+                        div(class='flex items-center justify-center w-full')
+                            include ../assets/images/global/cta.svg
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                            p(class='w-full lg:w-[854px] max-w-full text-base lg:text-body') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span CREATE YOUR ACCOUNT FOR FREE
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

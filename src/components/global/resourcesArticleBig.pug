@@ -1,0 +1,15 @@
+a(class='w-full max-w-[600px]' href=link).bg-white.shadow-card.overflow-hidden.rounded-10px.case-study.flex.flex-col
+    div(class='h-[330px]').bg-gray.flex.items-center.justify-center
+        img(src=img alt=name loading='lazy')
+    div(class='gap-10px lg:gap-15px py-20px lg:py-30px px-20px lg:px-25px grow').bg-white.flex.flex-col
+        div().flex.flex-col.gap-5px
+            h5(class='text-sm font-medium font-inter').text-textGray=category
+            h3(class='text-lg lg:text-2xl font-bold font-inter')=name
+        p(class='text-sm lg:text-base')=desc
+        .flex.flex-row.justify-between.items-center.mt-auto
+            .flex.items-center.gap-5px.text-base.font-semibold.text-textGray
+                div Last Updated:
+                div.text-blackBlue 15 April 2022
+            div(class='btn font-bold text-sm').text-blue
+                span READ FULL ARTICLE
+                include ../../../assets/images/global/next.svg

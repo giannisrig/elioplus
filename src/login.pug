@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        title Sign in to your Account | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col.justify-center.items-center
+                        .flex.flex-col.gap-10px.text-center.items-center.w-full
+                            a(href='../templates/index.html' class='w-[100px] lg:w-[150px]').block.header-logo
+                                include ../assets/images/global/logo.svg
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Sign in to your account
+                            p(class='text-base lg:text-body') Enter your credentials to login to your ElioPlus account.
+                        .flex.flex-col.gap-25px.text-center.items-center.w-full
+                            form(method='POST' class='w-[460px] max-w-full p-20px lg:p-40px').flex.flex-col.bg-white.shadow-card.rounded-10px.justify-center.items-center
+                                .w-full.flex.flex-col.gap-30px
+                                    .input-field
+                                        label(for='email' class='text-sm font-semibold') Email:
+                                        input(id='email' name='email' type='email' placeholder='Enter your email address or your username')
+                                    .input-field
+                                        label(for='password' class='text-sm font-semibold') Password:
+                                        input(id='password' name='password' type='password' placeholder='Enter your password')
+                                    .flex.justify-between
+                                        .input-field.flex-row.flex-gap-5px.items-center
+                                            input(id='remember' name='remember' type='checkbox')
+                                            label(for='remember' class='text-sm font-semibold text-textGray') Remember me
+                                        a(href='../templates/forgotPassword.html' class='text-textGray font-semibold text-sm hover:text-blue') Forgot your password?
+                                    .w-full.flex.flex-col.gap-20px
+                                        button(type='submit' class='btn large font-bold text-sm bg-blue text-white w-full justify-center')
+                                            span LOGIN TO MY ACCOUNT
+                                            include ../assets/images/global/next.svg
+                                        a( id='linkedinLogin' href='#' class='btn large font-bold text-sm text-linkedin border-linkedin w-full justify-center')
+                                            include ../assets/images/auth/linkedin.svg
+                                            span CONTINUE WITH LINKEDIN
+
+                            a(href='../templates/register.html' class='font-semibold text-sm text-blue underline') You don't have an account yet? Sign up for free now.
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,152 @@
+doctype html
+html(lang="en")
+    head
+        title About us | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') About ElioPlus
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Who we are and what we do.
+                            p(class='text-base lg:text-body text-center lg:text-left')  Elioplus is a B2B business development platform that enables software, SaaS and cloud vendors to recruit and manage their channel partners with our solutions. We use over 15 main criteria in order to match quickly, effectively and with accuracy vendors with channel partners and help them establish valuable partnerships and expand their network.
+                        img( src='../assets/images/aboutUs/aboutOpener.svg' alt='About Elioplus the B2B network for channel partners and software vendors')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-80px lg:gap-160px').flex.flex-col
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Overview
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') Since our beginning with have worked with both startup companies to help them kick off their partner program and attract their first partners up to enterprise level organizations that rely on our platform to further increase their network around the world. <br><br> We provide channel managers with tools to identify and partner with the best candidate companies and seamlessly optimize their network under the same roof. Partner management as it should be: <strong class='text-blue'>Effortless and affordable</strong>.
+                            div(class='flex items-center')
+                                img( src='../assets/images/aboutUs/aboutOverview.svg' alt='Overview of Elioplus company' loading='lazy')
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='flex items-center')
+                                img( src='../assets/images/aboutUs/aboutOurVision.svg' alt='The vision of an effective and effortless partner management tool' loading='lazy')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Our Vision
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') We envisioned a simple yet effective partner management tool accessible to small and medium businesses ready to be used without complex processes nor breaking the bank. <br><br> Channel managers can save time by connecting their favorite applications and move data around seamlessly while having insights about the performance and activity of their partners. <br><br> Now you can recruit, onboard, manage and train your channel partners from a single solution.
+                        .flex.flex-col.gap-40px
+                            .flex.flex-col.gap-10px.text-center.items-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') Why choose ElioPlus?
+                                p(class='w-full text-base lg:text-body') We provide channel partners with the same tools to manage all the tech partnerships from a single dashboard without signing up or logging in to multiple partner portals and wasting valuable time and resources in the process. As a channel company you can manage all your sales data, reporting, commissions, training and communications from a single point and connect all your team members in the same account for better visibility and performance.
+                            div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                                a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    include ../assets/images/global/circles.svg
+                                    span CREATE YOUR ACCOUNT FOR FREE
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') A roadmap to success
+                            p(class='w-full text-base lg:text-body')  Our journey began in 2015, since then we have worked with hundreds of companies, small and large, to help them on their indirect sales channel. We are constantly expanding by focusing on development and growth of the company & our clients
+                        div(class='timeline flex-col lg:flex-row text-left lg:text-center gap-20px lg:gap-0 pl-40px lg:pl-0').flex.justify-between.w-full.relative
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold Elioplus Company Founded
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray Aug. 2015
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold Launched Partner Recruitment
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray Mar. 2016
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold Onboard First Customers
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray Apr. 2016
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold Reached 100+ Clients
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray Apr. 2018
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold Launched Partner Management
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray May. 2019
+                            div(class='timeline-item flex flex-col gap-0 lg:gap-15px w-full lg:w-[150px] items-start lg:items-center relative z-1 pl-40px lg:pl-0')
+                                h4(class='text-sm lg:text-base').font-semibold 1.000+ Partner Portals Built
+                                div(class='w-[30px] h-[30px] rounded-full hidden lg:block').bg-blue
+                                h5(class='text-sm lg:text-base').text-textGray Jun. 2020
+            section.bg-blue.bg-particles.bg-cover
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center.text-white
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Leadership Team
+                            p(class='w-[780px] max-w-full text-base lg:text-body') Meet the team behind the ElioPlus who collectively responsible for the success of the company.
+                        div(class='flex-col lg:flex-row gap-30px lg:gap-50px').flex.text-center.items-center.justify-center
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div().rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/aboutUs/elias.png' alt='Ilias Ndreu - CEO & Business Development at Elioplus').rounded-full.border-2.border-blue
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-[20px]').font-bold Ilias Ndreu
+                                    p().text-sm.text-textGray  CEO Business Development
+                                .flex.flex-row.gap-20px.items-center
+                                    a(href='https://www.linkedin.com/in/iliasndreu' target='_blank').socialLink.rounded-full.flex.items-center.justify-center
+                                        include ../assets/images/global/linkedin.svg
+
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div().rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/aboutUs/vaggelis.png' alt='Vagelis Varvitsiotis - CTO & Lead Developer at Elioplus').rounded-full.border-2.border-blue
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-[20px]').font-bold Vagelis Varvitsiotis
+                                    p().text-sm.text-textGray  CTO & Lead Developer at Elioplus
+                                .flex.flex-row.gap-20px.items-center
+                                    a(href='https://www.linkedin.com/in/evagelos-varvitsiotis-27b70152/' target='_blank').socialLink.rounded-full.flex.items-center.justify-center
+                                        include ../assets/images/global/linkedin.svg
+
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div().rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    img(src='../assets/images/aboutUs/chris.png' alt='Christos Mantzikos - Marketing Community and Sales at Elioplus').rounded-full.border-2.border-blue
+                                .flex.flex-col.gap-5px
+                                    h4(class='text-base lg:text-[20px]').font-bold Christos Mantzikos
+                                    p().text-sm.text-textGray  Marketing Community and Sales
+                                .flex.flex-row.gap-20px.items-center
+                                    a(href='https://www.linkedin.com/in/chrismantzikos' target='_blank').socialLink.rounded-full.flex.items-center.justify-center
+                                        include ../assets/images/global/linkedin.svg
+                                    a(href='https://twitter.com/Xristos13magic' target='_blank').socialLink.rounded-full.flex.items-center.justify-center
+                                        include ../assets/images/global/twitter.svg
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Explore our products & services
+                            p(class='w-full text-base lg:text-body') Find out how we are matching IT vendors with channel partners and have created more than <strong>350k</strong> partnerships that expand across <strong>120+</strong> product/service categories and <strong>156</strong> different countries worldwide.
+                        div(class='w-full owl-carousel owl-theme' data-items='3')
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/products/partner-recruitment.svg'
+                                - var name='Partner Recruitment'
+                                - var desc='Get matched and recruit the best partners based on location, industry, experience and 13 more criteria.'
+                                - var link='../templates/productPR.html'
+                                include components/global/product.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/products/partner-relationship-manager.svg'
+                                - var name='Partner Management (PRM)'
+                                - var desc='Manage your partner network and incentivize your partner with our free partner relationship management software.'
+                                - var link='../templates/productPRM.html'
+                                include components/global/product.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/products/intent-signals.svg'
+                                - var name='Lead Generation'
+                                - var desc='Get access to quotation requests and intent data from local businesses that are on the market.'
+                                - var link='../templates/productIntentSignals.html'
+                                include components/global/product.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/products/referral-software.svg'
+                                - var name='Referral Software'
+                                - var desc='Referral software to scale and automate your referral partner program. Made exclusively for IT companies.'
+                                - var link='../templates/productReferralSoftware.html'
+                                include components/global/product.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/products/ma-marketplace.svg'
+                                - var name='M&A Marketplace'
+                                - var desc='Are you looking to sell your IT business? Visit our M&A Marketplace and get started in less than a minute.'
+                                - var link='../templates/productMA.html'
+                                include components/global/product.pug
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

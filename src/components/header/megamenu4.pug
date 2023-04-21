@@ -1,0 +1,23 @@
+mixin menuItem(name, href)
+    li
+        a(href=href).text-textGray.text-sm=name
+
+
+nav(id='PricingMenu').py-30px.px-40px.bg-white.absolute.megamenu.shadow-lg.rounded-xl.right-0
+    .flex.flex-row.gap-40px
+        .flex.flex-col.gap-25px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm IT Vendors
+                ul.flex.flex-col.gap-5px
+                    +menuItem('PRM Software Pricing', '../templates/pricingPRM.html')
+                    +menuItem('Partner Recruitment Pricing', '../templates/pricingPR.html')
+                    +menuItem('Intent Signals Pricing', '../templates/pricingIntent.html')
+        .separator.h-unset
+        .flex.flex-col.gap-40px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                a(href='../templates/register.html').flex.flex-col.gap-10px.megamenu-menu-item
+                    h4.font-inter.font-bold.text-sm Channel Partners
+                    p.text-textGray.text-sm All our features are completely free for channel partners without limitations.
+                    .btn.font-bold.text-blue.text-sm
+                        span Sign up for free
+                        include ../../../assets/images/global/next.svg

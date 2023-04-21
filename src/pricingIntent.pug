@@ -1,0 +1,116 @@
+mixin faqFeatureItem(question, answer)
+    details(class='text-sm lg:text-base').faq-item.bg-white.shadow-card.relative.rounded-4px.h-fit
+        summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px').flex.gap-7px.font-bold.relative
+            div.text-blue Q.
+            div=question
+        p(class='px-10px lg:px-20px py-25px')=answer
+
+mixin featureItem(name, included)
+    .flex.items-center.gap-5px
+        div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+            if included
+                img(src='../assets/images/pricing/check.svg' alt='Included feature for ' + name loading='lazy')
+            else
+                img(src='../assets/images/pricing/close.svg' alt='Not included feature for ' + name loading='lazy')
+        if included
+            div(class='text-[15px]')=name
+        else
+            div(class='text-[15px]').text-textGray=name
+
+doctype html
+html(lang="en")
+    head
+        title Intent Signals & Lead Generation Pricing | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                h2(class='text-base lg:text-lg font-semibold').text-blue INTENT SIGNALS PRICING
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Lead Generation & RFQs
+                                p(class='text-base lg:text-body text-center w-[900px] max-w-full') Grow your sales pipeline with leads and RFQs from thousands of local businesses near you. Contact us today and get a quote from our sales team.
+                            div(class='flex justify-center')
+                                a(href='../templates/productIntentSignals.html' class='btn large font-bold text-sm xl:text-base').bg-white
+                                    span VIEW THE INTENT SIGNALS PRODUCT
+                                    include ../assets/images/global/next.svg
+
+                        div(class='grid-cols-1 md:grid-cols-2 mdl:grid-cols-2 grid lg:flex lg:flex-row lg:justify-center items-center gap-30px lg:gap-30px').w-full
+
+                            div(class='w-[360px] max-w-full mx-auto lg:mx-0').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Free
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') Limited to small local IT companies, we offer a free plan to get access to a number of leads every month.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €0
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Upgrade to a premium plan anytime.
+                                a(href='../templates/contactUs.html' class='btn large font-bold text-sm').bg-white.border-blackBlue.text-blackBlue.w-full.justify-center
+                                    span CONTACT US NOW
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        +featureItem( 'Send quotes directly', true )
+                                        +featureItem( 'Limited no. of Leads', false )
+                                        +featureItem( 'Limited countries', false )
+                                        +featureItem( 'Limited categories', false )
+
+                            div(class='w-[360px] max-w-full mx-auto lg:mx-0').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left').text-blue Custom
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') The pricing is based on the country or regions that you are interested to gain access and is charged on a monthly basis.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €100+
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Per month, you can cancel anytime.
+                                a(href='../templates/contactUs.html' class='btn large font-bold text-sm').bg-blue.text-white.w-full.justify-center
+                                    span CONTACT SALES
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        +featureItem( 'Send quotes directly', true )
+                                        +featureItem( 'Unlimited no. of Leads', true )
+                                        +featureItem( 'Unlimited countries', true )
+                                        +featureItem( 'Unlimited categories', true )
+
+
+                        p(class='text-sm lg:text-base text-center w-[970px] max-w-full').text-textGray.italic
+                            | The pricing is based on the country or regions that you are interested to gain access and is charged on a monthly basis.
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-50px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/pricing/intent-cta.svg' alt='Join more than 120k companies using Elioplus for increasing their Intent Signals and RFQ data' loading='lazy' class='max-w-[350px] lg:max-w-full')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') More than <span class='text-blue'>120,000</span> companies are using Elioplus.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') What are you waiting for? Get started now and win new customers, expand your services or upsell your current clients and easily grow your network.
+
+                                div(class='flex justify-center lg:justify-start gap-15px')
+                                    a(href='../templates/productIntentSignals.html' class='btn large font-bold text-sm xl:text-base')
+                                        span INTENT SIGNALS DETAILS
+                                        include ../assets/images/global/next.svg
+                                    a(href='../templates/contactUs.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                        span CONTACT SALES
+                                        include ../assets/images/global/next.svg
+            section
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Frequently Asked Questions
+                            p(class='w-full text-base lg:text-body text-left') Common questions about the Elioplus Intent Signals solution.
+                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px').grid
+                            +faqFeatureItem('What is the pricing?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Is there a limit on the number of leads?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('What regions do you cover?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Is there a trial option?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('What type of data do you provide?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

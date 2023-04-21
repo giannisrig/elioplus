@@ -1,0 +1,142 @@
+mixin olItem(name, href)
+    li
+        a(href=href class='text-base go-to').text-textGray=name
+
+doctype html
+html(lang="en")
+    head
+        title What is a partner relationship management system? | Resources Article | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.py-0
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-legal').grid.gap-0
+                        div(class='gap-80px lg:gap-80px px-50px py-100px border-x-2 border-gray').flex.flex-col.w-full
+                            div(class='gap-30px lg:gap-30px').flex.flex-col.w-full
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') What is a partner relationship management system?
+                                p(class='italic text-base lg:text-xl') Partner relationship management system or simply PRM is a software system that includes tools, modules and capabilities to help vendors manage and enable their partner network.
+                                img(src='../assets/images/resources/article/featured.png' alt='Read at Elioplus:What is a partner relationship system' loading='lazy').w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.my-20px
+                                p(class='text-base lg:text-body') While traditional partner relationship management systems were viewed mostly as a database to manage partner contact information modern PRM software applications are focused on incentives and social collaboration features to help vendors activate and enable their partners to perform better on their sales efforts and thus increasing indirect revenues.
+                                p(class='text-base lg:text-body') While vendors are usually driven by their motivation to enter fast new markets and keep their financial overhead at a minimum, channel partners on the other hand need to be trained properly, invest in their salespeople to understand the product or solution and the sales process and finally benefit from the commission scheme in order to make sense to make this investment. This is what a partner relationship management system should include in the methods offered to increase partner engagement.
+                                p(class='text-base lg:text-body') Some of the typical features found in a partner relationship management system application are deal registration, lead distribution, content library, analytics, onboarding and training, MDF request programs and joint business planning. Below is a brief overview of these features and their importance.
+
+
+                            div(class='gap-50px lg:gap-80px').flex.flex-col.w-full
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Deal registration
+                                    p(class='text-base lg:text-body') Having a deal registration plan is place is a basic but also great incentive for channel partners as it gives them peace of mind to work on their leads without the worries of having to compete with other partners of the same network or even with the vendor itself.
+                                    img(src='../assets/images/resources/article/deal-registration.png' alt='Deal Registration' loading='lazy').w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.my-20px
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Lead Distribution
+                                    p(class='text-base lg:text-body') Another great way to incentivize partners is the send them leads from companies that operate in their market and would to work with a local partner. Lead distribution can be used to award the top performing channel partners or to boost companies that are lagging, it’s a strategic decision.
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Market development funds (MDFs)
+                                    p(class='text-base lg:text-body') Many vendors choose to deploy market development funds or Co-op Funds in order to help channel partner create local awareness about their product. While these funds can be prove to be very helpful there are a number of factors to consider before defining such programs.
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Content Library
+                                    p(class='text-base lg:text-body') Providing update and relevant material like product documentation, sales decks, marketing material and other important documents it’s critical for a vendor’s partner network as it provides the right tools to their partners and salesforce in order to close more deals.
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Collaboration
+                                    p(class='text-base lg:text-body') At this day and age, being able to collaborate in real-time with ones partners it’s crucial to increase channel partner productivity and indirect revenue. Collaboration features can be used to provide the right channel company or group of channel partners the right material in time and also perform co-sales initiatives.
+                                    img(src='../assets/images/resources/article/collaboration.png' alt='Collaboration' loading='lazy').w-full.bg-white.shadow-card.rounded-10px.overflow-hidden.my-20px
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Continuous training
+                                    p(class='text-base lg:text-body') While onboarding channel partners is very important also of equal importance is to undergo through training during a channel partner’s lifecycle. Having a trained and up to date indirect sales team can mean a constant flow of indirect sales or a rapid increase in some cases.
+
+                                div( class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Partner relationship management thoughts
+                                    p(class='text-base lg:text-body') Almost every vendor has realized that recruiting channel partners is only have of the job. Keeping the channel network active and incentivized to sell ones solutions is the most important aspect in the channel industry. In order to achieve that a proper partner relationship management system should be implemented to give you the tools to enable your partner network and also pass the message to the partners that you are providing the means for them to be successful.
+                                    a(href='../templates/register.html' class='btn font-bold text-sm text-blue')
+                                        span TRY ELIOPLUS PRM FOR FREE
+                                        include ../assets/images/global/next.svg
+
+                        div(class='gap-80px lg:gap-80px py-100px ').flex.flex-col.w-full
+                            div.relative.h-full
+                                aside(class='sidebar-container sticky top-[100px] mt-80px')
+                                    div(class='gap-30px lg:gap-50px').flex.flex-col.w-full
+                                        div(class='gap-10px lg:gap-10px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-xl lg:text-2.5xl font-inter font-bold') Elioplus Resources
+                                            p.text-textGray.text-base Additional resources and information.
+                                            a(href='../templates/resources.html' class='btn font-bold text-sm text-blue mt-10px')
+                                                span VIEW ALL RESOURCES
+                                                include ../assets/images/global/next.svg
+                                        div(class='divider bg-gray h-[2px]')
+                                        div(class='gap-20px lg:gap-25px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-lg lg:text-xl font-inter font-bold') Partner Management:
+                                            .flex.flex-col.gap-20px.w-full
+                                                - var img= '../assets/images/resources/small/2.png'
+                                                - var name='How to manage channel partners?'
+                                                include components/global/resourcesArticleSmall.pug
+                                                - var img= '../assets/images/resources/small/3.png'
+                                                - var name='The Ultimate Guide for Partner Management'
+                                                include components/global/resourcesArticleSmall.pug
+                                                - var img= '../assets/images/resources/small/4.png'
+                                                - var name='How it works: Collaboration Tool'
+                                                include components/global/resourcesArticleSmall.pug
+                                        div(class='divider bg-gray h-[2px]')
+                                        div(class='gap-20px lg:gap-25px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-lg lg:text-xl font-inter font-bold') Partner Recruitment:
+                                            .flex.flex-col.gap-20px.w-full
+                                                - var img= '../assets/images/resources/small/5.png'
+                                                - var name='Partnering Examples'
+                                                include components/global/resourcesArticleSmall.pug
+                                                - var img= '../assets/images/resources/small/6.png'
+                                                - var name='Partner to Partner (P2P) Deals '
+                                                include components/global/resourcesArticleSmall.pug
+                                                - var img= '../assets/images/resources/small/7.png'
+                                                - var name='How the channel partner recruitment process works?'
+                                                include components/global/resourcesArticleSmall.pug
+                                        div(class='divider bg-gray h-[2px]')
+                                        div(class='gap-20px lg:gap-25px pl-30px').w-full
+                                            .flex.flex-col.gap-40px.justify-center.w-full
+                                                div(class='flex items-center justify-center w-full')
+                                                    include ../assets/images/prm-alternatives/cta.svg
+                                                .flex.flex-col.gap-10px.text-center.items-center
+                                                    h3(class='text-2xl lg:text-2xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                                                    p(class='w-full max-w-full text-base') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                                                div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                                                    a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                                        include ../assets/images/global/circles.svg
+                                                        span CREATE YOUR ACCOUNT FOR FREE
+
+            section.bg-white
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        h3(class='text-2xl lg:text-3xl font-bold font-inter text-center') Networks
+                        div(class='m-carousel' data-items='2').flex.w-full.justify-between.gap-30px
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/spiceworks.png' alt='Spiceworks Network' loading='lazy')
+                                p.text-sm A community for IT professionals and engage in relevant discussions and find local meetups.
+                                a(href='../templates/network.html' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/comptia.png' alt='Comptia Network' loading='lazy')
+                                p.text-sm A non-profit association that issues certifications for IT professionals in more than 120 countries.
+                                a(href='../templates/network.html' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/forrester.png' alt='Forrester Channel software' loading='lazy')
+                                p.text-sm The best channel software tech stack for 2021 by Jay McBain, Principal Analyst.
+                                a(href='https://www.forrester.com/blogs/channel-software-tech-stack-2021/' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/medium.png' alt='Medium Elioplus Blog' loading='lazy')
+                                p.text-sm The official blog of Elioplus on Medium, the most popular blogging network worldwide.
+                                a(href='https://medium.com/@elioplus' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+                            .flex.flex-col.gap-10px.text-center
+                                div(class='h-[70px]').w-full.flex.justify-center.items-center
+                                    img(src='../assets/images/resources/growann.png' alt='Growann List' loading='lazy')
+                                p.text-sm 14+ Best PRM Software in 2023, listing Elioplus PRM. A list currated by Nick Cotter and Growann.
+                                a(href='https://www.growann.com/best/partner-management-software-prm' class='transition-all duration-200 hover:text-blue').text-sm.font-bold Read More
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

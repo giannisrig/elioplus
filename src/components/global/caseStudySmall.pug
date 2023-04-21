@@ -1,0 +1,11 @@
+a(class='w-full max-w-[600px] h-full' href='../templates/caseStudySingle.html').bg-white.shadow-card.overflow-hidden.rounded-10px.case-study.flex.flex-col
+    div(class='').bg-gray.flex.items-center.justify-center
+        img(src=img alt=name loading='lazy')
+    div(class='gap-10px lg:gap-15px py-20px lg:py-30px px-20px lg:px-25px grow').bg-white.flex.flex-col
+        div().flex.flex-col.gap-5px
+            h5(class='text-sm font-medium font-inter').text-textGray OUR CLIENT’S STORY:
+            h3(class='text-lg font-bold font-inter')=name
+        p(class='text-sm lg:text-base')=desc
+        div(class='btn font-bold text-sm').text-blue.w-full.justify-center.mt-auto
+            span READ THE CASE STUDY
+            include ../../../assets/images/global/next.svg

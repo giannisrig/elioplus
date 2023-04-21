@@ -1,0 +1,203 @@
+mixin faqFeatureItem(question, answer)
+    details(class='text-sm lg:text-base').faq-item.bg-white.shadow-card.relative.rounded-4px.h-fit
+        summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px').flex.gap-7px.font-bold.relative
+            div=question
+        p(class='px-10px lg:px-20px py-25px')=answer
+
+mixin featureItem(name, included)
+    .flex.items-center.gap-5px
+        div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+            if included
+                img(src='../assets/images/pricing/check.svg' alt='Included feature for '+name loading='lazy' )
+            else
+                img(src='../assets/images/pricing/close.svg' alt='Not included feature for '+name loading='lazy')
+        if included
+            div(class='text-[15px]')=name
+        else
+            div(class='text-[15px]').text-textGray=name
+
+doctype html
+html(lang="en")
+    head
+        title Pricing for Partner Relationship Management Software (PRM) | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                h2(class='text-base lg:text-lg font-semibold').text-blue PRM SOFTWARE PRICING
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Partner Relationship Management
+                                p(class='text-base lg:text-body text-center w-[900px] max-w-full') Manage your partner network and incentivize your partner with our partner relationship management software. Get started with the plan that suits your needs.
+                            div(class='flex justify-center')
+                                a(href='../templates/productPRM.html' class='btn large font-bold text-sm xl:text-base').bg-white
+                                    span VIEW PRM PRODUCT IN DETAIL
+                                    include ../assets/images/global/next.svg
+                        div(class='grid-cols-1 sm:grid-cols-2 grid lg:flex lg:flex-row lg:justify-between items-center gap-30px lg:gap-20px').w-full
+                            div(class='w-[310px] max-w-full mx-auto').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Free
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') What you need to get started and try the Elioplus PRM software.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €0
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Upgrade to a premium plan anytime.
+                                a(href='../templates/register.html' class='btn large font-bold text-sm').bg-white.border-blackBlue.text-blackBlue.w-full.justify-center
+                                    span START FOR FREE
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/partners.svg' alt='manage partners icon' loading='lazy')
+                                            div(class='text-[15px]') Manage up to 5 partners
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/storage.svg' alt='storage icon' loading='lazy')
+                                            div(class='text-[15px]') 2 GB library storage
+                                        +featureItem( 'Onboarding', true )
+                                        +featureItem( 'Deal registration', true )
+                                        +featureItem( 'Lead Distribution', true )
+                                        +featureItem( 'Collaboration', true )
+                                        +featureItem( 'Partner directory', true )
+                                        +featureItem( 'Partner to partner', true )
+                                        +featureItem( 'Partner recruitment', false )
+                                        +featureItem( 'Customization', false )
+
+                            div(class='w-[310px] max-w-full mx-auto').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Start-Up
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') For small companies and start-ups that need a PRM solution.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €298
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Per month, you can cancel anytime.
+                                a(href='../templates/register.html' class='btn large font-bold text-sm').bg-white.border-blackBlue.text-blackBlue.w-full.justify-center
+                                    span GET STARTED NOW
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/partners.svg' alt='manage partners icon' loading='lazy')
+                                            div(class='text-[15px]') Manage up to 100 partners
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/storage.svg' alt='storage icon' loading='lazy')
+                                            div(class='text-[15px]') 10 GB library storage
+                                        +featureItem( 'Onboarding', true )
+                                        +featureItem( 'Deal registration', true )
+                                        +featureItem( 'Lead Distribution', true )
+                                        +featureItem( 'Collaboration', true )
+                                        +featureItem( 'Partner directory', true )
+                                        +featureItem( 'Partner to partner', true )
+                                        +featureItem( 'Partner recruitment', true )
+                                        +featureItem( 'Customization', true )
+
+                            div(class='w-[310px] max-w-full mx-auto').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left').text-blue Growth
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') For medium and large companies that scale and grow fast.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €498
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Per month, you can cancel anytime.
+                                a(href='../templates/register.html' class='btn large font-bold text-sm').bg-blue.text-white.w-full.justify-center
+                                    span GET STARTED NOW
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/partners.svg' alt='manage partners icon' loading='lazy')
+                                            div(class='text-[15px]') Manage up to 250 partners
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/storage.svg' alt='storage icon' loading='lazy')
+                                            div(class='text-[15px]') 20 GB library storage
+                                        +featureItem( 'Onboarding', true )
+                                        +featureItem( 'Deal registration', true )
+                                        +featureItem( 'Lead Distribution', true )
+                                        +featureItem( 'Collaboration', true )
+                                        +featureItem( 'Partner directory', true )
+                                        +featureItem( 'Partner to partner', true )
+                                        +featureItem( 'Partner recruitment', true )
+                                        +featureItem( 'Customization', true )
+
+                            div(class='w-[310px] max-w-full mx-auto').bg-white.shadow-card.rounded-20px.p-30px.flex.flex-col.gap-25px
+                                .flex.flex-col.gap-10px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Enterprise
+                                    p(class='w-full text-sm lg:text-[15px] text-center lg:text-left') For big corporations with extensive requirements that need a PRM.
+                                .flex.flex-col.gap-10px.w-full
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') €1200+
+                                    p(class='w-full text-sm lg:text-sm text-center lg:text-left italic').text-textGray Custom pricing, starting from.
+                                a(href='../templates/contactUs.html' class='btn large font-bold text-sm').bg-white.border-blackBlue.text-blackBlue.w-full.justify-center
+                                    span CONTACT US
+                                    include ../assets/images/global/next.svg
+                                .flex.flex-col.gap-15px.w-full
+                                    h5.text-base.font-inter.font-semibold Features:
+                                    .flex.flex-col.gap-5px.w-full
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/partners.svg' alt='manage partners icon' loading='lazy')
+                                            div(class='text-[15px]') Custom partners management
+                                        .flex.items-center.gap-5px
+                                            div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+                                                img(src='../assets/images/pricing/storage.svg' alt='storage icon' loading='lazy')
+                                            div(class='text-[15px]') Custom library storage
+                                        +featureItem( 'Onboarding', true )
+                                        +featureItem( 'Deal registration', true )
+                                        +featureItem( 'Lead Distribution', true )
+                                        +featureItem( 'Collaboration', true )
+                                        +featureItem( 'Partner directory', true )
+                                        +featureItem( 'Partner to partner', true )
+                                        +featureItem( 'Partner recruitment', true )
+                                        +featureItem( 'Customization', true )
+
+                        p(class='text-sm lg:text-base text-center w-[970px] max-w-full').text-textGray.italic
+                            | Prices do not include VAT. Charges may vary based on your country.
+                            | <br class='hidden lg:block'>
+                            | If you require to manage a big network of partners contact our sales team for a custom enterprise plan that will suit your needs.
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-50px
+                            div(class='flex items-center justify-center')
+                                img(src='../assets/images/pricing/prm-cta.svg' alt='More than 120,000 companies use Elioplus PRM' loading='lazy' class='max-w-[350px] lg:max-w-full')
+                            div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') More than <span class='text-blue'>120,000</span> companies are using Elioplus.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') What are you waiting for? Select the plan that fits your needs and start inviting your channel partners to join your PRM portal.
+
+                                div(class='flex justify-center lg:justify-start gap-15px')
+                                    a(href='../templates/productPRM.html' class='btn large font-bold text-sm xl:text-base')
+                                        span ELIOPLUS PRM
+                                        include ../assets/images/global/next.svg
+                                    a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                        span GET STARTED NOW
+                                        include ../assets/images/global/next.svg
+            section
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') PRM Features
+                            p(class='w-full text-base lg:text-body text-left') Information about the features of Elioplus Partner Relationship Management software.
+                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px').grid
+                            +faqFeatureItem('Company Profile', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('1st Page Results', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Matches', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Manage Partners', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Storage', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Lead Notifications', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Direct Messages', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Searches', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Save Profiles', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Community', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                            +faqFeatureItem('Opportunities Management', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

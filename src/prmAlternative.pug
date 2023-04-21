@@ -1,0 +1,143 @@
+mixin tableItem(name, alt, elio)
+    tr
+        td=name
+        td
+            .flex.justify-center
+                if alt
+                    img(src='../assets/images/prm-alternatives/check.svg' alt='Included feature for '+name loading='lazy')
+                else
+                    img(src='../assets/images/prm-alternatives/close.svg' alt='Included feature for '+name loading='lazy')
+        td
+            .flex.justify-center
+                if elio
+                    img(src='../assets/images/prm-alternatives/check.svg' alt='Included feature for '+name loading='lazy')
+                else
+                    img(src='../assets/images/prm-alternatives/close.svg' alt='Included feature for '+name loading='lazy')
+doctype html
+html(lang="en")
+    head
+        title Elioplus PRM vs Impartner | PRM Alternatives | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            .flex.items-center.gap-15px.w-fit.bg-white.rounded-10px.shadow-card.px-20px.py-10px
+                                img(src='../assets/images/prm-alternatives/elioplus-logo.svg' alt='Elioplus Logo compare' loading='lazy')
+                                div(class='w-[30px] h-[30px] flex items-center justify-center text-center').text-textGray.rounded-full.bg-gray.text-sm VS
+                                img(src='../assets/images/prm-alternatives/impartner.png' alt='Impartner Logo compare' loading='lazy')
+                            h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Impartner PRM vs Elioplus PRM
+                            p(class='text-base lg:text-body text-center lg:text-left')  Compare Impartner vs. Elioplus PRM, a free alternative to manage your partner network.
+                        .flex.justify-center
+                            img( src='../assets/images/prm-alternatives/opener.svg' alt='Impartner PRM vs Elioplus PRM')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Impartner PRM alternative software
+                            p(class='w-full text-base lg:text-body')
+                                | Impartner is offering a Partner Relationship Management solution that has all the basic functionality for vendors to manage their channel network. Although the company promotes its product on their website to be suitable for small and mid-sized businesses and for enterprise companies as well, their clientele, pricing and set up is geared towards the latter.
+                                | <br><br>
+                                | Rather than waiting for 14 days to have your partner portal set up, the Elioplus PRM is ready once you have signed up so you can invite your partners, having a branded log in and sign up page instantaneously and any customization that you may require in a couple of days, completely free. Also, you can benefit from the free plan with access to all features in order to try the Elioplus PRM for as long as you’d like (ideal for vendors with a small partner network) before you upgrade to a premium plan and manage hundreds or thousands of partners.
+                        div(class='grid-cols-1 lg:grid-cols-alternative text-img-row').grid.gap-30px
+                            div(class='gap-20px lg:gap-30px').flex.flex-col
+                                table.bg-white.shadow-card.rounded-10px
+                                    thead
+                                        tr
+                                            th Feature
+                                            th Impartner PRM
+                                            th
+                                                div.flex.items-center.gap-5px.justify-center
+                                                    include ../assets/images/prm-alternatives/elio-icon.svg
+                                                    div Elioplus PRM
+                                    tbody
+                                        +tableItem('Onboarding', true, true)
+                                        +tableItem('Deal Registration', true, true)
+                                        +tableItem('Lead Distribution', true, true)
+                                        +tableItem('Collaboration', true, true)
+                                        +tableItem('Partner Activity', true, true)
+                                        +tableItem('Forecasting', true, true)
+                                        +tableItem('Partner Locator', true, true)
+                                        +tableItem('Integrations', true, true)
+                                        +tableItem('Partner-to-Partner', false, true)
+                                        +tableItem('Partner Recruitment', false, true)
+                                        +tableItem('Free Plan', false, true)
+                            .flex.flex-col.gap-40px.justify-center
+                                div(class='flex items-center justify-center w-full')
+                                    include ../assets/images/prm-alternatives/cta.svg
+                                .flex.flex-col.gap-10px.text-center.items-center
+                                    h3(class='text-2xl lg:text-2xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                                    p(class='w-full max-w-full text-base') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                                div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                                    a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                        include ../assets/images/global/circles.svg
+                                        span CREATE YOUR ACCOUNT FOR FREE
+
+
+
+            section.bg-white
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        div(class='text-center lg:text-left gap-10px lg:gap-30px').flex.flex-col
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Partner-to-Partner: Incentivize your partners with leads
+                            p(class='w-full text-base lg:text-body')
+                                | Partner-to-Partner is a great way to provide your partners with new leads to increase their sales and get them incentivized. This feature allows channel partners to share and receive deals based on product category, location and technology. Since your PRM sits on top of our network your partners will have access to relevant deals coming from thousands of other channel companies.
+                                | <br><br>
+                                | For example, a channel company that has a potential client but don’t focus on that specific industry or market can upload this deal on the P2P network to find a partner and collaborate to close successfully the deal. This can be a one-off collaboration or a long-term partnership.
+                                | <br><br>
+                                | In addition, Elioplus ranks for various industry keywords and attracts many leads that can be relevant to your channel partners. These deals are uploaded as well to our P2P tool and your partners can have access and receive leads based on their product portfolio and location.
+                            a(href='#' class='btn large font-bold text-sm text-blue')
+                                span READ MORE ABOUT PARTNER TO PARTNER DEALS
+                                include ../assets/images/global/next.svg
+                        div(class='text-center lg:text-left gap-10px lg:gap-30px').flex.flex-col
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Collaboration
+                            p(class='w-full text-base lg:text-body')
+                                | Elioplus PRM helps you to collaborate in real time with your partners and engage into meaningful conversations concerning product feedback or requests, sending marketing material or even provide support. The collaboration tool enables you to have one-on-one conversations with a partner or create groups based on the location or any other criteria that is useful for your business. This enables your channel partner managers to have real time conversations with a company or a group of people in order to send material relevant to their businesses.
+                                | <br><br>
+                                | All documents are added to the content system and archived for easy access at any time. In addition, it enables your partners to have direct communication with each other, only when you create a group, so they can collaborate and support each other in order to increase their productivity and reduce resources on your part.
+                                | <br><br>
+                                | All registered trademarks, company names and brand names used on this website are the property of their respective owners. Data on features are taken directly from related web sites and marketing materials as of January, 2020. Information and features are subject to change. To report corrections, please contact us.
+                            a(href='#' class='btn large font-bold text-sm text-blue')
+                                span CONTACT US
+                                include ../assets/images/global/next.svg
+
+            section
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        div(class='items-center lg:items-start text-center lg:text-left').flex.flex-col.gap-10px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Other PRM alternatives
+                            p(class='w-full text-base lg:text-body') Compare the Elioplus PRM with other software solutions for partner recruitment management.
+                        div(class='w-full owl-carousel owl-theme' data-items='4')
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/impartner-logo.png'
+                                - var name='Elioplus PRM vs Partnerstack PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/allbound-logo.png'
+                                - var name='Elioplus PRM vs Allbound PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/zif-solutions-logo.png'
+                                - var name='Elioplus PRM vs Zift Solutions PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/salesforce-logo.png'
+                                - var name='Elioplus PRM vs Salesforce PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+                            div(class='p-15px lg:p-20px')
+                                - var img= '../assets/images/prm-alternatives/impartner-logo.png'
+                                - var name='Elioplus PRM vs Partnerstack PRM'
+                                - var link='../templates/prmAlternative.html'
+                                include components/global/alternativeItem.pug
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

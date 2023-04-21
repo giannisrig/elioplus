@@ -1,0 +1,109 @@
+mixin menuLinkPrimary(name, href)
+    a(href=href class='hover:text-blue text-sm md:text-base transition-colors duration-200 has-submenu').flex.items-center.gap-5px.font-bold
+        span=name
+        img(src='../assets/images/global/chevron.svg' alt='chevron icon')
+
+mixin menuSubItem(name, href)
+    li
+        a(href=href class='hover:text-blue text-sm md:text-base transition-colors duration-200 py-5px')=name
+
+nav(id='mobileMenu' class='bg-white fixed top-0 right-0 h-screen w-screen max-w-sm shadow-lg z-40 flex')
+    .flex.flex-col.w-full
+        .flex.justify-between.px-30px.py-10px.items-center.border-b-2.border-gray.pb-5px
+            div(class='py-10px xl:py-20px')
+                a(href='../templates/index.html').pb-5px.block.header-logo
+                    img(src='../assets/images/global/logo.svg' alt='Elioplus Mobile Menu logo')
+            a(id='closeMobileMenu' href='#').flex.items-center.gap-5px
+                div(class='p-2.5').bg-gray.rounded-full.w-8.h-8.flex.items-center.justify-center
+                    img(src='../assets/images/global/close.svg' alt='close icon')
+                span(class='font-bold text-sm xl:text-base text-textGray transition-colors duration-200 hover:text-blue') Close Menu
+        .flex.flex-col.px-30px.py-30px.grow.overflow-y-auto
+            ul.flex.flex-col.gap-10px
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('Products & Services', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Partner Recruitment - Automate', '../templates/productPRautomate.html')
+                        +menuSubItem('Partner Recruitment - Database', '../templates/productPRdatabase.html')
+                        +menuSubItem('Partner Relationship Management', '../templates/productPRM.html')
+                        +menuSubItem('RFQs and Intend Data', '../templates/productIntentSignals.html')
+                        +menuSubItem('Referral Software', '../templates/productReferralSoftware.html')
+                        +menuSubItem('M&A Marketplace', '../templates/productMA.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('Browse Companies', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Search Companies', '../templates/search.html')
+                        +menuSubItem('Channel Partners', './templates/searchChannelPartners.html')
+                        +menuSubItem('Vendors', '../templates/searchVendors.html')
+                        +menuSubItem('Partnerships', '../templates/searchPartnerhsips.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('Features', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Vendors', '../templates/featuresVendors.html')
+                        +menuSubItem('Channel Partners', '../templates/featuresChannelPartners.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('Resources', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Partner to Partner Deals', '../templates/resourcesArticle.html')
+                        +menuSubItem('Collaboration Tool', '../templates/resourcesArticle.html')
+                        +menuSubItem('All Resources', '../templates/resources.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('PRM Alternatives', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Impartner', '../templates/prmAlternative.html')
+                        +menuSubItem('PartnerStack', '../templates/prmAlternative.html')
+                        +menuSubItem('Allbound', '../templates/prmAlternative.html')
+                        +menuSubItem('Zift Solutions', '../templates/prmAlternative.html')
+                        +menuSubItem('Salesforce PRM', '../templates/prmAlternative.html')
+                        +menuSubItem('Mindmatrix', '../templates/prmAlternative.html')
+                        +menuSubItem('Myprm', '../templates/prmAlternative.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('PRM Features', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('Partner Portal', '../templates/prmFeature.html')
+                        +menuSubItem('Partner Directory', '../templates/prmFeature.html')
+                        +menuSubItem('Partner Onboarding', '../templates/prmFeature.html')
+                        +menuSubItem('Deal Registration', '../templates/prmFeature.html')
+                        +menuSubItem('Lead Distribution', '../templates/prmFeature.html')
+                        +menuSubItem('Content Management', '../templates/prmFeature.html')
+                        +menuSubItem('Collaboration', '../templates/prmFeature.html')
+                        +menuSubItem('Channel Analytics', '../templates/prmFeature.html')
+                        +menuSubItem('Partner Locator', '../templates/prmFeature.html')
+                        +menuSubItem('Partner 2 Partner', '../templates/prmFeature.html')
+                        +menuSubItem('Partner Activation', '../templates/prmFeature.html')
+                        +menuSubItem('Tier Management', '../templates/prmFeature.html')
+                        +menuSubItem('Team Roles', '../templates/prmFeature.html')
+                        +menuSubItem('Partner Management', '../templates/prmFeature.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('Pricing', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('PRM Software Pricing', '../templates/pricingPRM.html')
+                        +menuSubItem('Partner Recruitment Pricing', '../templates/pricingPR.html')
+                        +menuSubItem('Intent Signals Pricing', '../templates/pricingIntent.html')
+                li.flex.items-center
+                    .divider
+                li.flex.flex-col.gap-10px
+                    +menuLinkPrimary('About Us', '#')
+                    ul.pl-5.hidden
+                        +menuSubItem('About Elioplus', '../templates/aboutUs.html')
+                        +menuSubItem('Case Studies', '../templates/caseStudiesArchive.html')
+                        +menuSubItem('Contact us', '../templates/contactUs.html')
+                        +menuSubItem('Blog', 'https://medium.com/@elioplus')
+                        +menuSubItem('FAQ', '../templates/faq.html')
+                li.flex.items-center
+                    .divider
+                li(class='flex items-center gap-10px xl:gap-15px pt-10px')
+                    a(href='../templates/login.html' class='btn font-bold text-sm xl:text-base text-blue') Login
+                    a(href='../templates/register.html' class='btn font-bold text-sm xl:text-base bg-blue text-white') Sign up free
+

@@ -1,0 +1,94 @@
+mixin ulItem(name, href, active)
+    li
+        if active
+            a(href=href class='text-base active').text-textGray=name
+        else
+            a(href=href class='text-base').text-textGray=name
+doctype html
+html(lang="en")
+    head
+        title Partner Directory | PRM Features | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-blue.bg-particles.bg-cover
+                .container
+                    div(class='gap-20px lg:gap-30px text-center lg:text-left').flex.flex-col
+                        div(class=' items-center lg:items-start').flex.flex-col.gap-10px
+                            h3(class='text-lg lg:text-xl font-medium font-inter').text-lightBlue PRM FEATURE
+                            h1(class='text-2.5xl lg:text-5xl font-bold font-inter').text-white Partner Directory
+                        p(class='w-full text-base lg:text-body').text-white This is the feature that you use to invite your channel partners in order to join your Partner Portal. In order to use your PRM account on Elioplus and take a full advantage of the functionality that we provide then you need to send invitations to your existing channel partners.
+                        div(class='flex items-center justify-center lg:justify-start')
+                            a(href='../templates/register.html' class='btn large font-bold bg-white text-sm xl:text-base')
+                                span GET STARTED FOR FREE
+                                include ../assets/images/global/next.svg
+            section.py-0
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-legal').grid.gap-0
+                        div(class='px-50px py-100px border-x-2 border-gray').w-full
+                            article( id="articleContent" class='gap-50px lg:gap-80px').flex.flex-col.w-full
+                                div( class='gap-20px lg:gap-30px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Send invitations
+                                    p(class='text-base lg:text-body') Enter the Partner Directory tab and click on the Send Invitations tab. Here you can upload a CSV file with the email addresses of the channel partners that you would like to invite.
+                                    img(src='../assets/images/prm-features/invitations.png' alt='Send invitations from your partner directory' loading='lazy').w-full.bg-white.shadow-card.rounded-10px.overflow-hidden
+                                    p(class='text-base lg:text-body') When you click the send invitation button then your resellers will receive a notification email to join your PRM account and they will be able to sign up through your partner portal page (Your unique partner portal sign up URL).
+
+                                div( class='gap-20px lg:gap-30px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Pending Requests
+                                    p(class='text-base lg:text-body') Here we have two different scenarios:
+                                    ul(class='text-base lg:text-body').flex.flex-col.w-full.gap-30px
+                                        li Resellers that you have previously invited through the “Send Invitations” tab but they haven’t accepted yet this invitation to sign up to your partner portal.
+                                        li Resellers that have signed up to your partner portal through your unique partner portal sign up page but you haven’t previously sent them an invite. These resellers have signed up by finding your partner portal sign up page on your website or by distributing them the link of the page.
+
+                                div( class='gap-20px lg:gap-30px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') Manage Partners
+                                    p(class='text-base lg:text-body') Here you can see the channel partners that have accepted your invitation to join your PRM portal. Their status is Active which means that you can use all the functionality of your portal in order to manage them in the most efficient way.
+                                    img(src='../assets/images/prm-features/manage-partners.png' alt='Manage Partners at Elioplus' loading='lazy').w-full.bg-white.shadow-card.rounded-10px.overflow-hidden
+
+                                div(class='flex items-center justify-center lg:justify-between')
+                                    a(href='#' class='btn large font-bold bg-white text-sm xl:text-base')
+                                        include ../assets/images/global/prev.svg
+                                        span PREVIOUS FEATURE
+
+                                    a(href='#' class='btn large font-bold bg-white text-sm xl:text-base')
+                                        span NEXT FEATURE
+                                        include ../assets/images/global/next.svg
+
+                        div(class='gap-80px lg:gap-80px py-100px ').flex.flex-col.w-full
+                            div.relative.h-full
+                                aside(class='sidebar-container sticky top-[100px]')
+                                    div(class='gap-30px lg:gap-50px').flex.flex-col.w-full
+                                        div(class='gap-20px lg:gap-25px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-xl lg:text-2.5xl font-inter font-black') PRM Features
+                                            ul(class='gap-5px lg:gap-10px').flex.flex-col.toc
+                                                +ulItem('Partner Portal', '../templates/prmFeature.html')
+                                                +ulItem('Partner Directory', '../templates/prmFeature.html', true)
+                                                +ulItem('Partner Onboarding', '../templates/prmFeature.html')
+                                                +ulItem('Deal Registration', '../templates/prmFeature.html')
+                                                +ulItem('Lead Distribution', '../templates/prmFeature.html')
+                                                +ulItem('Content Management', '../templates/prmFeature.html')
+                                                +ulItem('Collaboration', '../templates/prmFeature.html')
+                                                +ulItem('Channel Analysis', '../templates/prmFeature.html')
+                                                +ulItem('Partner Locator', '../templates/prmFeature.html')
+                                                +ulItem('Partner 2 Partner', '../templates/prmFeature.html')
+                                                +ulItem('Partner Activation', '../templates/prmFeature.html')
+                                                +ulItem('Tier Management', '../templates/prmFeature.html')
+                                                +ulItem('Team Roles', '../templates/prmFeature.html')
+                                                +ulItem('Partner Management', '../templates/prmFeature.html')
+
+                                        div(class='divider bg-gray h-[2px]')
+                                        div(class='gap-20px lg:gap-25px pl-30px').w-full
+                                            .flex.flex-col.gap-40px.justify-center.w-full
+                                                div(class='flex items-center justify-center w-full')
+                                                    img(src='../assets/images/prm-alternatives/cta.svg' alt='Elioplus join more than 120,000 companies using our products and services' loading='lazy')
+                                                .flex.flex-col.gap-10px.text-center.items-center
+                                                    h3(class='text-2xl lg:text-2xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                                                    p(class='w-full max-w-full text-base') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                                                div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                                                    a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                                        include ../assets/images/global/circles.svg
+                                                        span CREATE YOUR ACCOUNT FOR FREE
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,272 @@
+doctype html
+html(lang="en")
+    head
+        title Channel Partners and software resellers network | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Connecting cloud & software Vendors with Channel Partners
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Became effortless and affordable.
+                            p(class='text-base lg:text-body text-center lg:text-left')  We are a leading provider of partner recruitment and management solutions that assist IT companies to expand their partner network and offer a better experience to their partners.
+                            div(class='flex items-center gap-10px xl:gap-15px flex-col lg:flex-row')
+                                a(href='../templates/search.html' class='btn large font-bold text-sm xl:text-base')
+                                    span BROWSE COMPANIES
+                                    include ../assets/images/global/next.svg
+                                a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                    include ../assets/images/global/circles.svg
+                                    span ADD YOUR COMPANY FOR FREE
+                        img( src='../assets/images/homepage/map.svg' alt='Connecting cloud & software Vendors with Channel Partners')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Products & Services
+                            p(class='w-[770px] max-w-full text-base lg:text-body') We are matching IT vendors with channel partners, creating more than <strong>350k</strong> partnerships that expand across <strong>120+</strong> product & service categories.
+                        div(class='gap-30px lg:gap-60px').flex.w-full.flex-col
+                            div(class='gap-30px lg:gap-0').flex.w-full.justify-between.flex-wrap
+                                - var img= '../assets/images/products/partner-recruitment.svg'
+                                - var name='Partner Recruitment'
+                                - var desc='Get matched and recruit the best partners based on location, industry, experience and 13 more criteria.'
+                                - var link='../templates/productPR.html'
+                                include components/global/product.pug
+                                - var img= '../assets/images/products/partner-relationship-manager.svg'
+                                - var name='Partner Management (PRM)'
+                                - var desc='Manage your partner network and incentivize your partner with our free partner relationship management software.'
+                                - var link='../templates/productPRM.html'
+                                include components/global/product.pug
+                                - var img= '../assets/images/products/intent-signals.svg'
+                                - var name='Lead Generation'
+                                - var desc='Get access to quotation requests and intent data from local businesses that are on the market.'
+                                - var link='../templates/productIntentSignals.html'
+                                include components/global/product.pug
+                            div(class='gap-30px lg:gap-50px').flex.w-full.justify-center.flex-wrap
+                                - var img= '../assets/images/products/referral-software.svg'
+                                - var name='Referral Software'
+                                - var desc='Referral software to scale and automate your referral partner program. Made exclusively for IT companies.'
+                                - var link='../templates/productReferralSoftware.html'
+                                include components/global/product.pug
+                                - var img= '../assets/images/products/ma-marketplace.svg'
+                                - var name='M&A Marketplace'
+                                - var desc='Are you looking to sell your IT business? Visit our M&A Marketplace and get started in less than a minute.'
+                                - var link='../templates/productMA.html'
+                                include components/global/product.pug
+            section.bg-white
+                .container
+                    .flex.flex-col.gap-40px
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Our Clients
+                            p(class='w-[855px] max-w-full text-base lg:text-body')  Elioplus is being trusted by big software & cloud companies, vendors and channel partners around the world <strong>since 2015</strong>.
+                        div(class='m-carousel' data-items=1).flex.gap-30px.justify-center
+                            div.flex.items-center.justify-center.h-full
+                                div.w-max
+                                    img(src='../assets/images/homepage/sap.png')
+                            div(class='hidden mdl:flex').items-center
+                                div(class='w-[3px] ').separator
+                            div.flex.items-center.justify-center.h-full
+                                div.w-max
+                                    img(src='../assets/images/homepage/freshworks.png')
+                            div(class='hidden mdl:flex').items-center
+                                div(class='w-[3px] ').separator
+                            div.flex.items-center.justify-center
+                                div.w-max
+                                    img(src='../assets/images/homepage/Deloitte.png')
+                            div(class='hidden mdl:flex').items-center
+                                div(class='w-[3px] ').separator
+                            div.flex.items-center.justify-center.h-full
+                                div.w-max
+                                    img(src='../assets/images/homepage/iri.png')
+                            div(class='hidden mdl:flex').items-center
+                                div(class='w-[3px] ').separator
+                            div.flex.items-center.justify-center.h-full
+                                div.w-max
+                                    img(src='../assets/images/homepage/totaralms.png')
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/search.html' class='btn large font-bold text-sm xl:text-base')
+                                span VIEW ALL COMPANIES
+                                include ../assets/images/global/next.svg
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span ADD YOUR COMPANY FOR FREE
+            section.bg-blue.bg-particles.bg-cover
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center.text-white
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Creating Partnerships & Connections
+                            p(class='w-[780px] max-w-full text-base lg:text-body') We have worked with hundreds of companies, small and large, to help them on their indirect sales channel.
+                        div(class='flex-col lg:flex-row gap-30px lg:gap-50px').flex.text-center.items-center.justify-center
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    include ../assets/images/homepage/PartnerPortals.svg
+                                .flex.flex-col
+                                    h4(class='text-base lg:text-body').font-bold 1,747
+                                    p().text-sm  Partner Portals
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    include ../assets/images/homepage/Partnerships.svg
+                                .flex.flex-col
+                                    h4(class='text-base lg:text-body').font-bold 2,150
+                                    p().text-sm  Partnerships / month
+                            div(class='w-[250px] max-w-full py-15px lg:py-30px').bg-white.rounded-10px.shadow-card.flex.flex-col.gap-15px.items-center
+                                div(class='w-[60px] h-[60px] lg:w-[85px] lg:h-[85px] p-10px').rounded-full.bg-lightBlue2.flex.items-center.justify-center
+                                    include ../assets/images/homepage/Customers.svg
+                                .flex.flex-col
+                                    h4(class='text-base lg:text-body').font-bold 300+
+                                    p().text-sm  Premium Customers
+                        div(class='flex justify-center items-center gap-10px xl:gap-20px')
+                            a(href='../templates/partnerPortals.html' class='btn font-bold text-sm bg-white')
+                                span VIEW OUR PARTNER PORTALS
+                                include ../assets/images/global/next.svg
+            section.bg-white
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Popular Locations
+                            p(class='w-[780px] max-w-full text-base lg:text-body') We host companies from <strong>156</strong> different countries worldwide and this makes us the ideal platform for you to introduce your company and expertize.
+                        div(class='gap-7px lg:gap-15px').countries.flex.justify-center.flex-wrap
+                            - var img= '../assets/images/flags/US.svg'
+                            - var name='United States'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Australia.svg'
+                            - var name='Australia'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/India.svg'
+                            - var name='India'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Nigeria.svg'
+                            - var name='Nigeria'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/SouthAfrica.svg'
+                            - var name='South Africa'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/NewZealand.svg'
+                            - var name='New Zealand'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Philippines.svg'
+                            - var name='Philippines'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Singapore.svg'
+                            - var name='Singapore'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/France.svg'
+                            - var name='France'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Germany.svg'
+                            - var name='Germany'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Italy.svg'
+                            - var name='Italy'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Netherlands.svg'
+                            - var name='Netherlands'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Poland.svg'
+                            - var name='Poland'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Spain.svg'
+                            - var name='Spain'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/UK.svg'
+                            - var name='United Kingdom'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/United_Arab_Emirates.svg'
+                            - var name='United Arab Emirates'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Canada.svg'
+                            - var name='Canada'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Egypt.svg'
+                            - var name='Egypt'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Mexico.svg'
+                            - var name='Mexico'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Argentina.svg'
+                            - var name='Argentina'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Brazil.svg'
+                            - var name='Brazil'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Chile.svg'
+                            - var name='Chile'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/China.svg'
+                            - var name='China'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Japan.svg'
+                            - var name='Japan'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                            - var img= '../assets/images/flags/Greece.svg'
+                            - var name='Greece'
+                            - var href='../templates/searchChannelPartnersRegion.html'
+                            include components/global/country.pug
+                        div(class='flex justify-center items-center gap-10px xl:gap-20px')
+                            a(href='../templates/searchChannelPartners.html' class='btn font-bold text-sm bg-white')
+                                span BROWSE COMPANIES BY COUNTRY
+                                include ../assets/images/global/next.svg
+            section
+                .container
+                    div(class='gap-25px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Reviews & Testimonials
+                            p(class='w-[690px] max-w-full text-base lg:text-body') Get the insights you need for the Elioplus PRM software & services from <strong>verified reviews</strong> on capterra.com.
+                        div(data-items='2').owl-carousel.owl-theme
+                            - var name='Len B.'
+                            - var pos='Director of Global Channel Development Computer Software'
+                            - var title='"Great Combination of Software & Support"'
+                            - var desc='Elioplus PRM is helping us expand our reseller network throughout the world by providing not only leads for us to contact but also guidance on targeting and messaging.'
+                            - var href='https://www.capterra.com/p/171144/Elioplus-PRM/reviews/'
+                            include components/global/review.pug
+                            - var name='Len B.'
+                            - var pos='Director of Global Channel Development Computer Software'
+                            - var title='"Great Combination of Software & Support"'
+                            - var desc='Elioplus PRM is helping us expand our reseller network throughout the world by providing not only leads for us to contact but also guidance on targeting and messaging.'
+                            - var href='https://www.capterra.com/p/171144/Elioplus-PRM/reviews/'
+                            include components/global/review.pug
+                            - var name='Len B.'
+                            - var pos='Director of Global Channel Development Computer Software'
+                            - var title='"Great Combination of Software & Support"'
+                            - var desc='Elioplus PRM is helping us expand our reseller network throughout the world by providing not only leads for us to contact but also guidance on targeting and messaging.'
+                            - var href='https://www.capterra.com/p/171144/Elioplus-PRM/reviews/'
+                            include components/global/review.pug
+                            - var name='Len B.'
+                            - var pos='Director of Global Channel Development Computer Software'
+                            - var title='"Great Combination of Software & Support"'
+                            - var desc='Elioplus PRM is helping us expand our reseller network throughout the world by providing not only leads for us to contact but also guidance on targeting and messaging.'
+                            - var href='https://www.capterra.com/p/171144/Elioplus-PRM/reviews/'
+                            include components/global/review.pug
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

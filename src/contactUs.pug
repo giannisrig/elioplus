@@ -1,0 +1,106 @@
+doctype html
+html(lang="en")
+    head
+        title Contact us | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px justify-center').flex.flex-col
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Contact Us
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue We are here to help our customers.
+                            p(class='text-base lg:text-body text-center lg:text-left')  We appreciate your interest in ElioPlus. You can contact us by filling the form below or through our social. If you need immediate assistance you can send us a message through our chat portal.
+                        div(class='justify-center').flex
+                            img( src='../assets/images/contact-us/opener.svg' alt='Contact Elioplus and get help and support from our team')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2 gap-50px').grid
+                        div(class='gap-30px lg:gap-50px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left').flex.flex-col.gap-10px
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') Let's start a conversation
+                                p(class='w-full text-base lg:text-body') Please fill out the form below and someone from our team will get back to you as soon as possible.
+                            form(method='POST' class='w-full p-20px lg:p-40px').flex.flex-col.bg-white.shadow-card.rounded-10px.justify-center.items-center
+                                .w-full.flex.flex-col.gap-30px
+                                    .input-field
+                                        label(for='email' class='text-sm font-semibold') Email address:
+                                        input(id='email' name='email' type='email' placeholder='Enter your business email address' required=true)
+                                    .input-field
+                                        label(for='name' class='text-sm font-semibold') Name:
+                                        input(id='name' name='name' type='text' placeholder='Enter your full name' required=true)
+                                    .input-field
+                                        label(for='phone' class='text-sm font-semibold') Phone: <span class="text-textGray">(optional)</span>
+                                        input(id='phone' name='phone' type='text' placeholder='Enter your phone number')
+                                    .input-field
+                                        label(for='subject' class='text-sm font-semibold') Subject:
+                                        input(id='subject' name='subject' type='text' placeholder='Enter the topic of the discussion' required=true)
+                                    .input-field
+                                        label(for='message' class='text-sm font-semibold') Message:
+                                        textarea(id='message' name='message' placeholder='Enter your message')
+                                    .w-full.flex.flex-col.gap-20px
+                                        button(type='submit' class='btn large font-bold text-sm bg-blue text-white w-full justify-center')
+                                            span SEND MESSAGE
+                                            include ../assets/images/global/next.svg
+
+                        div(class='flex items-end')
+                            .flex.flex-col.gap-30px.w-full
+                                .flex.flex-col.gap-15px.w-full
+                                    h3(class='text-2xl lg:text-2.5xl font-bold font-inter') Additional contact options
+                                    div(class='h-[2px]').divider
+                                div(class='gap-30px lg:gap-50px').flex.flex-col.w-full
+                                    div(class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                        div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                            strong(class='text-base lg:text-lg') Email:
+                                            h4(class='text-base lg:text-lg').text-textGray.font-bold info@elioplus.com
+                                        .w-full.flex.gap-15px
+                                            a(href='#' class='btn copy font-bold text-sm text-blue' data-email='info@elioplus.com')
+                                                span COPY EMAIL
+                                            a(href='mailto:info@elioplus.com' class='btn font-bold text-sm bg-blue text-white')
+                                                span SEND EMAIL
+                                                include ../assets/images/global/next.svg
+                                    div(class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                        div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                            strong(class='text-base lg:text-lg') US office:
+                                            h4(class='text-base lg:text-lg').text-textGray <strong>Address:</strong> 3511 Silverside Road, Suite 105, Wilmington, DE 19810
+                                        .w-full.flex.gap-15px
+                                            a(href='https://www.google.com/maps/place/3511+Silverside+Rd+%23105,+Wilmington,+DE+19810,+%CE%97%CE%BD%CF%89%CE%BC%CE%AD%CE%BD%CE%B5%CF%82+%CE%A0%CE%BF%CE%BB%CE%B9%CF%84%CE%B5%CE%AF%CE%B5%CF%82/@39.810406,-75.5459022,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6fb59348a3eed:0x439c63072cd46b81!8m2!3d39.8104019!4d-75.5433273'
+                                                class='btn font-bold text-sm text-blue' target='_blank' )
+                                                span GET DIRECTIONS
+                                                include ../assets/images/global/next.svg
+                                    div(class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                        div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                            strong(class='text-base lg:text-lg') Europe office:
+                                            h4(class='text-base lg:text-lg').text-textGray <strong>Address:</strong> 33 Saronikou St , 163 45, Ilioupoli, Athens, Greece
+                                        .w-full.flex.gap-15px
+                                            a(href='https://www.google.com/maps/place/Elioplus/@37.9458828,23.7512186,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bd6aa46d8f73:0x9f6fbac797a48673!8m2!3d37.9458786!4d23.7537935!16s%2Fg%2F11f308dv68'
+                                                class='btn font-bold text-sm text-blue' target='_blank')
+                                                span GET DIRECTIONS
+                                                include ../assets/images/global/next.svg
+                                    div(class='gap-10px lg:gap-15px').flex.flex-col.w-full
+                                        strong(class='text-base lg:text-lg') Social:
+                                        .flex.flex-row.gap-15px.items-center
+                                            include components/global/social
+
+            section.bg-white
+                .container
+                    div(class='gap-80px lg:gap-160px').flex.flex-col
+                        div(class='grid-cols-1 lg:grid-cols-2 text-img-row').grid.gap-30px
+                            div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                                div(class='gap-5px lg:gap-10px').flex.flex-col
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Do you have questions?
+                                    h4(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left').text-blue We have the answers.
+                                p(class='w-full text-base lg:text-body text-center lg:text-left') You can visit our help center with frequently asked questions about ElioPlus and our products & services.
+                                div(class='flex justify-center lg:justify-start')
+                                    a(href='../templates/faq.html' class='btn large font-bold text-sm xl:text-base text-blue')
+                                        span VIEW FREQUENTLY ASKED QUESTIONS
+                                        include ../assets/images/global/next.svg
+                            div(class='flex items-center')
+                                img( src='../assets/images/contact-us/faq.svg' alt='Visit the Elioplus FAQ to get answers for your questions' loading='lazy' class='max-w-[350px] lg:max-w-full')
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

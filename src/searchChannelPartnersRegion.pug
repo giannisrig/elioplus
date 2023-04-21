@@ -1,0 +1,347 @@
+mixin letterItem(letter, prefix)
+
+    if prefix === 'cat'
+        -var extraClass = 'go-to'
+    else
+        -var extraClass = 'go-to-expand'
+    a(href='#'+prefix+letter class='text-sm lg:text-base w-[35px] h-[35px] font-medium '+extraClass).font-inter.border.border-iconGray.bg-white.rounded-full.text-textGray.flex.items-center.justify-center.text-center=letter
+
+
+
+doctype html
+html(lang="en")
+    head
+        title Sass Channel Partners in Africa | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                div(class='text-xs lg:text-base flex gap-5px items-center justify-center').text-textGray.font-medium
+                                    a(href='../templates/index.html' class='transition-all duration-200 hover:text-blue') HOME
+                                    span(class='') /
+                                    a(href='../templates/searchChannelPartners.html' class='transition-all duration-200 hover:text-blue') CHANNEL PARTNERS
+                                    span(class='') /
+                                    span AFRICA
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Search for Channel Partners in Africa
+                                p(class='text-base lg:text-body text-center max-w-full') Channel partnerships can be a win-win relationship for both the vendor and the channel partner. The channel company sells products and services on behalf of their vendor and belongs to the indirect sales force and acts as an independent company.
+
+                            div(class='flex justify-center')
+                                form( method='POST' action='../templates/searchResultsChannelPartners.html' class='flex gap-10px w-full lg:w-[760px] max-w-full pt-5px pr-5px pb-5px pl-15px').bg-white.shadow-card.rounded-40px.overflow-hidden
+                                    input(class='grow pl-15px' placeholder='Type to search for a product category, vendor technology, country, region').rounded-30px.outline-none
+                                    button( type='submit' class='btn large font-bold text-xs xl:text-sm bg-blue text-white')
+                                        span SEARCH
+                                        include ../assets/images/global/searchWhite.svg
+
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.text-center.items-center
+                            h3(class='text-xl lg:text-2xl font-bold font-inter') Countries in <span id='currentRegion'>Africa</span>:
+                            div(class='gap-7px lg:gap-15px').countries.flex.justify-center.flex-wrap
+                                - var img= '../assets/images/flags/US.svg'
+                                - var name='United States'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Australia.svg'
+                                - var name='Australia'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/India.svg'
+                                - var name='India'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Nigeria.svg'
+                                - var name='Nigeria'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/SouthAfrica.svg'
+                                - var name='South Africa'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/NewZealand.svg'
+                                - var name='New Zealand'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Philippines.svg'
+                                - var name='Philippines'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Singapore.svg'
+                                - var name='Singapore'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/France.svg'
+                                - var name='France'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Germany.svg'
+                                - var name='Germany'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Italy.svg'
+                                - var name='Italy'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Netherlands.svg'
+                                - var name='Netherlands'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Poland.svg'
+                                - var name='Poland'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Spain.svg'
+                                - var name='Spain'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/UK.svg'
+                                - var name='United Kingdom'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/United_Arab_Emirates.svg'
+                                - var name='United Arab Emirates'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Canada.svg'
+                                - var name='Canada'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Egypt.svg'
+                                - var name='Egypt'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Mexico.svg'
+                                - var name='Mexico'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Argentina.svg'
+                                - var name='Argentina'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Brazil.svg'
+                                - var name='Brazil'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Chile.svg'
+                                - var name='Chile'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/China.svg'
+                                - var name='China'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Japan.svg'
+                                - var name='Japan'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+                                - var img= '../assets/images/flags/Greece.svg'
+                                - var name='Greece'
+                                - var href='../templates/searchResultsChannelPartners.html'
+                                include components/global/country.pug
+
+            section
+                .container
+                    div(class='w-full gap-50px lg:gap-80px').flex.flex-col
+
+                        div(class='w-full gap-20px lg:gap-30px').flex.flex-col
+                            .flex.flex-col.gap-15px
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Channel Partners in Africa Region
+                                p(class='text-base lg:text-body text-center lg:text-left max-w-full') Browse the best software IT resellers and SaaS channel partners in countries within the Africa region.
+
+                            div(class='py-20px px-15px justify-center  lg:justify-between items-center flex-col lg:flex-row gap-15px lg:gap-15px').bg-white.rounded-15px.shadow-card.flex.w-full
+                                div(class='text-sm lg:text-base px-15px py-10px').bg-gray.rounded-10px.text-blue.font-inter.w-fit.font-bold Africa
+                                div(class='h-[35px]').separator
+                                div(class='search-tabs').flex.items-center.gap-15px
+                                    div(class='text-sm lg:text-base').text-textGray.font-inter.w-fit Browse by:
+                                    a(href='#tabCategory').tab-item.flex.items-center.gap-5px.active
+                                        div(class='w-[15px] h-[15px]').rounded-full.bg-textGray.circle
+                                        h4(class='text-sm lg:text-base').text-textGray Product Category
+                                    a(href='#tabTechnology').tab-item.flex.items-center.gap-5px
+                                        div(class='w-[15px] h-[15px]').rounded-full.bg-textGray.circle
+                                        h4(class='text-sm lg:text-base').text-textGray Vendor Technology
+
+
+                                div(class='h-[35px]').separator
+                                form(class='flex gap-10px grow pt-5px pr-5px pb-5px pl-15px').rounded-40px.overflow-hidden.border-gray.border-2.bg-gray2
+                                    input(class='grow pl-15px' placeholder='Search for a category, vendor technology, country, region').rounded-30px.outline-none.bg-transparent
+                                    button( type='submit' class='w-[40px] h-[40px]').bg-blue.rounded-full.flex.justify-center.items-center
+                                        include ../assets/images/global/searchWhite.svg
+
+                        div(id='tabCategory' class='tab-content gap-30px lg:gap-50px').flex.flex-col.w-full
+
+                            .flex.flex-col.gap-10px.w-full
+                                h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Popular categories in Africa Region:
+                                div(class='owl-carousel owl-theme' data-items='5')
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/bigData.png'
+                                        - var name='Big Data'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/analyticsSoftware.png'
+                                        - var name='Analytics Software'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/ecommerce.png'
+                                        - var name='Ecommerce'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/accounting.png'
+                                        - var name='Accounting'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/databases.png'
+                                        - var name='Databases'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/bigData.png'
+                                        - var name='Big Data'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+                                    div(class='p-10px lg:p-15px h-full')
+                                        - var img= '../assets/images/search/categories/analyticsSoftware.png'
+                                        - var name='Analytics Software'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchCategory.pug
+
+                            .flex.flex-col.gap-30px.w-full
+                                .flex.flex-col.gap-15px.w-full
+                                    h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') All product categories in Africa Region:
+                                    div(class='h-[2px]').divider
+
+                                div(class='grid-cols-1 lg:grid-cols-letters gap-30px lg:gap-50px').grid.w-full
+
+                                    div().flex.flex-col.gap-15px.items-center.justify-start.border-x-2.border-gray.py-5px
+                                        - var list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                                        each item in list
+                                            +letterItem(item, 'cat')
+
+                                    div(class='gap-30px lg:gap-40px').flex.flex-col.w-full
+                                        - var letter = 'A'
+                                        - var terms = ["Accounting", "Ad Serving", "Affiliate Marketing", "Analytics Software", "API Tools", "Applicant Tracking", "Application Security", "Asset Lifecycle Management"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+                                        - var letter = 'B'
+                                        - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+                                        - var letter = 'C'
+                                        - var terms = ["Calendar & Scheduling", "CAM", "Campaign Management", "Change Management", "Chat & Web Conference", "Chatbot", "Cloud Integration (iPaaS)", "Cloud Management", "Cloud Storage", "CMMS", "Collaboration", "Competitive Intelligence", "Compliance", "Conferencing", "Contact Center", "Content Marketing", "CRM"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+                                        - var letter = 'D'
+                                        - var terms = ["Data Integration", "Data Management", "Data Masking", "Data Security", "Data Visualization", "Data Warehousing", "Databases", "Development Tools", "Digital Asset Management", "Document Management"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+                                        - var letter = 'E'
+                                        - var terms = ["ECM", "eCommerce", "eLearning", "Email", "Email Marketing", "Email Security", "Endpoint Security", "Engagement Tools", "Enterprise Asset Management", "ERP", "E-Signature", "Event Management"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+                                        - var letter = 'F'
+                                        - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                        - var prefix = 'cat'
+                                        - var link='../templates/searchResultsChannelPartners.html'
+                                        include components/global/searchTaxonomyGroup.pug
+                                        div(class='h-[2px]').divider
+
+
+
+
+
+                        div(id='tabTechnology' class='tab-content flex hidden gap-30px lg:gap-50px').flex-col.w-full
+
+                            .flex.flex-col.gap-15px.w-full
+                                h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Vendor Technologies in Africa Region:
+                                div(class='h-[2px]').divider
+
+                            div(class='grid-cols-1 lg:grid-cols-letters gap-30px lg:gap-50px').grid.w-full
+
+                                div().flex.flex-col.gap-15px.items-center.justify-start.border-x-2.border-gray.py-5px
+                                    - var list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                                    each item in list
+                                        +letterItem(item, 'tech')
+
+                                div(class='gap-30px lg:gap-40px').flex.flex-col.w-full
+                                    - var letter = 'A'
+                                    - var openval = true
+                                    - var terms = ["Accounting", "Ad Serving", "Affiliate Marketing", "Analytics Software", "API Tools", "Applicant Tracking", "Application Security", "Asset Lifecycle Management"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+                                    - var letter = 'B'
+                                    - var openval = false
+                                    - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+                                    - var letter = 'C'
+                                    - var openval = false
+                                    - var terms = ["Calendar & Scheduling", "CAM", "Campaign Management", "Change Management", "Chat & Web Conference", "Chatbot", "Cloud Integration (iPaaS)", "Cloud Management", "Cloud Storage", "CMMS", "Collaboration", "Competitive Intelligence", "Compliance", "Conferencing", "Contact Center", "Content Marketing", "CRM"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+                                    - var letter = 'D'
+                                    - var openval = false
+                                    - var terms = ["Data Integration", "Data Management", "Data Masking", "Data Security", "Data Visualization", "Data Warehousing", "Databases", "Development Tools", "Digital Asset Management", "Document Management"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+                                    - var letter = 'E'
+                                    - var openval = false
+                                    - var terms = ["ECM", "eCommerce", "eLearning", "Email", "Email Marketing", "Email Security", "Endpoint Security", "Engagement Tools", "Enterprise Asset Management", "ERP", "E-Signature", "Event Management"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+                                    - var letter = 'F'
+                                    - var openval = false
+                                    - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                    - var prefix = 'tech'
+                                    include components/global/searchTechnologyGroup.pug
+                                    div(class='h-[2px]').divider
+
+        section.bg-gray
+            .container
+
+                div(class='gap-80px lg:gap-120px').flex.flex-col
+
+
+                    div(class='grid-cols-1 lg:grid-cols-2 text-img-row gap-30px lg:gap-50px').grid
+                        div(class='row-start-2 lg:row-start-1 gap-15px lg:gap-25px').flex.flex-col.justify-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') What’s a Channel Partner?
+                            p(class='w-full text-base lg:text-xl text-center lg:text-left')
+                                | A channel partner is a company or individual in some cases that partners with a manufacturer or vendor to market and sell their products, technologies or services. The channel company although sells products and services on behalf of their partnering vendor and belongs to the indirect sales force, it is and acts as an independent company.
+                                | <br><br>
+                                | This means that a specific channel partner may have partnerships with more than one vendor and in fact the average channel partner works with 7-10 different IT vendors at a given period. Due to the explosive evolution in the Software-as-a-Service (SaaS) industry many channel partners produce and promote their own products as well.
+                        .flex.justify-center.items-center
+                            img(src='../assets/images/search/what-is-a-channel-partner.svg' alt='What is a channel partner' loading='lazy')
+
+                    div(class='grid-cols-1 lg:grid-cols-2 text-img-row gap-30px lg:gap-50px').grid
+                        .flex.justify-center.items-center
+                            img(src='../assets/images/search/build-partnerships.svg' alt='How to build a channel partnership' loading='lazy')
+
+                        div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') How to build a channel partnership?
+                            p(class='w-full text-base lg:text-xl text-center lg:text-left')
+                                | Channel partnerships can be a win-win relationship for both the vendor and the channel partner. A vendor should create an ideal channel partner profile before engaging with potential partners. Then there are several criteria on our platform to help you track these companies and reach out to them.
+                                | <br><br>
+                                | When reaching out make sure to provide your potential partners a concise message of what are the benefits and requirements partnering with your company. And please keep in mind that the most important part comes afterwards, how to maintain a successful relationship with your partners.
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

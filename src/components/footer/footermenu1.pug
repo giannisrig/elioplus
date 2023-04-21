@@ -1,0 +1,14 @@
+mixin menuItem(name, href)
+    li
+        a(href=href class='hover:text-blue text-sm md:text-base transition-colors duration-200').text-textGray=name
+
+.flex.flex-col.gap-15px
+    h4(class='text-sm md:text-base lg:text-lg').font-itner.font-bold PRODUCTS & SERVICES
+    ul.flex.flex-col.gap-10px
+        +menuItem('Partner Recruitment', '../templates/productPR.html')
+        +menuItem('Partner Relationship Management', '../templates/productPRM.html')
+        +menuItem('Intent Signals', '../templates/productIntentSignals.html')
+        +menuItem('Referral Software', '../templates/productReferralSoftware.html')
+        +menuItem('M&A Marketplace', '../templates/productMA.html')
+    div
+        img(src='../assets/images/global/capterra.png')

@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+    head
+        title Case Studies Archive | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Case Studies
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue Our clients success is ours too.
+                            p(class='text-base lg:text-body text-center lg:text-left')  Get the confirmation you need for the Elioplus products and services by reading past case studies of our clients and their successful results with us.
+                        .flex.justify-center
+                            img( src='../assets/images/case-studies/opener.svg' alt='Case studies and success stories of Elioplus products & services')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-40px
+                            .flex.flex-col.gap-10px.text-center.items-center
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') Successful clients stories
+                                p(class='w-full text-base lg:text-body') Click on a case study to read more information about the achievements and goals of the client.
+                        div(class='grid-cols-1 lg:grid-cols-2').grid.gap-50px
+                            - var img= '../assets/images/case-studies/1.png'
+                            - var name='A Business Intelligence (BI) software company'
+                            - var desc='A business intelligence software company in United States wanted to increase their channel partners network and penetrate into new markets....'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+                            - var img= '../assets/images/case-studies/2.png'
+                            - var name='A Data Loss and security company'
+                            - var desc='One of our clients that is offering backup & restore software for Google Apps, got in touch with our team in order to help them attract Google Apps resellers willing to become their channel partners...'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+                            - var img= '../assets/images/case-studies/3.png'
+                            - var name='A productivity SaaS Enterprise company'
+                            - var desc='An enterprise company in US operating in note taking software industry launched a reseller partner program because they used to offer only an affiliate partner program until now...'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+                            - var img= '../assets/images/case-studies/4.png'
+                            - var name='A POS software company'
+                            - var desc='A small POS software company operating in retail, wellness and hospitality industry launched few months ago their white label partner program and wanted to attract their first resellers...'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+                            - var img= '../assets/images/case-studies/5.png'
+                            - var name='An email client software'
+                            - var desc='An email client provider software company in Europe wanted to attract new quality resellers.'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+                            - var img= '../assets/images/case-studies/6.png'
+                            - var name='A mobile app builder'
+                            - var desc='A SaaS company in US that offers a great mobile app builder solution wanted to increase their channel partners network with white label resellers...'
+                            - var link='#'
+                            include components/global/caseStudy.pug
+            section.bg-white
+                .container
+                    .flex.flex-col.gap-50px
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Our Clients
+                            p(class='w-[855px] max-w-full text-base lg:text-body')  Elioplus is being trusted by big software & cloud companies, vendors and channel partners around the world <strong>since 2015</strong>.
+                        div.w-full.flex.justify-center
+                            img(src='../assets/images/case-studies/clients.png')
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/search.html' class='btn large font-bold text-sm xl:text-base')
+                                span VIEW ALL COMPANIES
+                                include ../assets/images/global/next.svg
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span ADD YOUR COMPANY FOR FREE
+
+            section.bg-blue.bg-particles.bg-cover
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-10px.text-center.items-center.text-white
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') David Friedland, VP Business Development IRI, The CoSort Company
+                            p(class='w-full text-base lg:text-body') "By feeding us with a steady array of qualified channel candidates at home and abroad, and providing an intuitive interface to manage the engagements, the Elioplus portal has quickly become one of the most valuable tools in our business development arsenal. We also appreciate Elioplus' responsiveness to our questions and feature requests, and would recommend the portal to anyone seeking to expand the global reach of their offerings."
+                        div(class='flex items-center justify-center')
+                            a(href='https://calendly.com/elioplus' target='_blank' class='btn large font-bold bg-white text-sm xl:text-base')
+                                span REQUEST A DEMO
+                                include ../assets/images/global/next.svg
+            section.bg-white
+                .container
+                    .flex.flex-col.gap-40px
+                        div(class='flex items-center justify-center w-full')
+                            include ../assets/images/global/cta.svg
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                            p(class='w-full lg:w-[854px] max-w-full text-base lg:text-body') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span CREATE YOUR ACCOUNT FOR FREE
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

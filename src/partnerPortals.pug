@@ -1,0 +1,101 @@
+mixin faqFeatureItem(question, answer)
+    details(class='text-sm lg:text-base').faq-item.bg-white.shadow-card.relative.rounded-4px.h-fit
+        summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px').flex.gap-7px.font-bold.relative
+            div.text-blue Q.
+            div=question
+        p(class='px-10px lg:px-20px py-25px')=answer
+
+mixin featureItem(name, included)
+    .flex.items-center.gap-5px
+        div(class='w-[20px] h-[20px]').flex.items-center.justify-center
+            if included
+                include ../assets/images/pricing/check.svg
+            else
+                include ../assets/images/pricing/close.svg
+        if included
+            div(class='text-[15px]')=name
+        else
+            div(class='text-[15px]').text-textGray=name
+
+doctype html
+html(lang="en")
+    head
+        title Partner Portals | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                h2(class='text-base lg:text-lg font-semibold').text-blue HOME/ PARTNER PORTALS
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Search & Browse Partner Portals
+                                p(class='text-base lg:text-body text-center max-w-full')
+                                    | Search for an IT partner portal, log in or sign and start collaborating.
+                                    | <br class='hidden lg:block'>
+                                    | Unify all your tech partnerships in a single place and automate your deals and reporting.
+                            div(class='flex justify-center')
+                                form(class='flex gap-10px w-full lg:w-[750px] max-w-full pt-5px pr-5px pb-5px pl-15px').bg-white.shadow-card.rounded-40px.overflow-hidden
+                                    input(class='grow pl-15px' placeholder='Type a company name  to search for an available partner portal at Elioplus').rounded-30px.outline-none
+                                    button( type='submit' class='btn large font-bold text-xs xl:text-sm bg-blue text-white')
+                                        span SEARCH
+                                        include ../assets/images/global/searchWhite.svg
+
+                        div(class='w-full lg:w-[1010px] max-w-full').flex.flex-col.gap-50px
+                            - var img= '../assets/images/company-item/loqate.png'
+                            - var name= 'Loqate a GBG solution'
+                            - var lastBtnTex= 'VIEW PARTNER PORTAL'
+                            - var desc= 'Loqate, GBG\'s location intelligence business unit, is a leading developer of Global Location Data Solutions, including Address Verification and Geocode. WHY PARTNER Loqate partners deliver a richer global data product and increase their revenues...'
+                            include components/global/company.pug
+                            - var img= '../assets/images/company-item/marketman.png'
+                            - var name= 'Marketman'
+                            - var lastBtnTex= 'VIEW PARTNER PORTAL'
+                            - var desc= 'MarketMan is a cloud-based inventory management and purchasing app focused on streamlining procurement, delivery and accounting. Our all-in-one restaurant management platform offers...'
+                            include components/global/company.pug
+                            - var img= '../assets/images/company-item/claritytel.png'
+                            - var name= 'ClarityTel'
+                            - var lastBtnTex= 'VIEW PARTNER PORTAL'
+                            - var desc= 'ClarityTel is a leading nationwide Hosted IP PBX and SIP Trunk provider. Since 2003, ClarityTel has leveraged its expertise in telephony engineering and software design to deliver enhanced tele...'
+                            include components/global/company.pug
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Partner Portal
+                            p(class='w-full text-base lg:text-body')
+                                | Find out what’s a partner portal and why your business should start using one in order to increase productivity and sales.
+                                | It is reported that a partner portal can increase partner productivity and sales up to <strong>15%</strong>. That’s why the Elioplus PRM solution integrates the Partner Portal feature by default.
+                            div(class='flex justify-center mt-20px')
+                                a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base').bg-white
+                                    span READ MORE ABOUT OUR PARTNER PORTAL
+                                    include ../assets/images/global/next.svg
+
+                        div(class='gap-80px lg:gap-120px').flex.flex-col
+
+                            div(class='grid-cols-1 lg:grid-cols-2 text-img-row gap-30px lg:gap-50px').grid
+                                .flex.justify-center.items-center
+                                    img(src='../assets/images/partner-portal/what-is-a-partner-portal.svg')
+
+                                div(class='gap-15px lg:gap-25px').flex.flex-col.justify-center
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') What is a partner portal?
+                                    p(class='w-full text-base lg:text-xl text-center lg:text-left')
+                                        | A partner portal is a software tool used by companies with a partner network to manage, optimize and automate their partnerships. A partner portal or PRM tool can be customized to fit specific needs based on the structure of a partner program or the benefits a vendor is offering.
+                                        | Typically, some of the features included in every partner portal include a resources page or content management system, deal registration and lead distribution, partner directory and locator and a collaboration tool.
+
+                            div(class='grid-cols-1 lg:grid-cols-2 text-img-row gap-30px lg:gap-50px').grid
+                                div(class='row-start-2 lg:row-start-1 gap-15px lg:gap-25px').flex.flex-col.justify-center
+                                    h3(class='text-2xl lg:text-3xl font-bold font-inter text-center lg:text-left') Why is a partner portal important?
+                                    p(class='w-full text-base lg:text-xl text-center lg:text-left')
+                                        | A partner portal can help channel managers to automate many of their channel tasks when it comes to reporting, approving deal registrations, providing marketing content and other material to their partners and give incentives to their network. Also, it helps a channel company to have a single source for all their tech partnerships and reporting needs and thus reducing their workload and increase their productivity.
+
+                                .flex.justify-center.items-center
+                                    img(src='../assets/images/partner-portal/why-is-partner-portal-important.svg')
+
+
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,65 @@
+mixin olItem(name, href)
+    li
+        a(href=href class='text-base go-to').text-textGray=name
+
+doctype html
+html(lang="en")
+    head
+        title Manage your Data | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.py-0
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-legal').grid.gap-0
+                        div(class='gap-80px lg:gap-80px px-50px py-100px border-x-2 border-gray').flex.flex-col.w-full
+                            div(class='gap-30px lg:gap-30px').flex.flex-col.w-full
+                                .flex.flex-col.gap-10px.w-full
+                                    .flex.gap-10px.text-textGray.text-sm.items-center
+                                        div Effective: <strong class="italic">September 1, 2015</strong>
+                                        div(class='w-[7px] h-[7px] bg-textGray rounded-full')
+                                        div Last Updated: <strong class="italic">May 1, 2018</strong>
+                                    h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Manage your Data
+                                p(class='italic text-base lg:text-xl') At Elioplus Inc. we respect your data and you can manage your Elioplus account as you want. Claim your company profile or request to remove your data from our platform.
+                            div(class='gap-50px lg:gap-80px').flex.flex-col.w-full
+                                div(id='claimProfile' class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') 1. Claim Your Company Profile
+                                    p(class='text-base lg:text-body')
+                                        | Promote your company’s expertise to our visitors, our business community, and interested local businesses with an up-to-date profile on Elioplus. Update your company’s profile to reflect your product portfolio and services and grow your awareness to your local market.
+                                        | <br><br>
+                                        | In order to claim a company profile please browse and visit a company profile and use the “Claim Profile” option on the bottom of the listing.
+                                    a(href='#' class='btn font-bold text-sm text-blue')
+                                        span SEARCH MY COMPANY PROFILE
+                                        include ../assets/images/global/next.svg
+                                div(id='requestRemoval' class='gap-20px lg:gap-25px').flex.flex-col.w-full
+                                    h2(class='text-xl lg:text-2.5xl font-inter font-bold') 2. Request Removal/Deletion from Elioplus (Opt-Out of Sale)
+                                    p(class='text-base lg:text-body')
+                                        | Want to remove your existing company profile and individual data from the Elioplus database?
+                                        | <br><br>
+                                        | If you make this choice, all information contained in your company profile, including personal data, will be removed and your record will become unavailable in our products as soon as possible.
+                                        | <br><br>
+                                        | Removing your company profile also serves as an opt-out of the sale of information that was contained in your profile.
+                                    a(href='#' class='btn font-bold text-sm text-blue')
+                                        span REQUEST REMOVAL
+                                        include ../assets/images/global/next.svg
+
+                        div(class='gap-80px lg:gap-80px py-100px ').flex.flex-col.w-full
+                            div.relative.h-full
+                                aside(class='sidebar-container sticky top-[100px] mt-100px')
+                                    div(class='gap-30px lg:gap-50px').flex.flex-col.w-full
+                                        div(class='gap-20px lg:gap-25px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-xl lg:text-2.5xl font-inter font-bold') Table of Contents
+                                            ol(class='gap-5px lg:gap-10px').flex.flex-col.toc
+                                                +olItem('Claim your company profile', '#claimProfile')
+                                                +olItem('Request Removal/Deletion from Elioplus (Opt-Out of Sale)', '#requestRemoval')
+                                        div(class='divider bg-gray h-[2px]')
+                                        div(class='gap-20px lg:gap-25px pl-30px').flex.flex-col.w-full
+                                            h3(class='text-xl lg:text-2.5xl font-inter font-bold') Legal
+                                            .flex.flex-col.gap-10px.w-full
+                                                a(href='../templates/terms-and-conditions.html' class='text-base lg:font-[17px]').text-blue.font-semibold.underline Terms & Conditions
+                                                a(href='../templates/privacy-policy.html' class='text-base lg:font-[17px]').text-blue.font-semibold.underline Privacy Policy
+                                                a(href='../templates/faq.html' class='text-base lg:font-[17px]').text-blue.font-semibold.underline Frequently asked questions
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

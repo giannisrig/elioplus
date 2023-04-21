@@ -1,0 +1,113 @@
+mixin faqFeatureItem(question, answer)
+    details(class='text-sm lg:text-base').faq-item.bg-white.shadow-card.relative.rounded-4px.h-fit
+        summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px').flex.gap-7px.font-bold.relative
+            div=question
+        p(class='px-10px lg:px-20px py-25px')=answer
+
+
+doctype html
+html(lang="en")
+    head
+        title Search for Channel Partners & Partner Programs | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Search and browse more than <span class='text-blue'>120.000</span> <br>Channel Partners & Partner Programs at Elioplus
+                                p(class='text-base lg:text-body text-center w-full') Select if you are looking for partner programs by vendors or looking for channel partners. Choose between 125 different products, select the market you are interested in and get connected with thousands of IT companies for free.
+
+                        div(class='flex justify-center items-center flex-col gap-15px')
+                            h2(class='text-base lg:text-lg').text-blue.text-center.font-inter.font-bold Unlock advanced search features and grow your opportunities by purchasing one of our premium products.
+                            form(id='searchForm' method='POST' action='../templates/searchResults.html' class='p-15px justify-center lg:justify-between items-center flex-col lg:flex-row gap-15px').bg-white.rounded-40px.shadow-card.flex.w-full
+
+                                div(class='text-sm lg:text-sm px-20px py-10px w-full lg:w-fit text-center').flex.gap-5px.text-textGray.border-gray.border-2.font-bold.rounded-30px.justify-center.bg-gray2
+                                    label(for='country') Looking for:
+                                    select(id='country' name='country').bg-transparent.text-blackBlue
+                                        option Partner Programs
+                                        option Channel Partners
+                                div(class='text-sm lg:text-sm px-20px py-10px w-full lg:w-fit text-center').flex.gap-5px.text-textGray.border-gray.border-2.font-bold.rounded-30px.justify-center.bg-gray2
+                                    label(for='city') Select a category:
+                                    select(id='city' name='city' class='max-w-[130px]').bg-transparent.text-blackBlue
+                                        - var items = ['3D Architecture', '3D CAD', 'Access Control Systems', 'Accounting', 'Ad Serving', 'Affiliate Marketing', 'Alarms Automation', 'Analytics Software', 'API Tools', 'Applicant Tracking', 'Application Security', 'Asset Lifecycle Management', 'Backup Restore', 'Big Data', 'Billing Invoicing', 'BIM', 'Budgeting', 'Bug Trackers', 'Business Intelligence', 'Business Process Management', 'Calendar Scheduling', 'CAM', 'Campaign Management', 'CCTV Video Surveillance', 'Change Management', 'Chat Web Conference', 'Chatbot', 'Cloud Integration (iPaaS)', 'Cloud Management', 'Cloud Storage', 'CMMS', 'Collaboration', 'Competitive Intelligence', 'Compliance', 'Conferencing', 'Contact Center', 'Content Marketing', 'CRM', 'Data Integration', 'Data Management', 'Data Masking', 'Data Security', 'Data Visualization', 'Data Warehousing', 'Databases', 'Development Tools', 'Digital Asset Management', 'Document Management', 'ECM', 'eCommerce', 'eLearning', 'Email', 'Email Marketing', 'Email Security', 'Endpoint Security', 'Engagement Tools', 'Enterprise Asset Management', 'ERP', 'E-Signature', 'Event Management', 'Facility Management', 'Feedback Management', 'Field Services Management', 'File Sharing Software', 'Firewall', 'Fleet Management', 'Frameworks Libraries', 'Fraud Prevention', 'Gamification Loyalty', 'General-Purpose CAD', 'GIS', 'Governance, Risk Compliance (GRC)', 'Graphic Design', 'Healthcare', 'Help Desk', 'HR Administration', 'Identity Management', 'Infographics', 'Intercom Systems', 'Inventory Management', 'IoT', 'ITSM', 'Knowledge Management', 'Learning Management System', 'Live Chat', 'Location Intelligence', 'Marketing Automation', 'Mobile Data Security', 'Mobile Development', 'Mobility', 'Monitors Cameras Sensors', 'Note Taking', 'Optimization', 'Password Management', 'Payment Processing', 'Payroll', 'PDM (Product Data Management)', 'Penetration Testing', 'Performance Management', 'Perimeter Security Systems', 'PLM', 'POS', 'Presentations', 'PRM', 'Procurement', 'Productivity Suites', 'Project Management Tools', 'Quotes Orders', 'Recruiting', 'Remote Access', 'Risk Management', 'Robotic Process Automation', 'Sales Intelligence', 'Sales Process Management', 'SEO SEM', 'Servers', 'Shipping Tracking', 'Simulation Software', 'Social Media Marketing', 'Spreadsheets', 'Supply Chain Execution', 'Supply Chain Management', 'Surveys Forms', 'Switches', 'Task Management', 'Team Collaboration', 'Time Expense', 'Time Expenses', 'Time Management', 'Track Management', 'Unified Communications', 'Unified Messaging', 'Usability Testing', 'Video Conferencing', 'Video Editing', 'Video Management System', 'Virtualization', 'VOIP', 'Vulnerability Management', 'Warehouse Management', 'Web Hosting', 'Web Monitoring', 'Websites', 'Workflow Management', ]
+                                        each item in items
+                                            option=item
+
+                                div(class='text-sm lg:text-sm px-20px py-10px w-full lg:w-fit text-center').flex.gap-5px.text-textGray.border-gray.border-2.font-bold.rounded-30px.justify-center.bg-gray2
+                                    label(for='sort') Choose a country:
+                                    select(id='sort' name='sort').bg-transparent.text-blackBlue
+                                        option United States
+                                        option Name A-Z
+                                        option Rating
+                                button( type='submit' class='btn large font-bold text-xs lg:text-sm bg-blue text-white')
+                                    span APPLY FILTERS
+                                    include ../assets/images/global/searchWhite.svg
+
+                        .w-full.flex.items-center.gap-5px.justify-center
+                            include ../assets/images/global/unlock.svg
+                            p(class='text-sm lg:text-base').text-textGray
+                                | Unlock advanced search features and grow your opportunities by purchasing one of our premium products.
+                            a(href='../templates/register.html' class='text-sm lg:text-base').text-blue.underline.inline.font-bold Upgrade Now!
+
+            section
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Create Partnerships & Connections
+                            p(class='w-full text-base lg:text-body') Grow your indirect sales channel and connect with channel partners and IT vendors worldwide.
+
+                        div(class='flex flex-col lg:flex-row gap-30px lg:gap-10px justify-start lg:justify-between')
+
+                            div(class='w-[390px] max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='pt-15px lg:pt-25px').flex.items-center.justify-center
+                                    img(src='../assets/images/search/partner-programs.svg' alt='Sass Partner Programs by Vendors at Elioplus' loading='lazy' width='101' height='100')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px lg:pt-20px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    .w-full.flex.flex-col.gap-5px
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Sass Partner Programs by Vendors
+                                        p(class='text-sm lg:text-base') Browse programs by vendors and partner with Resellers, Managed Service Providers (MSPs) and System Integrators (SIs).
+                                    a(href='../templates/searchVendors.html' class='btn font-bold text-xs xl:text-sm').w-full.justify-center.text-blue
+                                        span VIEW PARTNER PROGRAMS
+                                        include ../assets/images/global/next.svg
+
+                            div(class='w-[390px] max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='pt-15px lg:pt-25px').flex.items-center.justify-center
+                                    img(src='../assets/images/search/channel-partners.svg' alt='Browse Sass Channel Partners at Elioplus' loading='lazy' width='100' height='100')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px lg:pt-20px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    .w-full.flex.flex-col.gap-5px
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Sass Channel Partners
+                                        p(class='text-sm lg:text-base') Explore channel companies that sell your products or services and belong to your indirect sales force while acting independent.
+                                    a(href='../templates/searchChannelPartners.html' class='btn font-bold text-xs xl:text-sm').w-full.justify-center.text-blue
+                                        span VIEW CHANNEL PARTNERS
+                                        include ../assets/images/global/next.svg
+
+                            div(class='w-[390px] max-w-full').bg-white.shadow-card.overflow-hidden.rounded-10px
+                                div(class='pt-15px lg:pt-25px').flex.items-center.justify-center
+                                    img(src='../assets/images/search/partnerships.svg' alt='Browse Partnerships & Technologies at Elioplus' loading='lazy' width='135' height='100')
+                                div(class='gap-10px lg:gap-15px py-10px lg:py-30px lg:pt-20px px-20px lg:px-25px text-center').bg-white.flex.flex-col
+                                    .w-full.flex.flex-col.gap-5px
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Partnerships & Technologies
+                                        p(class='text-sm lg:text-base') Search for partnerships offered by vendors who promote their product with current applications that their businesses use.
+                                    a(href='../templates/searchPartnerhsips.html' class='btn font-bold text-xs xl:text-sm').w-full.justify-center.text-blue
+                                        span VIEW PARTNERSHIPS
+                                        include ../assets/images/global/next.svg
+
+            section.bg-gray
+                .container
+                    .flex.flex-col.gap-40px
+                        div(class='flex items-center justify-center w-full')
+                            img( src='../assets/images/global/cta.svg' alt='Elioplus connects software and IT vendors with channel partners' loading='lazy')
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                            p(class='w-full lg:w-[854px] max-w-full text-base lg:text-body') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span ADD YOUR COMPANY FOR FREE
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

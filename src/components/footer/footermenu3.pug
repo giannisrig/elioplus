@@ -1,0 +1,15 @@
+mixin menuItem(name, href)
+    li
+        a(href=href class='hover:text-blue text-sm md:text-base transition-colors duration-200').text-textGray=name
+
+.flex.flex-col.gap-15px
+    h4(class='text-sm md:text-base lg:text-lg').font-itner.font-bold COMPANY
+    ul.flex.flex-col.gap-10px
+        +menuItem('About Us', '../templates/aboutUs.html')
+        +menuItem('Case studies', '../templates/caseStudiesArchive.html')
+        +menuItem('Blog', 'https://medium.com/@elioplus')
+        +menuItem('Resources', '../templates/resourcesArticle.html')
+        +menuItem('Search', '#')
+        +menuItem('Features', '#')
+        +menuItem('Pricing', '#')
+        +menuItem('FAQ', '../templates/faq.html')

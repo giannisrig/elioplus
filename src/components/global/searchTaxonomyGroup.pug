@@ -1,0 +1,9 @@
+div( id=prefix+letter class='gap-20px lg:gap-25px').w-full.flex.flex-col
+    h4.font-bold.font-inter.text-2xl Categories starting with&nbsp;
+        span(class='text-blue')=letter
+        | :
+    .w-full.flex.gap-15px.flex-wrap
+        each term in terms ? terms : []
+            a(href=link class='hover:text-blue').flex.items-center.gap-5px.bg-white.shadow-card.rounded-4px.py-10px.px-15px.text-textGray.transition-all.duration-200
+                span().font-bold.text-sm=term
+                img(src='../assets/images/global/next.svg' alt='next icon' loading='lazy')

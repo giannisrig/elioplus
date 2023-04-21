@@ -1,0 +1,91 @@
+mixin letterItem(letter, prefix)
+    a(href='#'+prefix+letter class='go-to-expand text-sm lg:text-base w-[35px] h-[35px] font-medium').font-inter.border.border-iconGray.bg-white.rounded-full.text-textGray.flex.items-center.justify-center.text-center=letter
+
+
+
+doctype html
+html(lang="en")
+    head
+        title Partnerships & Vendor Technologies | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-40px lg:gap-60px').flex.flex-col.justify-center.items-center.w-full
+                        div(class='gap-20px lg:gap-30px').flex.flex-col.justify-center.items-center.w-full
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                div(class='text-xs lg:text-base flex gap-5px items-center justify-center').text-textGray.font-medium
+                                    a(href='../templates/index.html' class='transition-all duration-200 hover:text-blue') HOME
+                                    span(class='') /
+                                    span PARTNERSHIPS
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Search for more than <span class='text-blue'>9,000</span>
+                                    | <br class='hidden lg:block'>Partnerships & Technologies at Elioplus
+                                p(class='text-base lg:text-body text-center max-w-full') Are you looking for an IT provider (like reseller, VAR, consultant etc.) that sells a specific technology? Browse our platform's IT providers listed by their specific partnerships and expertise in the list below or by using the search form.
+
+                        div(class='flex justify-center')
+                            form(class='flex gap-10px w-full lg:w-[760px] max-w-full pt-5px pr-5px pb-5px pl-15px').bg-white.shadow-card.rounded-40px.overflow-hidden
+                                input(class='grow pl-15px' placeholder='Type to search for a specific partnership, expertise, vendor technology').rounded-30px.outline-none
+                                button( type='submit' class='btn large font-bold text-xs xl:text-sm bg-blue text-white')
+                                    span SEARCH
+                                    include ../assets/images/global/searchWhite.svg
+
+            section
+                .container
+
+                    div(id='tabTechnology' class='flex gap-30px lg:gap-50px').flex-col.w-full
+
+                        .flex.flex-col.gap-15px.w-full
+                            h3(class='text-xl lg:text-2xl font-bold font-inter text-center lg:text-left') Vendor Technologies:
+
+
+                        div(class='grid-cols-1 lg:grid-cols-letters gap-30px lg:gap-50px').grid.w-full
+
+                            div().flex.flex-col.gap-15px.items-center.justify-start.border-x-2.border-gray.py-5px
+                                - var list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                                each item in list
+                                    +letterItem(item, 'tech')
+
+                            div(class='gap-30px lg:gap-40px').flex.flex-col.w-full
+                                - var letter = 'A'
+                                - var openval = true
+                                - var terms = ["Accounting", "Ad Serving", "Affiliate Marketing", "Analytics Software", "API Tools", "Applicant Tracking", "Application Security", "Asset Lifecycle Management"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+                                - var letter = 'B'
+                                - var openval = false
+                                - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+                                - var letter = 'C'
+                                - var openval = false
+                                - var terms = ["Calendar & Scheduling", "CAM", "Campaign Management", "Change Management", "Chat & Web Conference", "Chatbot", "Cloud Integration (iPaaS)", "Cloud Management", "Cloud Storage", "CMMS", "Collaboration", "Competitive Intelligence", "Compliance", "Conferencing", "Contact Center", "Content Marketing", "CRM"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+                                - var letter = 'D'
+                                - var openval = false
+                                - var terms = ["Data Integration", "Data Management", "Data Masking", "Data Security", "Data Visualization", "Data Warehousing", "Databases", "Development Tools", "Digital Asset Management", "Document Management"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+                                - var letter = 'E'
+                                - var openval = false
+                                - var terms = ["ECM", "eCommerce", "eLearning", "Email", "Email Marketing", "Email Security", "Endpoint Security", "Engagement Tools", "Enterprise Asset Management", "ERP", "E-Signature", "Event Management"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+                                - var letter = 'F'
+                                - var openval = false
+                                - var terms = ["Backup & Restore", "Big Data", "Billing & Invoicing", "BIM", "Budgeting", "Bug Trackers", "Business Intelligence", "Business Process Management"]
+                                - var prefix = 'tech'
+                                include components/global/searchTechnologyGroup.pug
+
+
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

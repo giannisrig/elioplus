@@ -1,0 +1,118 @@
+doctype html
+html(lang="en")
+    head
+        title Case Study Single | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener.relative
+                .bg.absolute.w-full.h-full.top-0.left-0
+                    .bg.absolute.w-full.h-full.top-0.left-0.bg-gradient-case
+                    img(src='../assets/images/case-studies/bi-case-study.png' alt='A Business Intelligence (BI) software company').object-cover.w-full.h-full
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2 relative z-1').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px py-120px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col.text-white
+                                a( href='../templates/caseStudiesArchive.html' class='text-base lg:text-xl font-medium font-inter') CASE STUDIES
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') A Business Intelligence (BI) software company
+                            a(href='#' class='btn large font-bold text-sm xl:text-base').bg-white
+                                span CONTINUE TO CASE STUDY
+                                include ../assets/images/global/next.svg
+
+                .mt-30px.wave.relative.z-1
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-80px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px').flex.flex-col.justify-center
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') About the case study
+                                p(class='w-full text-base lg:text-body')
+                                    | A business intelligence software company in United States wanted to increase their channel partners network and penetrate into new markets.
+                                    | <br><br>
+                                    | They were trying to attract new partners by using traditional methods like databases and by hiring consulting services without having the expected results. They got in touch with our team and their channel manager started using our platform on a daily basis.
+                                    | <br><br>
+                                    | According to the targeted criteria that they submitted on our platform, they started having their first reseller matches. They are sending 4 follow up emails to every match that they receive through Elioplus and they are using our opportunities pipeline to track every opportunity, they add tasks, reminders and notes.
+
+                        .flex.items-end
+                            .w-full.flex.flex-col.gap-20px
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray Tracking period:
+                                    strong(class='text-base lg:text-lg') 7 months
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray They provide:
+                                    strong(class='text-base lg:text-lg') Business intelligence software from SMBs to Enterprise level companies
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray They look for partners:
+                                    strong(class='text-base lg:text-lg') Worldwide
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray Results:
+                                    strong(class='text-base lg:text-lg') 54 demos + 39 calls + 39 more info requests = 132 qualified partners leads
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray Ratio:
+                                    strong(class='text-base lg:text-lg') 18.9 /mo qualified leads
+                                div(class='gap-5px lg:gap-5px').flex.flex-col.w-full
+                                    h4(class='text-base lg:text-lg').text-textGray Achievements:
+                                    strong(class='text-base lg:text-lg') They have now through Elioplus new resellers in US, Mexico, Brazil, India, South Africa, UK, Poland , Germany, Australia and we continue our collaboration with great success.
+            section.bg-gray
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col
+                        .flex.flex-col.gap-40px
+                            div(class='text-center lg:text-left items-center lg:items-start').flex.flex-col.gap-10px
+                                h3(class='text-2xl lg:text-3xl font-bold font-inter') More clients stories
+                                p(class='w-full text-base lg:text-body') Read more successful case studies of our clients using Elioplus.
+                        div(class='owl-carousel owl-theme' data-items='3')
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/1.png'
+                                - var name='A Business Intelligence (BI) software company'
+                                - var desc='A business intelligence software company in United States wanted to increase their channel partners network and penetrate into new markets....'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/2.png'
+                                - var name='A Data Loss and security company'
+                                - var desc='One of our clients that is offering backup & restore software for Google Apps, got in touch with our team in order to help them attract Google Apps resellers willing to become their channel partners...'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/3.png'
+                                - var name='A productivity SaaS Enterprise company'
+                                - var desc='An enterprise company in US operating in note taking software industry launched a reseller partner program because they used to offer only an affiliate partner program until now...'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/4.png'
+                                - var name='A POS software company'
+                                - var desc='A small POS software company operating in retail, wellness and hospitality industry launched few months ago their white label partner program and wanted to attract their first resellers...'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/5.png'
+                                - var name='An email client software'
+                                - var desc='An email client provider software company in Europe wanted to attract new quality resellers.'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+                            div(class='p-15px lg:p-20px h-full')
+                                - var img= '../assets/images/case-studies/6.png'
+                                - var name='A mobile app builder'
+                                - var desc='A SaaS company in US that offers a great mobile app builder solution wanted to increase their channel partners network with white label resellers...'
+                                - var link='#'
+                                include components/global/caseStudySmall.pug
+
+            section.bg-white
+                .container
+                    .flex.flex-col.gap-40px
+                        div(class='flex items-center justify-center w-full')
+                            include ../assets/images/global/cta.svg
+                        .flex.flex-col.gap-10px.text-center.items-center
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') More than <span class='text-blue'>120.000</span> companies are using Elioplus
+                            p(class='w-full lg:w-[854px] max-w-full text-base lg:text-body') What are you waiting for? Add your company for free and find out how you can improve your business with us.
+                        div(class='flex justify-center items-center flex-col lg:flex-row gap-10px xl:gap-20px')
+                            a(href='../templates/register.html' class='btn large font-bold text-sm xl:text-base bg-blue text-white')
+                                include ../assets/images/global/circles.svg
+                                span CREATE YOUR ACCOUNT FOR FREE
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+    head
+        title Get a Quote | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section
+                .container
+                    .flex.w-full.justify-center
+                        div(class='w-full md:w-[730px]').flex.flex-col.gap-30px
+                            div(class='text-center gap-5px lg:gap-10px').flex.flex-col.items-center.w-full
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Get a Quote
+                                p(class='text-base lg:text-body text-center w-full') This request will be sent to all similar businesses on our network to help you compare prices.
+
+
+                            div(id='quoteSteps' class='px-10px lg:px-25px').flex.items-center.justify-between.w-full.relative
+                                a(id='triggerStep1' href='#step1').stepTab.flex.flex-col.gap-10px.items-center.justify-center.text-center.relative.z-2.active
+                                    div(class='w-[30px] h-[30px] ').rounded-full.border-2.border-blue.bg-white.circle
+                                    h4(class='text-sm lg:text-base').font-semibold.text-textGray Requirements
+                                a(id='triggerStep2' href='#step2').stepTab.flex.flex-col.gap-10px.items-center.justify-center.text-center.relative.z-2
+                                    div(class='w-[30px] h-[30px] ').rounded-full.border-2.border-blue.bg-white.circle
+                                    h4(class='text-sm lg:text-base').font-semibold.text-textGray Contact Details
+                                a(id='triggerStep3' href='#step3').stepTab.flex.flex-col.gap-10px.items-center.justify-center.text-center.relative.z-2
+                                    div(class='w-[30px] h-[30px] ').rounded-full.border-2.border-blue.bg-white.circle
+                                    h4(class='text-sm lg:text-base').font-semibold.text-textGray Review & Submit
+
+                            form(method='POST' class='w-full p-20px lg:p-40px').flex.flex-col.bg-white.shadow-card.rounded-10px.justify-center.items-center
+
+                                .w-full.flex.flex-col.gap-30px
+
+                                    div(id='step1').w-full.flex.flex-col.gap-30px.step-content.active
+
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Requirements
+
+                                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px lg:gap-50px').grid
+                                            .input-field
+                                                label(for='product' class='text-sm font-semibold') Product/Technology:
+                                                input(id='product' name='product' type='text' placeholder='Enter your full name')
+                                            .input-field
+                                                label(for='items' class='text-sm font-semibold') No. of items/users:
+                                                input(id='items' name='items' type='number' placeholder='Enter your phone number')
+
+                                        .input-field
+                                            label(for='description' class='text-sm font-semibold') Description:
+                                            textarea(id='description' name='description' placeholder='Enter your message and describe your requirements')
+
+                                        .w-full.flex.justify-end.gap-20px
+
+                                            a(href='#triggerStep2' class='step-nav-btn btn large font-bold text-sm bg-blue text-white justify-center')
+                                                span NEXT
+                                                include ../assets/images/global/next.svg
+
+                                    div(id='step2' class='flex hidden').w-full.flex-col.gap-30px.step-content
+
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Contact Details
+
+                                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px lg:gap-50px').grid
+                                            .input-field
+                                                label(for='fname' class='text-sm font-semibold') First Name:
+                                                input(id='fname' name='fname' type='text' placeholder='Enter your first name')
+                                            .input-field
+                                                label(for='lname' class='text-sm font-semibold') Last Name:
+                                                input(id='lname' name='lname' type='text' placeholder='Enter your last name')
+
+                                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px lg:gap-50px').grid
+                                            .input-field
+                                                label(for='email' class='text-sm font-semibold') Working Email:
+                                                input(id='email' name='email' type='email' placeholder='Enter your email address')
+                                            .input-field
+                                                label(for='company' class='text-sm font-semibold') Company:
+                                                input(id='company' name='company' type='text' placeholder='Enter your company name')
+
+                                        div(class='grid-cols-1 lg:grid-cols-2 gap-30px lg:gap-50px').grid
+                                            .input-field
+                                                label(for='country' class='text-sm font-semibold') Country:
+                                                input(id='country' name='country' type='text' placeholder='Select your Country')
+                                            .input-field
+                                                label(for='city' class='text-sm font-semibold') City:
+                                                input(id='city' name='city' type='text' placeholder='Enter your city')
+                                        .input-field
+                                            label(for='phone' class='text-sm font-semibold') Phone Number:
+                                            input(id='phone' name='phone' type='number' placeholder='Enter your phone number')
+
+                                        .w-full.flex.justify-end.gap-20px
+
+                                            a(href='#triggerStep1' class='step-nav-btn btn large font-bold text-sm justify-center text-blue')
+                                                include ../assets/images/global/prev.svg
+                                                span BACK
+
+                                            a(href='#triggerStep3' class='step-nav-btn btn large font-bold text-sm bg-blue text-white justify-center')
+                                                span NEXT
+                                                include ../assets/images/global/next.svg
+
+                                    div(id='step3' class='flex hidden').w-full.flex-col.gap-30px.step-content
+
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Review & Submit
+
+                                        .w-full.flex.justify-end.gap-20px
+
+                                            a(href='#triggerStep2' class='step-nav-btn btn large font-bold text-sm justify-center text-blue')
+                                                include ../assets/images/global/prev.svg
+                                                span BACK
+
+                                            button(type='submit' class='step-nav-btn btn large font-bold text-sm bg-blue text-white justify-center')
+                                                span SUBMIT FORM
+                                                include ../assets/images/global/next.svg
+
+                            div(class='w-full p-25px gap-15px lg:gap-20px').bg-white.shadow-card.overflow-hidden.rounded-10px.flex.items-start.flex-wrap
+                                img(src='../assets/images/search/channel-partners.svg' class='mt-5px' alt='Search and browse Sass Channel Partners' loading='lazy')
+                                div(class='gap-10px lg:gap-15px').bg-white.flex.flex-col.w-min.grow
+                                    .flex.flex-col.gap-5px
+                                        h3(class='text-base lg:text-lg font-bold font-inter') Sass Channel Partners
+                                        p(class='text-sm lg:text-base') Explore channel companies that sell your products or services and belong to your indirect sales force while acting independent.
+                                    a(href='../templates/searchChannelPartners.html' class='btn font-bold text-xs xl:text-sm').justify-center.text-blue
+                                        span VIEW CHANNEL PARTNERS
+                                        include ../assets/images/global/next.svg
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

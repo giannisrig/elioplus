@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        title Create your Account | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray
+                .container
+                    div(class='gap-30px lg:gap-50px').flex.flex-col.justify-center.items-center
+                        .flex.flex-col.gap-10px.text-center.items-center.w-full
+                            a(href='../templates/index.html' class='w-[100px] lg:w-[150px]').block.header-logo
+                                include ../assets/images/global/logo.svg
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') Create your account
+                            p(class='text-base lg:text-body w-[546px] max-w-full') Enter your details below to sign up for your ElioPlus account. It will take less than 2 minutes and it's free.
+                        .flex.flex-col.gap-25px.text-center.items-center.w-full
+                            form(method='POST' class='w-[460px] max-w-full p-20px lg:p-40px').flex.flex-col.bg-white.shadow-card.rounded-10px.justify-center.items-center
+                                .w-full.flex.flex-col.gap-30px
+                                    .input-field
+                                        label(for='email' class='text-sm font-semibold') Business email:
+                                        input(id='email' name='email' type='email' placeholder='Enter your business email address')
+                                    .input-field
+                                        label(for='username' class='text-sm font-semibold') Username:
+                                        input(id='username' name='username' type='text' placeholder='Enter your business email address')
+                                    .input-field
+                                        label(for='password' class='text-sm font-semibold') Password:
+                                        input(id='password' name='password' type='password' placeholder='Enter your password')
+                                    .input-field
+                                        label(for='repeat_password' class='text-sm font-semibold') Repeat Password:
+                                        input(id='repeat_password' name='password' type='password' placeholder='Repeat your entered your password')
+                                    .w-full.flex.flex-col.gap-20px
+                                        button(type='submit' class='btn large font-bold text-sm bg-blue text-white w-full justify-center')
+                                            span REGISTER MY ACCOUNT
+                                            include ../assets/images/global/next.svg
+                                        a( id='linkedinLogin' href='#' class='btn large font-bold text-sm text-linkedin border-linkedin w-full justify-center')
+                                            include ../assets/images/auth/linkedin.svg
+                                            span CONTINUE WITH LINKEDIN
+
+                            a(href='../templates/login.html' class='font-semibold text-sm text-blue underline') You already have an account? Sign in.
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

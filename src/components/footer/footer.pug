@@ -1,0 +1,38 @@
+footer.bg-white.border-t-2.border-gray
+    div(class='py-50px lg:py-80px')
+        .container
+            .flex.flex-col.gap-50px
+                div(class='flex-col lg:flex-row').flex.border-b-2.border-gray.pb-30px.justify-between.items-bottom.gap-20px
+                    .flex.flex-col.gap-20px
+                        div(class='flex-col md:flex-row justify-center md:justify-start items-center md:items-end').flex.gap-20px
+                            img(src='../assets/images/global/logo.svg' alt='Elioplus logo footer')
+                            .flex.flex-row.gap-15px.items-end
+                                include ../global/social
+                        p(class='text-sm md:text-base text-center md:text-left').max-w-xl Elioplus is a leading provider of partner recruitment and management solutions that assist IT software companies to expand their partner network.
+                    div(class='justify-center md:justify-start gap-5px sm:gap-15px').flex.flex-row.items-end
+                        a(href='../templates/searchVendors.html').btn.font-bold.text-blue.text-sm
+                            span VENDORS
+                            include ../../../assets/images/global/next.svg
+                        a(href='../templates/searchChannelPartners.html').btn.font-bold.text-blue.text-sm
+                            span CHANNEL PARTNERS
+                            include ../../../assets/images/global/next.svg
+                        a(href='../templates/searchPartnerhsips.html').btn.font-bold.text-blue.text-sm
+                            span PARTNERSHIPS
+                            include ../../../assets/images/global/next.svg
+                div(class='grid gap-30px grid-cols-2 md:grid-cols-3 mdl:flex mdl:justify-between mdl:gap-0')
+                    include ../footer/footermenu1.pug
+                    include ../footer/footermenu2.pug
+                    include ../footer/footermenu3.pug
+                    include ../footer/footermenu4.pug
+    div(class='py-15px md:py-25px').bg-blue.text-white
+        .container
+            div(class='flex-col-reverse md:flex-row').flex.justify-between.gap-10px
+                div(class='justify-center md:justify-start text-xs md:text-sm').flex.items-center Elioplus 2023, All Rights Reserved
+                ul(class='justify-center md:justify-start').flex.items-center.gap-25px
+                    li
+                        a(href='../templates/terms-and-conditions.html' class='text-xs md:text-sm') Terms & Conditions
+                    li
+                        a(href='../templates/privacy-policy.html' class='text-xs md:text-sm') Privacy Policy
+                    li
+                        a(href='../templates/myData.html' class='text-xs md:text-sm') Do not sell my Data
+

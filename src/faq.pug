@@ -1,0 +1,70 @@
+mixin faqItem(question, answer)
+    details(class='text-sm lg:text-base').faq-item.bg-white.shadow-card.relative.rounded-4px.h-fit
+        summary(class='px-10px py-15px lg:p-20px pr-30px lg:pr-40px').flex.gap-7px.font-bold.relative
+            div.text-blue Q.
+            div=question
+        p(class='px-10px lg:px-20px py-25px')=answer
+
+doctype html
+html(lang="en")
+    head
+        title Frequently Asked Questions | Elioplus
+        include components/head.pug
+    body.text-blackBlue.overflow-x-hidden
+        include components/header/header.pug
+        main.transition-all.duration-200
+            section.bg-gray.opener
+                .container
+                    div(class='grid-cols-1 lg:grid-cols-2').grid.gap-30px
+                        div(class='row-start-2 lg:row-start-1 gap-20px lg:gap-30px justify-center').flex.flex-col
+                            div(class='text-center lg:text-left gap-10px lg:gap-15px').flex.flex-col
+                                h1(class='text-2.5xl lg:text-5xl font-bold font-inter') Frequently Asked Questions
+                                h2(class='text-2xl lg:text-3xl font-bold font-inter').text-blue We've got answers for you.
+                            p(class='text-base lg:text-body text-center lg:text-left')  At ElioPlus it's our priority to provide an excellent customer experience and provide any assistance possible.
+                            form(method='post').bg-white.shadow-card.flex.w-full.flex-wrap.search-bar.rounded-4px.overflow-hidden
+                                .input-field.grow
+                                    input(id='name' name='name' type='text' placeholder='Search for a question or topic').w-full
+                                buttton(type='submit' class='w-[45px] h-[45px] ').bg-blue.flex.items-center.justify-center
+                                    include ../assets/images/global/searchWhite.svg
+
+                        div(class='justify-center').flex
+                            img( src='../assets/images/faq/faqOpener.svg' alt='Elioplus Frequently Asked Questions and help support center')
+                .mt-30px.wave
+                    img( src='../assets/images/global/wave.svg' alt='Elioplus decorative wave')
+            section
+                .container
+                    div(class='gap-50px lg:gap-80px').flex.flex-col
+                        .flex.flex-col.gap-30px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') General FAQ
+                            div(class='grid-cols-1 lg:grid-cols-2 gap-30px').grid
+                                +faqItem('Which companies should create a profile as a Vendor?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Which companies should create a profile as a Channel Partner?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Can I promote my partner programs for free?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Is there a way to promote my offering more actively?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Can I upgrade, downgrade or cancel my Premium plan?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('I am a channel partner. Why should I join ?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Are the company profiles and partner programs vetted?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+
+                        .flex.flex-col.gap-30px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') FAQ about matching process
+                            div(class='grid-cols-1 lg:grid-cols-2 gap-30px').grid
+                                +faqItem('What’s the matching process feature and how it works?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('What happens when I go premium?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Are the matches quality ones and is the data up-to-date?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('How can I see my possible partnership opportunities?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('How the matches look like and how often the platform provides them into my dashboard?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Why to submit and save the partnership criteria of the matching process?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('When I upload the CSV file with my partners is the data private or public?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+
+                        .flex.flex-col.gap-30px
+                            h3(class='text-2xl lg:text-3xl font-bold font-inter') FAQ about our ‘Lead Generation’ product
+                            div(class='grid-cols-1 lg:grid-cols-2 gap-30px').grid
+                                +faqItem('What’s the pricing?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Is there a limit in the number of the leads?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('What regions do you cover?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('Is there  a trial option?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+                                +faqItem('What type of data do you provide?', 'We do our best to check and verify the data provided by our users but it their responsibility to give us accurate data. We want to keep the quality of content on our website very high and we are developing tools towards this direction in order to provide accurate and relevant information.')
+
+        include components/footer/footer.pug
+        div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+        include components/scripts.pug

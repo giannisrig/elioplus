@@ -1,0 +1,25 @@
+mixin menuItem(name, href)
+    li
+        a(href=href).text-textGray.text-sm=name
+
+
+nav(id='AboutMenu').py-30px.px-40px.bg-white.absolute.megamenu.shadow-lg.rounded-xl.right-0
+    .flex.flex-row.gap-40px
+        .flex.flex-col.gap-40px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                .flex.flex-col.gap-15px.megamenu-menu-item
+                    .w-20.logo
+                        include ../../../assets/images/global/logo.svg
+                    p.text-textGray.text-sm Elioplus is a leading provider of partner recruitment and management solutions that assist IT software companies to expand their partner network.
+                    .flex.flex-row.gap-15px
+                        include ../../components/global/social
+        .separator.h-unset
+        .flex.flex-col.gap-25px.megamenu-col
+            .flex.flex-col.gap-15px.megamenu-menu-item
+                h4.font-inter.font-bold.text-sm About
+                ul.flex.flex-col.gap-5px
+                    +menuItem('About Elioplus', '../templates/aboutUs.html')
+                    +menuItem('Case Studies', '../templates/caseStudiesArchive.html')
+                    +menuItem('Contact us', '../templates/contactUs.html')
+                    +menuItem('Blog', 'https://medium.com/@elioplus')
+                    +menuItem('FAQ', '../templates/faq.html')
