@@ -1,19 +1,27 @@
 # Elioplus Templates Documentation
+## Preview:
+Just open the html files under /templates/ folder on your browser.
 
-# Tech:
-### 1. Pug:
+
+## Folder Structure:
+- /assets: The public static assets of the website, styles, scripts & images. Styles & Scripts are categorised in source and distribution (production)
+- /src : The source folder of the pug files. You can inspect the pug files to get an overview of the logic for some component rendering and overall structure.
+- /templates : The final HTML files. In addition to the pages there are some general components with their HTML.
+
+## Tech:
+### Pug:
 A templating engine designed to render HTML in server-side technologies such as Node. js
 <br>
 <br>
 Pug Documentation: https://pugjs.org/api/getting-started.html
 
-### 2. Tailwind CSS:
+### Tailwind CSS:
 A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup. Used as a CSS framework.
 <br>
 <br>
 Tailwind Documentation: https://tailwindcss.com/docs/installation
 
-### 3. Gulp:
+### Gulp:
 A tool to automate tasks and create workflows.
 <br>
 Used for: 
