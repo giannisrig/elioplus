@@ -1,9 +1,10 @@
 {
   "settings": {
+    "pug": true,
     "css": {
       "src": "assets/css/src",
       "dest": "assets/css/dist",
-      "minify": false
+      "minify": true
     },
     "js": {
       "src": "assets/js/src",

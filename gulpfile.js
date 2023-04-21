@@ -13,17 +13,22 @@ const tailwindcss       = require("tailwindcss");
 //set the sass compiler
 sass.compiler  = require('node-sass');
 
+const compilePug = config.settings.pug;
+
 
 //Task to Compile the styles, scripts are combined and minified
-gulp.task( 'pug:compile', function () {
+if( compilePug ){
+    gulp.task( 'pug:compile', function () {
 
-    return gulp.src( 'src/**/*.pug' )
-        // .pipe(gulp_watch_pug('templates/**/*.pug', { delay: 100 }))
-        .pipe( pug( { pretty: true } ) )
-        .pipe( gulp.dest('templates/') );
+        return gulp.src( 'src/**/*.pug' )
+            // .pipe(gulp_watch_pug('templates/**/*.pug', { delay: 100 }))
+            .pipe( pug( { pretty: true } ) )
+            .pipe( gulp.dest('templates/') );
 
 
-});
+    });
+}
+
 //Task to Compile the styles, scripts are combined and minified
 gulp.task( 'sass:compile', function () {
 
@@ -82,10 +87,12 @@ gulp.task('scripts:compile', function() {
 
 
 //Task to Watch only for changes in pug files
-gulp.task('pug:watch', function (done) {
-    gulp.watch( 'src/**/*.pug', gulp.series( 'pug:compile' ) );
-    done();
-});
+if( compilePug ) {
+    gulp.task('pug:watch', function(done) {
+        gulp.watch('src/**/*.pug', gulp.series('pug:compile'));
+        done();
+    });
+}
 
 //Task to Watch only for changes in styles
 gulp.task('sass:watch', function (done) {
@@ -106,12 +113,20 @@ gulp.task('watch', function(done){
 
     gulp.watch( config.settings.css.src + '/**/*.scss', gulp.series( 'sass:compile' ) );
     gulp.watch( config.settings.js.src + '/**/*.js', gulp.series( 'scripts:compile' ) );
-    gulp.watch( 'src/**/*.pug', gulp.series( 'pug:compile', 'sass:compile' ) );
+    if( compilePug ) {
+        gulp.watch('src/**/*.pug', gulp.series('pug:compile', 'sass:compile'));
+    }
     done();
 
 });
 
 
 //Change the default gulp task to compile styles and scripts and then watch
-gulp.task( 'default', gulp.series( 'sass:compile', 'scripts:compile', 'pug:compile', 'watch' ) );
+let tasks = ['sass:compile', 'scripts:compile', 'watch'];
+
+if( compilePug ) {
+    tasks.push('pug:compile')
+}
+
+gulp.task( 'default', gulp.series( tasks ) );
 
