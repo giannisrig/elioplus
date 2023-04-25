@@ -6,7 +6,9 @@ mixin letterItem(letter, prefix)
 doctype html
 html(lang="en")
     head
-        title Partnerships & Vendor Technologies | Elioplus
+        - var title = 'Partnerships & Vendor Technologies | Elioplus'
+        - var desc  = 'Find all software, cloud and hardware IT partners and browse their technologies and partnerships to help you with licensing, implementation, support and training services.'
+        - var url   = 'https://elioplus.com/partnerships'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

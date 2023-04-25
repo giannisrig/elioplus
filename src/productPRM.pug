@@ -15,7 +15,10 @@ mixin featureItem(name, included)
 doctype html
 html(lang="en")
     head
-        title Partner Relation Management (PRM) Software | Elioplus
+
+        - var title = 'Free PRM software | Partner Management software | Elioplus'
+        - var desc  = 'Free Partner Relationship Management (PRM) software to manage, incentivize and enable your partner network. Focused on SaaS &amp; cloud vendors and their channel partners.'
+        - var url   = 'https://elioplus.com/prm-software'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

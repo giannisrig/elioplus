@@ -8,7 +8,9 @@ mixin faqItem(question, answer)
 doctype html
 html(lang="en")
     head
-        title Frequently Asked Questions | Elioplus
+        - var title = 'Frequently Asked Questions | Elioplus'
+        - var desc  = 'Find answers for frequently asked questions from our users, customers and visitors of Elioplus.'
+        - var url   = 'https://elioplus.com/faq'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

@@ -15,7 +15,9 @@ mixin featureItem(name, included)
 doctype html
 html(lang="en")
     head
-        title Database:Partner Recruitment  | Elioplus
+        - var title = 'Database Solution | Partner Recruitment Software Elioplus'
+        - var desc  = 'Find and recruit channel partners like resellers, VARs, MSPs and consultants based on their location or industry.'
+        - var url   = 'https://elioplus.com/channel-partner-recruitment/database'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

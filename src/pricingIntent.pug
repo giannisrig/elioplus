@@ -20,7 +20,9 @@ mixin featureItem(name, included)
 doctype html
 html(lang="en")
     head
-        title Intent Signals & Lead Generation Pricing | Elioplus
+        - var title = 'Intent Signals & Lead Generation Pricing | Elioplus'
+        - var desc  = 'View our pricing plans for lead generation and intent signals. Join for free on our basic plan, upgrade or downgrade anytime. Completely free for channel partners.'
+        - var url   = 'https://elioplus.com/pricing/intent-signals'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

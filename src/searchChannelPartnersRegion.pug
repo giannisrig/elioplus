@@ -11,7 +11,10 @@ mixin letterItem(letter, prefix)
 doctype html
 html(lang="en")
     head
-        title Sass Channel Partners in Africa | Elioplus
+        title
+        - var title = 'Sass Channel Partners in Africa Region | Elioplus'
+        - var desc  = 'Search and discover the best IT companies, like Managed Service Providers, resellers and software companies in Africa'
+        - var url   = 'https://elioplus.com/africa/channel-partners'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
     head
-        title Contact us | Elioplus
+        - var title = 'Contact us | Elioplus'
+        - var desc  = 'Get in touch with our sales or support team if you have a related question.'
+        - var url   = 'https://elioplus.com/contact-us'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

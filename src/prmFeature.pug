@@ -7,7 +7,9 @@ mixin ulItem(name, href, active)
 doctype html
 html(lang="en")
     head
-        title Partner Directory | PRM Features | Elioplus
+        - var title = 'Partner Directory | PRM Features | Elioplus'
+        - var desc  = 'Distribute your unique partner portal login and sign up page to let your channel partners use your PRM account. Add your unique partner portal URL on your website to increase your channel network.'
+        - var url   = 'https://elioplus.com/prm-software/partner-portal'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

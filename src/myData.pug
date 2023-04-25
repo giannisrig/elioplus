@@ -5,7 +5,9 @@ mixin olItem(name, href)
 doctype html
 html(lang="en")
     head
-        title Manage your Data | Elioplus
+        - var title = 'Manage your Data | Elioplus'
+        - var desc  = 'Manage your company’s and personal data on Elioplus.'
+        - var url   = 'https://elioplus.com/my-data'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

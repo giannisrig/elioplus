@@ -47,7 +47,9 @@ mixin techItem(name)
 doctype html
 html(lang="en")
     head
-        title Intent Signals & Lead Generation | Elioplus
+        - var title = 'Intent Signals & Lead Generation | Elioplus'
+        - var desc  = 'Get quotation requests and intent data for thousands of products and technologies exclusively for local IT companies around the world.'
+        - var url   = 'https://elioplus.com/intent-signals'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

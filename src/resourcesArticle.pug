@@ -5,7 +5,9 @@ mixin olItem(name, href)
 doctype html
 html(lang="en")
     head
-        title What is a partner relationship management system? | Resources Article | Elioplus
+        - var title = 'What is a partner relationship management system? | Resources Article | Elioplus'
+        - var desc  = 'Find what a partner relationship management system is and what the most important features of such applications are.'
+        - var url   = 'https://elioplus.com/partner-relationship-management-system'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
     head
-        title Sign in to your Account | Elioplus
+        - var title = 'Sign in to your Account | Elioplus'
+        - var desc  = 'Sign in to your account and find great partnership opportunities and notifications from software and SaaS companies right into your advanced dashboard'
+        - var url   = 'https://elioplus.com/login'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

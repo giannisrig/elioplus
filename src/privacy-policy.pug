@@ -5,7 +5,9 @@ mixin olItem(name, href)
 doctype html
 html(lang="en")
     head
-        title Privacy Policy | Elioplus
+        - var title = 'Privacy Policy | Elioplus'
+        - var desc  = 'Privacy policy for users, customers and visitors making use of the Elioplus platform.'
+        - var url   = 'https://elioplus.com/privacy'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

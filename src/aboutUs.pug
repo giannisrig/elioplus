@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
     head
-        title About us | Elioplus
+        - var title = 'About us | Elioplus'
+        - var desc  = 'Meet the team behind Elioplus and read our story.'
+        - var url   = 'https://elioplus.com/about-us'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

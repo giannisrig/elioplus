@@ -5,7 +5,9 @@ mixin olItem(name, href)
 doctype html
 html(lang="en")
     head
-        title Terms & Conditions | Elioplus
+        - var title = 'Terms & Conditions | Elioplus'
+        - var desc  = 'Terms and Conditions for users, customers and visitors of the Elioplus platform.'
+        - var url   = 'https://elioplus.com/terms'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

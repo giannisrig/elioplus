@@ -7,7 +7,9 @@ mixin techItem(name)
 doctype html
 html(lang="en")
     head
-        title Cupix - Channel Partner Company Profile | Elioplus
+        - var title = 'Cupix - Channel Partner Company Profile | Elioplus'
+        - var desc  = 'Browse the Cupix business profile and view the solutions and products the company offers in the Mumbai area.'
+        - var url   = 'https://elioplus.com/profiles/channel-partners/137402/acronis'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

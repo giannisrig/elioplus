@@ -19,7 +19,9 @@ mixin featureItem(name, included)
 doctype html
 html(lang="en")
     head
-        title Referral Software | Elioplus
+        - var title = 'Referral Software | Referral partner program management | Elioplus'
+        - var desc  = 'Referral software to scale and automate your referral partner program and generate more leads. Manage your referral partners and payouts, easily integrate your CRM.'
+        - var url   = 'https://elioplus.com/referral-software'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

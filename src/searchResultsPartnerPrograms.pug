@@ -14,7 +14,9 @@ mixin pageItem(name, active)
 doctype html
 html(lang="en")
     head
-        title Sass Partner Programs by Vendors Search Results | Elioplus
+        - var title = 'Ad Serving software | Partner Programs by Vendors | Search Results | Elioplus'
+        - var desc  = 'The best Ad Serving software and SaaS vendors offering a partner program for channel partners worldwide.'
+        - var url   = 'https://elioplus.com/partner-programs/vendors/ad_serving'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

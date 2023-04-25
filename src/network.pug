@@ -5,7 +5,9 @@ mixin olItem(name, href)
 doctype html
 html(lang="en")
     head
-        title Spiceworks Network | Resources | Elioplus
+        - var title = 'Spiceworks Network | Resources | Elioplus'
+        - var desc  = 'Find out more about Spiceworks, an IT community for professionals to share content, discuss and find local meetups. Join Elioplus for free, a global IT network.'
+        - var url   = 'https://elioplus.com/networks/spiceworks'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

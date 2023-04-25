@@ -14,7 +14,10 @@ mixin pageItem(name, active)
 doctype html
 html(lang="en")
     head
-        title Channel Partners Search Results | Elioplus
+        title
+        - var title = 'Ad Serving | Channel Partners | Search Results | Elioplus'
+        - var desc  = 'Search for the best channel partners, resellers, affiliates and consultants that offer Ad Serving solutions and products.'
+        - var url   = 'https://elioplus.com/profile/channel-partners/ad_serving'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

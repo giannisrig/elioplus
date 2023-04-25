@@ -14,7 +14,9 @@ mixin pageItem(name, active)
 doctype html
 html(lang="en")
     head
-        title Search Results | Elioplus
+        - var title = 'Search Results | Find new channel partners in software industry | Elioplus'
+        - var desc  = 'Search for channel partners based on their product & service offerings, location, industry and other criteria. Find partner programs from innovative vendors in more than 100 categories.'
+        - var url   = 'https://elioplus.com/search-results'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

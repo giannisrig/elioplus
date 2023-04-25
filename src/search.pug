@@ -8,7 +8,9 @@ mixin faqFeatureItem(question, answer)
 doctype html
 html(lang="en")
     head
-        title Search for Channel Partners & Partner Programs | Elioplus
+        - var title = 'Search for Channel Partners & Partner Programs | Elioplus'
+        - var desc  = 'Search for channel partners based on their product & service offerings, location, industry and other criteria. Find partner programs from innovative vendors in more than 100 categories.'
+        - var url   = 'https://elioplus.com/search'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

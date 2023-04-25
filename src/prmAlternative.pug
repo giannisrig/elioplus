@@ -16,7 +16,9 @@ mixin tableItem(name, alt, elio)
 doctype html
 html(lang="en")
     head
-        title Elioplus PRM vs Impartner | PRM Alternatives | Elioplus
+        - var title = 'Elioplus PRM vs Impartner | PRM Alternatives | Elioplus'
+        - var desc  = 'Compare Impartner PRM vs. Elioplus PRM, a free partner management alternative to manage and automate your partnerships. Try it for free.'
+        - var url   = 'https://elioplus.com/alternatives/impartner'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

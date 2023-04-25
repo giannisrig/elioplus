@@ -6,7 +6,9 @@ mixin letterItem(letter, prefix)
 doctype html
 html(lang="en")
     head
-        title Sass Partner Programs by Software & IT Vendors | Elioplus
+        - var title = 'Search for Sass Partner Programs by Software & IT Vendors | Elioplus'
+        - var desc  = 'Find the best SaaS partner programs. Compare between different programs and check partner reviews.'
+        - var url   = 'https://elioplus.com/saas-partner-programs'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

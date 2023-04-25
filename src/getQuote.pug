@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
     head
-        title Get a Quote | Elioplus
+        - var title = 'Get a quote from MSPs and IT companies near you'
+        - var desc  = 'Share your requirements and get quotations from Managed Service Providers, IT companies and agencies near you to compare prices.'
+        - var url   = 'https://elioplus.com/get-a-quote'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug

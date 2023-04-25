@@ -11,7 +11,9 @@ mixin letterItem(letter, prefix)
 doctype html
 html(lang="en")
     head
-        title Sass Channel Partners | Elioplus
+        - var title = 'Search for Sass Channel Partners | Elioplus'
+        - var desc  = 'Search browse and find a software reseller or a SaaS channel partner based on the products they offer, location or industry they support.'
+        - var url   = 'https://elioplus.com/search/channel-partners'
         include components/head.pug
     body.text-blackBlue.overflow-x-hidden
         include components/header/header.pug
