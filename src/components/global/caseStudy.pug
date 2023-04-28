@@ -1,13 +1,13 @@
-a(class='w-full max-w-[600px]' href='../templates/caseStudySingle.html').bg-white.shadow-card.overflow-hidden.rounded-10px.case-study.flex.flex-col
-    div(class='h-[330px]').bg-gray.flex.items-center.justify-center
+a(class='w-full max-w-[600px] mx-auto' href='../templates/caseStudySingle.html').bg-white.shadow-card.overflow-hidden.rounded-10px.case-study.flex.flex-col
+    div(class=' md:h-[330px]').bg-gray.flex.items-center.justify-center
         img(src=img alt=name loading='lazy')
     div(class='gap-10px lg:gap-15px py-20px lg:py-30px px-20px lg:px-25px grow').bg-white.flex.flex-col
         div().flex.flex-col.gap-5px
-            h5(class='text-sm font-medium font-inter').text-textGray OUR CLIENT’S STORY:
+            h5(class='text-xs sm:text-sm font-medium font-inter').text-textGray OUR CLIENT’S STORY:
             h3(class='text-lg lg:text-2xl font-bold font-inter')=name
         p(class='text-sm lg:text-base')=desc
-        .flex.flex-row.justify-between.items-center.mt-auto
-            .flex.items-center.gap-5px.text-base.font-semibold.text-textGray
+        div(class='flex-col sm:flex-row items-start sm:items-center gap-10px md:gap-0').flex.justify-between.mt-auto
+            div(class='text-sm md:text-base').flex.items-center.gap-5px.font-semibold.text-textGray
                 div Tracking Period:
                 div.text-blackBlue 7 months
             div(class='btn font-bold text-sm').text-blue
