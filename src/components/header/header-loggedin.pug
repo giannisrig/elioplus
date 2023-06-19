@@ -1,0 +1,46 @@
+mixin menuItem(name, href, icon)
+    li.flex.items-center
+        a(href=href).flex.items-center.gap-5px.font-bold
+            =icon
+            =name
+            include ../../../assets/images/global/chevron.svg
+
+header(class='bg-white shadow-lg z-10 fixed top-0 left-0 w-screen')
+    .container
+        .flex.justify-between
+            div(class='py-10px xl:py-20px')
+                a(href='../templates/index.html').pb-5px.block.header-logo
+                    img( src='../assets/images/global/logo.svg' alt='Elioplus Logo' title='Elioplus Logo' width='110' height='52')
+            nav(id='mainNavigation' class='flex gap-5px usm:gap-10px xl:gap-15px relative py-10px xl:py-20px')
+                ul(class='text-sm xl:text-base hidden lg:flex gap-10px xl:gap-15px')
+                    li.flex.items-center
+                        a(href='#ProductsServicesMenu').flex.items-center.gap-5px.font-bold
+                            include ../../../assets/images/global/circles.svg
+                            span Products & Services
+                            include ../../../assets/images/global/chevron.svg
+                    li.flex.items-center
+                        .separator
+                    li.flex.items-center
+                        a(href='#BrowseCompaniesMenu').flex.items-center.gap-5px.font-bold
+                            include ../../../assets/images/global/search.svg
+                            span Browse Companies
+                            include ../../../assets/images/global/chevron.svg
+                    li.flex.items-center
+                        .separator
+                    +menuItem('Features & Resources', '#FeaturesResourcesMenu')
+                    +menuItem('Pricing', '#PricingMenu')
+                    +menuItem('About Us', '#AboutMenu')
+                    li.flex.items-center
+                        .separator
+                include ../../components/header/header-user.pug
+                div(class='hidden sm:flex items-center lg:hidden')
+                    div(class='separator')
+                a(id="toggleMobileMenu" href='#mobileMenu' class='flex items-center gap-5px lg:hidden hamburger transition-colors duration-200 hover:text-blue')
+                    include ../../../assets/images/global/menu.svg
+                    span(class='font-bold text-sm xl:text-base') Menu
+                include ../../components/header/megamenu1.pug
+                include ../../components/header/megamenu2.pug
+                include ../../components/header/megamenu3.pug
+                include ../../components/header/megamenu4.pug
+                include ../../components/header/megamenu5.pug
+include ../../components/header/mobilemenu.pug

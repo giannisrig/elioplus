@@ -32,8 +32,6 @@
 
             $(id).removeClass('hidden').addClass('opened');
 
-
-
         });
 
         $(document).on('overlayClicked', function(){
@@ -253,7 +251,105 @@
         });
 
 
+        $('.toast-demo').on('click', function(e){
+            e.preventDefault();
+            let type = $(this).attr('data-type')
+            let options = {};
 
+            switch(type){
+
+                case 'info':
+                    options = {
+                        heading: 'Information',
+                        text: 'Some notification message here that describes the result of the user action.',
+                        icon: 'info',
+                        loader: true,        // Change it to false to disable loader
+                        loaderBg: '#fff',  // To change the background
+                        position: {
+                            top: "80px",
+                            right:"20px",
+                        }
+                    };
+                    break;
+
+                case 'success':
+                    options = {
+                        heading: 'Success',
+                        text: 'Some notification message here that describes the result of the user action.',
+                        icon: 'success',
+                        loader: true,        // Change it to false to disable loader
+                        loaderBg: '#fff',  // To change the background
+                        position: {
+                            top: "80px",
+                            right:"20px",
+                        }
+                    };
+                    break;
+
+                case 'warning':
+                    options = {
+                        heading: 'Warning',
+                        text: 'Some notification message here that describes the result of the user action.',
+                        icon: 'warning',
+                        loader: true,        // Change it to false to disable loader
+                        loaderBg: '#fff',  // To change the background
+                        position: {
+                            top: "80px",
+                            right:"20px",
+                        }
+                    };
+                    break;
+
+                case 'error':
+                    options = {
+                        heading: 'Error',
+                        text: 'Some notification message here that describes the result of the user action.',
+                        icon: 'error',
+                        loader: true,        // Change it to false to disable loader
+                        loaderBg: '#fff',  // To change the background
+                        position: {
+                            top: "80px",
+                            right:"20px",
+                        }
+                    };
+                    break;
+
+                default:
+                    options = {
+                        heading: 'Simple',
+                        text: 'Some notification message here that describes the result of the user action.',
+                        loader: true,        // Change it to false to disable loader
+                        loaderBg: '#E2EDFF',  // To change the background
+                        position: {
+                            top: "80px",
+                            right:"20px",
+                        }
+                    };
+                    break;
+
+            }
+
+            $.toast( options );
+
+        });
+
+
+        $('.open-menu').on('click', function(e){
+            e.preventDefault();
+            let id = $(this).attr('href')
+            let el = $(id);
+            el.toggleClass('hidden');
+        });
+
+        $(document).on('click', function(e){
+
+            if($(e.target).closest('.menu-group, .open-menu').length)
+                return;
+
+            $('.menu-group').addClass('hidden');
+
+
+        });
 
 
     });
