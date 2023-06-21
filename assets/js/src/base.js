@@ -55,7 +55,7 @@
             overlay.removeClass('hidden');
         });
 
-        $('#closeMobileMenu, #overlay').on('click', function (e) {
+        $('#closeMobileMenu, #overlay, .trigger-close').on('click', function (e) {
             e.preventDefault();
             mobileMenu.removeClass('active');
             blurItems.removeClass('blur-md overflow-hidden');

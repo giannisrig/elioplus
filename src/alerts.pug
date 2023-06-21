@@ -12,6 +12,10 @@ html(lang="en")
                 .container
 
                     .flex.flex-col.gap-60px
+
+                        .flex.flex-col
+                            a(href='#testModal' class='button border-blue hover:text-blue modal-trigger') Modal Test
+
                         .flex.gap-15px
                             a(href='#' class='button border-blue hover:text-blue toast-demo' data-type='simple') Simple Alert
                             a(href='#' class='button border-blue hover:text-blue toast-demo' data-type='info') Information Alert
@@ -81,4 +85,21 @@ html(lang="en")
 
         include components/footer/footer.pug
         div(id='overlay' class='fixed top-0 right-0 h-screen w-screen hidden z-20 bg-transparent')
+
+        div( id='testModal' class='modal hidden w-full max-w-[600px] p-30px flex flex-col gap-20px')
+
+            .flex.gap-15px.flex-col.w-full
+                h2(class='font-inter font-bold text-2xl') Edit Group
+                .divider
+
+            div.w-full
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                div(class='flex w-full justify-end gap-20px')
+
+                    a(href='#' class='btn text-blackBlue border-blackBlue hover:border-blue hover:text-blue h-[40px] text-center justify-center px-25px trigger-close')
+                        h4(class='text-sm font-semibold') Cancel
+
+                    button(type='submit' class='btn bg-blue text-white hover:bg-blueDark border:bg-blueDark justify-center h-[40px] items-center')
+                        h4(class='text-sm font-semibold') Save Changes
         include components/scripts.pug
